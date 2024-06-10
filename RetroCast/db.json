@@ -38,17 +38,6 @@
     "devName": "Rockstar Games"
   },
   {
-    "Title": "Cyberpunk 2077",
-    "genre": "RPG",
-    "year": 2020,
-    "price": 49.99,
-    "gameImg": "https://example.com/cyberpunk2077.jpg",
-    "gameVote": 7.5,
-    "sysRequirement": "Windows 10, Intel Core i5-3570K, 8GB RAM, GTX 780 3GB",
-    "plot": "Un mercenario noto come V cerca un impianto unico che garantisca l'immortalità.",
-    "devName": "CD Projekt Red"
-  },
-  {
     "Title": "The Legend of Zelda: Breath of the Wild",
     "genre": "Action-Adventure",
     "year": 2017,
