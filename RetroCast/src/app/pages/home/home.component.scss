@@ -3,12 +3,33 @@
   src: url(../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf);
   }
 
+@font-face{
+  font-family:VintageFont;
+  src: url(../../../assets/fonts/logos_font/retrocast-brand-zip-file/Sixtyfour.ttf);
+}
+
 .personal-font{
   font-family: OldGame;
   color: white;
+  border:5px solid white;
+  padding: 0.5em;
 }
 
 .personal-font:hover{
   color: #ffdc00;
   transition: 0.1s;
+}
+
+
+.personal-fontDue{
+  font-family: OldGame;
+  color: white;
+}
+.personal-fontTre{
+  font-family: VintageFont;
+  color: white;
+}
+
+.personal-p{
+  border:5px solid white;
 }
