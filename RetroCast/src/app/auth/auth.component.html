@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-12 alert alert-info">
+    <h1>Accedi o registrati</h1>
+  </div>
+  <div class="col-6">
+    <h1>Accedi</h1>
+
+    <form>
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="authData.email"
+        placeholder="email"
+        class="form-control"
+      />
+      <input
+        type="password"
+        name="password"
+        [(ngModel)]="authData.password"
+        placeholder="password"
+        class="form-control mt-3"
+      />
+      <button (click)="login()" class="btn btn-primary mt-3">Accedi</button>
+    </form>
+  </div>
+  <div class="col-6">
+    <h2>Registrati</h2>
+    <button routerLink="register" class="btn btn-primary">
+      Crea un nuovo account
+    </button>
+  </div>
+</div>
