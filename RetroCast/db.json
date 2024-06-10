@@ -1,17 +1,9 @@
 {
   "users": [
     {
-      "username": "administrator",
-      "password": "password",
-      "region": "Italy",
-      "game-list": [
-        {
-          "allGames": [],
-          "installedGames": [],
-          "last3Played": [],
-          "likedGames": []
-        }
-      ]
+      "email": "stefananto1@gmail.com",
+      "password": "$2a$10$zHtXYORk2eQ1QPTqQjHOr.TqRNbGXXKWFvpXlNJnp2lGdvXw0IF0K",
+      "id": 1
     }
   ],
     "games": [
