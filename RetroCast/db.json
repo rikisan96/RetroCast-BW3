@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "username": "administrator",
+      "password": "password",
+      "region": "Italy",
+      "game-list": [
+        {
+          "allGames": [],
+          "installedGames": [],
+          "last3Played": [],
+          "likedGames": []
+        }
+      ]
+    }
+  ]
+}
