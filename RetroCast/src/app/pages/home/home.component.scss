@@ -1,0 +1,14 @@
+@font-face {
+  font-family: OldGame;
+  src: url(../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf);
+  }
+
+.personal-font{
+  font-family: OldGame;
+  color: white;
+}
+
+.personal-font:hover{
+  color: #ffdc00;
+  transition: 0.1s;
+}
