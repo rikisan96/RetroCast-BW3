@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { iGameList } from '../../Models/i-game-list';
 import { GamesService } from '../../Service/games.service';
+import { Modal } from 'bootstrap';
 
 @Component({
   selector: 'app-home',
@@ -12,11 +13,12 @@ export class HomeComponent implements OnInit {
   filteredGameList: iGameList[] = [];
   activeFilter: string | null = null;
   searchTerm: string = '';
-  selectedPlatformContainer!:string;
+  selectedPlatformContainer!: string;
   startYear: number | null = null;
   endYear: number | null = null;
   selectedPlatform: string | null = null;
   selectedGenre: string | null = null;
+  selectedGame: iGameList | null = null;
 
   constructor(private gameSvc: GamesService) {}
 
@@ -90,5 +92,17 @@ export class HomeComponent implements OnInit {
     this.selectedPlatform = null;
     this.selectedGenre = null;
     console.log('Showing all games:', this.filteredGameList);
+  }
+
+
+  viewGameDetails(game: iGameList) {
+    this.selectedGame = game;
+    const modalElement = document.getElementById('gameDetailsModal');
+    if (modalElement) {
+      const modal = new Modal(modalElement);
+      modal.show();
+    } else {
+      console.error('Modal element not found');
+    }
   }
 }

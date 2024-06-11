@@ -59,7 +59,7 @@
   background-color: #000;
   color: #fff;
   border: 2px solid #fff;
-  border-radius: 0; /* Bordo squadrato per look retrò */
+  border-radius: 0; 
   transition: transform 0.3s, border-color 0.3s;
   margin-bottom: 20px;
 }
@@ -67,7 +67,7 @@
 .card:hover,
 .card:focus {
   transform: scale(1.05);
-  border-color: #ff0; /* Colore giallo per hover e focus */
+  border-color: #ff0; 
 }
 
 .card .card-body {
@@ -98,7 +98,7 @@
 .card .btn-primary:focus {
   background-color: #fff;
   color: #000;
-  border-color: #ff0; /* Colore giallo per hover e focus */
+  border-color: #ff0; 
 }
 
 .card .btn-secondary {
@@ -110,7 +110,7 @@
 .card .btn-secondary:focus {
   background-color: #fff;
   color: #000;
-  border-color: #ff0; /* Colore giallo per hover e focus */
+  border-color: #ff0; 
 }
 
 .card .btn-success {
@@ -122,7 +122,7 @@
 .card .btn-success:focus {
   background-color: #fff;
   color: #000;
-  border-color: #ff0; /* Colore giallo per hover e focus */
+  border-color: #ff0; 
 }
 
 .img-fluid {
@@ -134,5 +134,40 @@
 .img-fluid:hover,
 .img-fluid:focus {
   transform: scale(1.05);
-  border-color: #ff0; /* Colore giallo per hover e focus */
+  border-color: #ff0; 
 }
+
+.retro-modal {
+  background-color: #000;
+}
+
+.retro-modal-content {
+  border: 2px solid #fff;
+}
+
+.retro-modal-header {
+  border-bottom: 2px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+
+.retro-modal-title {
+  font-family: VintageFont, cursive;
+}
+
+.retro-modal-body {
+  background-color: #000;
+  color: #fff;
+}
+
+.retro-modal-footer {
+  border-top: 2px solid #fff;
+  background-color: #000;
+}
+
+.retro-modal-button {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0;
+}
+

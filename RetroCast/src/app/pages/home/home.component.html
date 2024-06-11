@@ -155,7 +155,6 @@
       (click)="filterByGenre('Action RPG')"
       type="button"
       [ngClass]="{ 'active-button': selectedGenre === 'Action RPG' }"
-
     >
       Action RPG
     </button>
@@ -164,7 +163,6 @@
       (click)="filterByGenre('First-Person Shooter')"
       type="button"
       [ngClass]="{ 'active-button': selectedGenre === 'First-Person Shooter' }"
-
     >
       First-Person Shooter
     </button>
@@ -173,7 +171,6 @@
       (click)="filterByGenre('Action-Adventure')"
       type="button"
       [ngClass]="{ 'active-button': selectedGenre === 'Action-Adventure' }"
-
     >
       Action-Adventure
     </button>
@@ -182,7 +179,6 @@
       (click)="filterByGenre('Real-Time Strategy')"
       type="button"
       [ngClass]="{ 'active-button': selectedGenre === 'Real-Time Strategy' }"
-
     >
       Real-Time Strategy
     </button>
@@ -215,15 +211,49 @@
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">{{ game.Title }}</h5>
-            <p class="card-text">{{ game.plot }}</p>
+            <p class="card-text">
+              {{ game.plot | slice:0:20 }}...
+            </p>
+            <p class="card-text">
+              {{ game.sysRequirement | slice:0:20 }}...
+            </p>
             <p class="card-text">{{ game.year }}</p>
-            <p class="card-text"><small>{{ game.sysRequirement }}</small></p>
             <button class="btn btn-primary me-2">{{ game.genre }}</button>
             <button class="btn btn-secondary me-2">{{ game.price }}</button>
             <button class="btn btn-success">{{ game.gameVote }}</button>
+            <button class="btn btn-info" (click)="viewGameDetails(game)">View Game</button>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Add the modal -->
+<div
+  class="modal fade"
+  id="gameDetailsModal"
+  tabindex="-1"
+  aria-labelledby="gameDetailsModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg retro-modal">
+    <div class="modal-content retro-modal-content">
+      <div class="modal-header retro-modal-header">
+        <h5 class="modal-title retro-modal-title" id="gameDetailsModalLabel">Game Details</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body retro-modal-body">
+        <img [src]="selectedGame?.gameImg" class="img-fluid mb-3" alt="" />
+        <p>{{ selectedGame?.plot }}</p>
+        <p>{{ selectedGame?.sysRequirement }}</p>
+        <p>{{ selectedGame?.year }}</p>
+        <p>{{ selectedGame?.genre }}</p>
+        <p>{{ selectedGame?.price | currency }}</p>
+        <p>{{ selectedGame?.gameVote }}</p>
+        <div class="modal-footer retro-modal-footer">
+          <button type="button" class="btn btn-info retro-modal-button" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
