@@ -5,6 +5,15 @@
   background-color: black;
 }
 
+.score {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 20px;
+}
+
 .ball {
   position: absolute;
   width: 10px;
