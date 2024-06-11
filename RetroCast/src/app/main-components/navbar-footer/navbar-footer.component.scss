@@ -1,19 +1,40 @@
-.row span i {
-  font-size: 40px;
-  color: black !important;
-  padding: 0 0.5rem;
+@font-face {
+  font-family: OldGames;
+  src: url(../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf);
+  }
+
+.retro-footer {
+  background-color: #000; 
+  color: #fff; 
+  padding-top: 3rem; 
+  font-family: 'OldGames'; 
+  border-top: 2px solid white;
+  border-bottom: 4px solid black;
+}
+.fontsize{
+  font-size: 0.7em;
+}
+.retro-footer a {
+  color: #fff; 
+  text-decoration: none; 
+  transition: color 0.3s; 
 }
 
-.row span i:hover {
-  background-color: blue;
+.retro-footer a:hover {
+  color: #e9e50a; 
 }
 
-.col p a {
-  color: black;
-  text-decoration: none;
-  font-size: 0.9rem;
+.retro-btn {
+  background-color: #fff; 
+  color: #000; 
+  font-size: 13px;
 }
 
-.col p a:hover {
-  color: blue;
+.retro-btn:hover {
+  background-color: #000; 
+  color: #fff; 
+}
+
+.retro-link {
+  font-weight: bold; 
 }
