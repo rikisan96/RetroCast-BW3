@@ -117,3 +117,8 @@
   height: 200px; /* Altezza fissa per le immagini nelle card */
   object-fit: cover; /* Adatta l'immagine alle dimensioni del contenitore */
 }
+.cover {
+  width: 60rem;
+  height: 40rem;
+  object-fit: cover;
+}
