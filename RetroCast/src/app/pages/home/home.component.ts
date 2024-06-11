@@ -1,4 +1,3 @@
-// home.component.ts
 import { Component, OnInit } from '@angular/core';
 import { iGameList } from '../../Models/i-game-list';
 import { GamesService } from '../../Service/games.service';
@@ -13,6 +12,10 @@ export class HomeComponent implements OnInit {
   filteredGameList: iGameList[] = [];
   activeFilter: string | null = null;
   searchTerm: string = '';
+  startYear: number | null = null;
+  endYear: number | null = null;
+  selectedPlatform: string | null = null;
+  selectedGenre: string | null = null;
 
   constructor(private gameSvc: GamesService) {}
 
@@ -25,31 +28,49 @@ export class HomeComponent implements OnInit {
   }
 
   filterByYear(startYear: number, endYear: number) {
-    this.filteredGameList = this.gameList.filter(game => game.year >= startYear && game.year <= endYear);
-    this.applySearchFilter();
+    this.startYear = startYear;
+    this.endYear = endYear;
+    this.applyFilters();
     console.log(`Filtered games from ${startYear} to ${endYear}:`, this.filteredGameList);
   }
 
   filterByGenre(genre: string) {
-    this.filteredGameList = this.gameList.filter(game => game.genre === genre);
-    this.applySearchFilter();
+    this.selectedGenre = genre;
+    this.applyFilters();
     console.log(`Filtered games by genre (${genre}):`, this.filteredGameList);
   }
 
   filterByPlatform(platform: string) {
-    this.filteredGameList = this.gameList.filter(game => game.sysRequirement.includes(platform));
-    this.applySearchFilter();
+    this.selectedPlatform = platform;
+    this.applyFilters();
     console.log(`Filtered games by platform (${platform}):`, this.filteredGameList);
   }
 
   filterByName() {
-    this.applySearchFilter();
+    this.applyFilters();
     console.log(`Filtered games by name (${this.searchTerm}):`, this.filteredGameList);
   }
 
-  applySearchFilter() {
-    const filteredList = this.filteredGameList.filter(game => game.Title.toLowerCase().includes(this.searchTerm.toLowerCase()));
-    this.filteredGameList = this.searchTerm ? filteredList : this.filteredGameList;
+  applyFilters() {
+    let filteredList = this.gameList;
+
+    if (this.startYear !== null && this.endYear !== null) {
+      filteredList = filteredList.filter(game => game.year >= this.startYear! && game.year <= this.endYear!);
+    }
+
+    if (this.selectedGenre) {
+      filteredList = filteredList.filter(game => game.genre === this.selectedGenre);
+    }
+
+    if (this.selectedPlatform) {
+      filteredList = filteredList.filter(game => this.selectedPlatform && game.sysRequirement.includes(this.selectedPlatform));
+    }
+
+    if (this.searchTerm) {
+      filteredList = filteredList.filter(game => game.Title.toLowerCase().includes(this.searchTerm.toLowerCase()));
+    }
+
+    this.filteredGameList = filteredList;
   }
 
   showForm(filterType: string) {
@@ -62,8 +83,11 @@ export class HomeComponent implements OnInit {
 
   showAllGames() {
     this.filteredGameList = this.gameList;
-    this.searchTerm = ''; // Reset search term
+    this.searchTerm = '';
+    this.startYear = null;
+    this.endYear = null;
+    this.selectedPlatform = null;
+    this.selectedGenre = null;
     console.log('Showing all games:', this.filteredGameList);
   }
 }
-
