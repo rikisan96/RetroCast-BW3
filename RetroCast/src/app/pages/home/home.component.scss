@@ -7,6 +7,10 @@
   font-family:VintageFont;
   src: url(../../../assets/fonts/logos_font/retrocast-brand-zip-file/Sixtyfour.ttf);
 }
+@font-face{
+  font-family:ThirdFont;
+  src: url(../../../assets/fonts/planet-joust-font/PlanetJoust-w1Kv6.otf);
+}
 
 .personal-font{
   font-family: OldGame;
@@ -16,7 +20,7 @@
 }
 
 .personal-font:hover{
-  color: #ffdc00;
+  color: #FFDC00;
   transition: 0.1s;
 }
 
@@ -30,6 +34,17 @@
   color: white;
 }
 
+.personal-fontQuattro{
+  font-family: ThirdFont;
+}
+
 .personal-p{
   border:5px solid white;
+}
+
+.active-link{
+  color: #FFDC00;
+}
+.active-button{
+  background-color: white!important;
 }

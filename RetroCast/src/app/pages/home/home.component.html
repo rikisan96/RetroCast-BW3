@@ -8,12 +8,32 @@
         class="w-25 mb-5"
       />
       <form class="container-fluid justify-content-center gap-4">
-        <a class="text-decoration-none personal-font fs-6" (click)="showForm('platform')" type="button">Platform</a>
-        <a class="text-decoration-none personal-font fs-6" (click)="showForm('year')" type="button">Year</a>
-        <a class="text-decoration-none personal-font fs-6" (click)="showForm('genre')" type="button">Genre</a>
+        <a
+          class="text-decoration-none personal-font fs-6"
+          (click)="showForm('platform')"
+          [ngClass]="{ 'active-link': activeFilter === 'platform' }"
+          type="button"
+          >Platform</a
+        >
+        <a
+          class="text-decoration-none personal-font fs-6"
+          (click)="showForm('year')"
+          [ngClass]="{ 'active-link': activeFilter === 'year' }"
+          type="button"
+          >Year</a
+        >
+        <a
+          class="text-decoration-none personal-font fs-6"
+          (click)="showForm('genre')"
+          [ngClass]="{ 'active-link': activeFilter === 'genre' }"
+          type="button"
+          >Genre</a
+        >
       </form>
     </nav>
-    <section class="d-flex flex-column justify-content-center align-items-center my-5">
+    <section
+      class="d-flex flex-column justify-content-center align-items-center my-5"
+    >
       <h1 class="personal-fontDue">RetroCast story:</h1>
       <p class="personal-fontTre mt-4">
         Esplora l'affascinante mondo dei giochi vintage su RetroGames Haven, il
@@ -30,13 +50,43 @@
     </section>
   </div>
 
-  <div *ngIf="activeFilter === 'platform'" class="filter-form">
-    <h3>Filter by Platform</h3>
-    <button (click)="filterByPlatform('Windows XP')" type="button">Windows XP</button>
-    <button (click)="filterByPlatform('Windows Vista')" type="button">Windows Vista</button>
-    <button (click)="filterByPlatform('Windows 7')" type="button">Windows 7</button>
-    <button type="button" (click)="hideForm()">Close</button>
-    <button type="button" (click)="showAllGames()">Show All</button>
+  <div *ngIf="activeFilter === 'platform'" class="filter-form mb-2">
+    <h3 class="text-light personal-fontQuattro">Filter by Platform</h3>
+    <button
+      class="btn btn-outline-light my-1 me-1 active-button"
+      (click)="filterByPlatform('Windows XP')"
+      type="button"
+    >
+      Windows XP
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1 active-button"
+      (click)="filterByPlatform('Windows Vista')"
+      type="button"
+    >
+      Windows Vista
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1 active-button"
+      (click)="filterByPlatform('Windows 7')"
+      type="button"
+    >
+      Windows 7
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1 active-button"
+      type="button"
+      (click)="hideForm()"
+    >
+      Close
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1 active-button"
+      type="button"
+      (click)="showAllGames()"
+    >
+      Show All
+    </button>
   </div>
 
   <div *ngIf="activeFilter === 'year'" class="filter-form">
@@ -51,16 +101,28 @@
 
   <div *ngIf="activeFilter === 'genre'" class="filter-form">
     <h3>Filter by Genre</h3>
-    <button (click)="filterByGenre('Action RPG')" type="button">Action RPG</button>
-    <button (click)="filterByGenre('First-Person Shooter')" type="button">First-Person Shooter</button>
-    <button (click)="filterByGenre('Action-Adventure')" type="button">Action-Adventure</button>
-    <button (click)="filterByGenre('Real-Time Strategy')" type="button">Real-Time Strategy</button>
+    <button (click)="filterByGenre('Action RPG')" type="button">
+      Action RPG
+    </button>
+    <button (click)="filterByGenre('First-Person Shooter')" type="button">
+      First-Person Shooter
+    </button>
+    <button (click)="filterByGenre('Action-Adventure')" type="button">
+      Action-Adventure
+    </button>
+    <button (click)="filterByGenre('Real-Time Strategy')" type="button">
+      Real-Time Strategy
+    </button>
     <button type="button" (click)="hideForm()">Close</button>
     <button type="button" (click)="showAllGames()">Show All</button>
   </div>
 
   <div class="row justify-content-center">
-    <div class="card mb-3 me-2" style="max-width: 540px" *ngFor="let game of filteredGameList">
+    <div
+      class="card mb-3 me-2"
+      style="max-width: 540px"
+      *ngFor="let game of filteredGameList"
+    >
       <div class="row g-0">
         <div class="col-md-4">
           <img [src]="game.gameImg" class="img-fluid rounded-start" alt="" />
