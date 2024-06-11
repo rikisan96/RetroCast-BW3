@@ -12,7 +12,8 @@ const routes: Routes = [
     loadChildren:() => import('./auth/auth.module').then((m) => m.AuthModule)
   },
   { path: 'library', loadChildren: () => import('./pages/library/library.module').then(m => m.LibraryModule) },
-  { path: 'pingpong', loadChildren: () => import('./pages/pingpong/pingpong.module').then(m => m.PingpongModule) }
+  { path: 'pingpong', loadChildren: () => import('./pages/pingpong/pingpong.module').then(m => m.PingpongModule) },
+  { path: 'arcade', loadChildren: () => import('./pages/arcade/arcade.module').then(m => m.ArcadeModule) }
 ];
 
 @NgModule({
