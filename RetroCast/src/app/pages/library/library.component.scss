@@ -1,0 +1,28 @@
+.sidebar {
+  height: 94vh;
+  overflow-y: auto;
+}
+.fixed-size-card {
+  height: 25rem;
+  width: 100%;
+}
+.fixed-size-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.card {
+  margin-bottom: 20px;
+}
+.sidebar {
+  position: fixed;
+}
+.main {
+  margin-left: 16%;
+}
+.nav-item img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  object-fit: cover;
+}
