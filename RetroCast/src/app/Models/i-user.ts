@@ -1,8 +1,9 @@
-import { iGameList } from "./i-game-list"
+import { iGameList } from './i-game-list';
 
 export interface iUser {
-  email: string
-  password: string
-  region: string
-  "game-list": iGameList[]
+  email: string;
+  password: string;
+  region: string;
+  'game-list': iGameList[];
+  id: number;
 }
