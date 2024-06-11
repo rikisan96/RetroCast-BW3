@@ -38,7 +38,7 @@ export class RegisterComponent {
       return;
     }
     if (this.securityAnswer !== '7') { // Verifica la risposta alla domanda di sicurezza
-      alert('Risposta alla domanda di verifica errata');
+      alert('Compila Correttamente');
       return;
     }
     this.authSvc.register(this.newUser).subscribe(() => {
