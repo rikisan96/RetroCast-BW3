@@ -8,6 +8,16 @@
     {
       "email": "administrator",
       "password": "password"
+    },
+    {
+      "email": "byzyke@mailinator.com",
+      "password": "$2a$10$IJSz295SVZTHSS.JmstdKOYfhl8YPot22EegNBj/fdJRL7RNkmNbG",
+      "id": 2
+    },
+    {
+      "email": "godap@mailinator.com",
+      "password": "$2a$10$3ab/UOl8rznt1fzJtBOKPOUYNimEMAu4/hPtmyu/9HjEtVXPqM.di",
+      "id": 3
     }
   ],
   "games": [

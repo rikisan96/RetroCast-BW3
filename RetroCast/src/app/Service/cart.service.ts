@@ -26,7 +26,11 @@ export class CartService {
 
   addToCart(game: iGameList) {
     if (this.user) {
-      return this.http.post<iGameList>(`${this.cartUrl}/${this.user.id}`, game);
+      const requestBody = {
+        userId: this.user.id,
+        game: game,
+      };
+      return this.http.post<iGameList>(this.cartUrl, requestBody);
     } else {
       return throwError(() => new Error('User not authenticated'));
     }
