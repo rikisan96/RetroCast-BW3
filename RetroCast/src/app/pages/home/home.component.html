@@ -56,7 +56,7 @@
       [(ngModel)]="searchTerm"
       (input)="filterByName()"
       placeholder="Search by name"
-      class="form-control input-personal"
+      class="form-control input-personal w-25"
     />
   </div>
 
@@ -217,7 +217,7 @@
             <h5 class="card-title">{{ game.Title }}</h5>
             <p class="card-text">{{ game.plot }}</p>
             <p class="card-text">{{ game.year }}</p>
-            <p class="card-text">{{ game.sysRequirement }}</p>
+            <p class="card-text"><small>{{ game.sysRequirement }}</small></p>
             <button class="btn btn-primary me-2">{{ game.genre }}</button>
             <button class="btn btn-secondary me-2">{{ game.price }}</button>
             <button class="btn btn-success">{{ game.gameVote }}</button>
