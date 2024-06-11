@@ -6,7 +6,7 @@
       class="logo"
     />
     <div class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex position-relative">
         <li class="nav-item">
           <a
             class="nav-link"
@@ -31,6 +31,17 @@
           <button (click)="logout()" class="nav-link" routerLinkActive="active">
             Logout
           </button>
+        </li>
+        <li
+          class="nav-item text-light align-self-center position-fixed fs-4"
+          *ngIf="isLoggedIn"
+        >
+          <i class="bi bi-cart-fill position-relative"></i>
+          <span
+            class="position-absolute translate-middle badge rounded-pill bg-danger"
+          >
+            {{ cartLength$ | async }}</span
+          >
         </li>
       </ul>
     </div>

@@ -217,7 +217,7 @@
             </p>
             <p class="card-text">{{ game.year }}</p>
             <button class="btn btn-primary me-2">{{ game.genre }}</button>
-            <button class="btn btn-secondary me-2">
+            <button class="btn btn-secondary me-2" (click)="addToCart(game)">
               {{ game.price | currency }}
             </button>
             <button class="btn btn-success me-2">{{ game.gameVote }}</button>
