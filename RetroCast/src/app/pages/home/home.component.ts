@@ -45,7 +45,6 @@ export class HomeComponent implements OnInit {
     this.selectedPlatform = platform;
     this.applyFilters();
     console.log(`Filtered games by platform (${platform}):`, this.filteredGameList);
-    this.selectedPlatform = platform;
   }
 
   filterByName() {
