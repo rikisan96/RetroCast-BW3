@@ -12,6 +12,9 @@ import { ArcadeComponent } from './arcade.component';
   imports: [
     CommonModule,
     ArcadeRoutingModule
+  ],
+  exports: [
+    ArcadeComponent
   ]
 })
 export class ArcadeModule { }

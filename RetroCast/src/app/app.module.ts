@@ -9,6 +9,7 @@ import { NavbarFooterComponent } from './main-components/navbar-footer/navbar-fo
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
