@@ -14,4 +14,5 @@ export class GamesService {
   getAllGames():Observable<iGameList[]>{
     return this.http.get<iGameList[]>(this.apiUrl)
   }
+  
 }
