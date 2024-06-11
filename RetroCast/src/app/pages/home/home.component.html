@@ -1,3 +1,4 @@
+<!-- home.component.html -->
 <div class="container mb-5">
   <div class="personal-p mb-4">
     <nav class="navbar bg-transparent justify-content-center">
@@ -7,20 +8,12 @@
         class="w-25 mb-5"
       />
       <form class="container-fluid justify-content-center gap-4">
-        <a class="text-decoration-none personal-font fs-6" type="button"
-          >Platform</a
-        >
-        <a class="text-decoration-none personal-font fs-6" type="button"
-          >Year</a
-        >
-        <a class="text-decoration-none personal-font fs-6" type="button"
-          >Genre</a
-        >
+        <a class="text-decoration-none personal-font fs-6" (click)="showForm('platform')" type="button">Platform</a>
+        <a class="text-decoration-none personal-font fs-6" (click)="showForm('year')" type="button">Year</a>
+        <a class="text-decoration-none personal-font fs-6" (click)="showForm('genre')" type="button">Genre</a>
       </form>
     </nav>
-    <section
-      class="d-flex flex-column justify-content-center align-items-center my-5"
-    >
+    <section class="d-flex flex-column justify-content-center align-items-center my-5">
       <h1 class="personal-fontDue">RetroCast story:</h1>
       <p class="personal-fontTre mt-4">
         Esplora l'affascinante mondo dei giochi vintage su RetroGames Haven, il
@@ -36,12 +29,38 @@
       </p>
     </section>
   </div>
+
+  <div *ngIf="activeFilter === 'platform'" class="filter-form">
+    <h3>Filter by Platform</h3>
+    <button (click)="filterByPlatform('Windows XP')" type="button">Windows XP</button>
+    <button (click)="filterByPlatform('Windows Vista')" type="button">Windows Vista</button>
+    <button (click)="filterByPlatform('Windows 7')" type="button">Windows 7</button>
+    <button type="button" (click)="hideForm()">Close</button>
+    <button type="button" (click)="showAllGames()">Show All</button>
+  </div>
+
+  <div *ngIf="activeFilter === 'year'" class="filter-form">
+    <h3>Filter by Year</h3>
+    <button (click)="filterByYear(1997, 1999)" type="button">1997-1999</button>
+    <button (click)="filterByYear(2000, 2005)" type="button">2000-2005</button>
+    <button (click)="filterByYear(2005, 2010)" type="button">2005-2010</button>
+    <button (click)="filterByYear(2010, 2015)" type="button">2010-2015</button>
+    <button type="button" (click)="hideForm()">Close</button>
+    <button type="button" (click)="showAllGames()">Show All</button>
+  </div>
+
+  <div *ngIf="activeFilter === 'genre'" class="filter-form">
+    <h3>Filter by Genre</h3>
+    <button (click)="filterByGenre('Action RPG')" type="button">Action RPG</button>
+    <button (click)="filterByGenre('First-Person Shooter')" type="button">First-Person Shooter</button>
+    <button (click)="filterByGenre('Action-Adventure')" type="button">Action-Adventure</button>
+    <button (click)="filterByGenre('Real-Time Strategy')" type="button">Real-Time Strategy</button>
+    <button type="button" (click)="hideForm()">Close</button>
+    <button type="button" (click)="showAllGames()">Show All</button>
+  </div>
+
   <div class="row justify-content-center">
-    <div
-      class="card mb-3 me-2"
-      style="max-width: 540px"
-      *ngFor="let game of gameList | slice : 0 : 4"
-    >
+    <div class="card mb-3 me-2" style="max-width: 540px" *ngFor="let game of filteredGameList">
       <div class="row g-0">
         <div class="col-md-4">
           <img [src]="game.gameImg" class="img-fluid rounded-start" alt="" />
@@ -50,6 +69,8 @@
           <div class="card-body">
             <h5 class="card-title">{{ game.Title }}</h5>
             <p class="card-text">{{ game.plot }}</p>
+            <p class="card-text">{{ game.year }}</p>
+            <p class="card-text">{{ game.sysRequirement }}</p>
             <p class="card-text">
               <small class="text-body-secondary">Last updated 3 mins ago</small>
             </p>
