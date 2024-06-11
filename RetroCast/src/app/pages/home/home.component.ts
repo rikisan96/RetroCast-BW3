@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   gameList: iGameList[] = [];
   filteredGameList: iGameList[] = [];
   activeFilter: string | null = null;
+  searchTerm: string = '';
 
   constructor(private gameSvc: GamesService) {}
 
@@ -25,17 +26,30 @@ export class HomeComponent implements OnInit {
 
   filterByYear(startYear: number, endYear: number) {
     this.filteredGameList = this.gameList.filter(game => game.year >= startYear && game.year <= endYear);
+    this.applySearchFilter();
     console.log(`Filtered games from ${startYear} to ${endYear}:`, this.filteredGameList);
   }
 
   filterByGenre(genre: string) {
     this.filteredGameList = this.gameList.filter(game => game.genre === genre);
+    this.applySearchFilter();
     console.log(`Filtered games by genre (${genre}):`, this.filteredGameList);
   }
 
   filterByPlatform(platform: string) {
     this.filteredGameList = this.gameList.filter(game => game.sysRequirement.includes(platform));
+    this.applySearchFilter();
     console.log(`Filtered games by platform (${platform}):`, this.filteredGameList);
+  }
+
+  filterByName() {
+    this.applySearchFilter();
+    console.log(`Filtered games by name (${this.searchTerm}):`, this.filteredGameList);
+  }
+
+  applySearchFilter() {
+    const filteredList = this.filteredGameList.filter(game => game.Title.toLowerCase().includes(this.searchTerm.toLowerCase()));
+    this.filteredGameList = this.searchTerm ? filteredList : this.filteredGameList;
   }
 
   showForm(filterType: string) {
@@ -48,6 +62,7 @@ export class HomeComponent implements OnInit {
 
   showAllGames() {
     this.filteredGameList = this.gameList;
+    this.searchTerm = ''; // Reset search term
     console.log('Showing all games:', this.filteredGameList);
   }
 }
