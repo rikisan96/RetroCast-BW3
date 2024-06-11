@@ -57,35 +57,40 @@
   <div *ngIf="activeFilter === 'platform'" class="filter-form mb-2">
     <h3 class="text-light personal-fontQuattro">Filter by Platform</h3>
     <button
-      class="btn btn-outline-light my-1 me-1 active-button"
+      class="btn btn-outline-light my-1 me-1"
       (click)="filterByPlatform('Windows XP')"
       type="button"
-    >
+      [ngClass]="{'active-button': selectedPlatform === 'Windows XP'}">
+
+
       Windows XP
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1 active-button"
+      class="btn btn-outline-light my-1 me-1"
       (click)="filterByPlatform('Windows Vista')"
       type="button"
-    >
+      [ngClass]="{'active-button': selectedPlatform === 'Windows Vista'}">
+
       Windows Vista
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1 active-button"
+      class="btn btn-outline-light my-1 me-1"
       (click)="filterByPlatform('Windows 7')"
       type="button"
-    >
+      [ngClass]="{'active-button': selectedPlatform === 'Windows 7'}">
+
+
       Windows 7
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1 active-button"
+      class="btn btn-outline-light my-1 me-1"
       type="button"
       (click)="hideForm()"
     >
       Close
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1 active-button"
+      class="btn btn-outline-light my-1 me-1"
       type="button"
       (click)="showAllGames()"
     >

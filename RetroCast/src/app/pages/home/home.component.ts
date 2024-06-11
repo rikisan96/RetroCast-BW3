@@ -12,6 +12,7 @@ export class HomeComponent implements OnInit {
   filteredGameList: iGameList[] = [];
   activeFilter: string | null = null;
   searchTerm: string = '';
+  selectedPlatformContainer!:string;
   startYear: number | null = null;
   endYear: number | null = null;
   selectedPlatform: string | null = null;
@@ -44,6 +45,7 @@ export class HomeComponent implements OnInit {
     this.selectedPlatform = platform;
     this.applyFilters();
     console.log(`Filtered games by platform (${platform}):`, this.filteredGameList);
+    this.selectedPlatform = platform;
   }
 
   filterByName() {
