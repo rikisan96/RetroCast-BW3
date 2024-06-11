@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { iGameList } from '../../Models/i-game-list';
 import { GamesService } from '../../Service/games.service';
+import { AuthService } from '../../auth/auth.service';
+import { iUser } from '../../Models/i-user';
+import { CartService } from '../../Service/cart.service';
 import { Modal } from 'bootstrap';
 
 @Component({
@@ -9,8 +12,10 @@ import { Modal } from 'bootstrap';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  gameList: iGameList[] = [];
-  filteredGameList: iGameList[] = [];
+  gameList: iGameList[]  = [];
+  shoppingCartArr: iGameList[] = [];
+  filteredGameList: iGameList[] = [];  user!: iUser;
+
   activeFilter: string | null = null;
   searchTerm: string = '';
   selectedPlatformContainer!: string;
@@ -20,7 +25,11 @@ export class HomeComponent implements OnInit {
   selectedGenre: string | null = null;
   selectedGame: iGameList | null = null;
 
-  constructor(private gameSvc: GamesService) {}
+  constructor(
+    private gameSvc:  GamesService,
+    private authSvc: AuthService,
+    private cartSvc: CartService
+  )  {}
 
   ngOnInit() {
     this.gameSvc.getAllGames().subscribe((games) => {
@@ -28,8 +37,20 @@ export class HomeComponent implements OnInit {
       this.filteredGameList = games;
       console.log('Loaded games:', this.gameList);
     });
-  }
+    this.authSvc.user$.subscribe((user) => {
+      if (user) {
+        this.user = user;
+      }
+    });
 
+  };
+
+  addToCart(game: iGameList) {
+    this.cartSvc.addToCart(game).subscribe(() => {
+      this.shoppingCartArr.push(game);
+      console.log(this.shoppingCartArr);
+    });
+  }
   filterByYear(startYear: number, endYear: number) {
     this.startYear = startYear;
     this.endYear = endYear;
@@ -105,4 +126,4 @@ export class HomeComponent implements OnInit {
       console.error('Modal element not found');
     }
   }
-}
+

@@ -211,17 +211,19 @@
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">{{ game.Title }}</h5>
+            <p class="card-text">{{ game.plot | slice : 0 : 20 }}...</p>
             <p class="card-text">
-              {{ game.plot | slice:0:20 }}...
-            </p>
-            <p class="card-text">
-              {{ game.sysRequirement | slice:0:20 }}...
+              {{ game.sysRequirement | slice : 0 : 20 }}...
             </p>
             <p class="card-text">{{ game.year }}</p>
             <button class="btn btn-primary me-2">{{ game.genre }}</button>
-            <button class="btn btn-secondary me-2">{{ game.price | currency }}</button>
+            <button class="btn btn-secondary me-2">
+              {{ game.price | currency }}
+            </button>
             <button class="btn btn-success me-2">{{ game.gameVote }}</button>
-            <button class="btn btn-info me-2" (click)="viewGameDetails(game)">View Game</button>
+            <button class="btn btn-info me-2" (click)="viewGameDetails(game)">
+              View Game
+            </button>
           </div>
         </div>
       </div>
@@ -240,8 +242,15 @@
   <div class="modal-dialog modal-dialog-centered modal-lg retro-modal">
     <div class="modal-content retro-modal-content">
       <div class="modal-header retro-modal-header">
-        <h5 class="modal-title retro-modal-title" id="gameDetailsModalLabel">Game Details</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title retro-modal-title" id="gameDetailsModalLabel">
+          Game Details
+        </h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="modal-body retro-modal-body">
         <img [src]="selectedGame?.gameImg" class="img-fluid mb-3" alt="" />
@@ -252,8 +261,15 @@
         <p>{{ selectedGame?.price | currency }}</p>
         <p>{{ selectedGame?.gameVote }}</p>
         <div class="modal-footer retro-modal-footer">
-          <button type="button" class="btn btn-info retro-modal-button" data-bs-dismiss="modal">Close</button>
+          <button
+            type="button"
+            class="btn btn-info retro-modal-button"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
   </div>
+</div>
