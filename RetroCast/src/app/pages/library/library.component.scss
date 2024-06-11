@@ -1,44 +1,119 @@
+@font-face {
+  font-family: 'OldGame';
+  src: url('../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf');
+}
+
+.container-fluid {
+  padding: 0;
+}
+
 .sidebar {
-  height: 94vh;
-  overflow-y: auto;
+  background-color: #000;
+  border-right: 2px solid #fff;
 }
-.fixed-size-card {
-  height: 25rem;
-  width: 100%;
+
+.nav-link {
+  color: #fff;
+  font-family: 'OldGame', cursive;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
-.fixed-size-img {
-  height: 100%;
-  width: 100%;
+
+.nav-link:hover,
+.nav-link:focus {
+  background-color: #fff;
+  color: #000;
+  border-color: #ff0; /* Colore giallo per hover e focus */
+}
+
+.img-thumbnail {
+  width: 50px;
+  height: 50px;
   object-fit: cover;
+  border: 2px solid #fff;
+  transition: transform 0.3s, border-color 0.3s;
+  margin-right: 10px;
 }
+
+.img-thumbnail:hover,
+.img-thumbnail:focus {
+  transform: scale(1.1);
+  border-color: #ff0; /* Colore giallo per hover e focus */
+}
+
+.main {
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+}
+
+.h2 {
+  font-family: 'OldGame', cursive;
+  color: #fff;
+  border-bottom: 2px solid #fff;
+  padding-bottom: 10px;
+}
+
 .card {
+  background-color: #000;
+  border: 2px solid #fff;
+  transition: transform 0.3s, border-color 0.3s;
+  height: 100%; /* Assicura che tutte le card abbiano la stessa altezza */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card:hover,
+.card:focus {
+  transform: scale(1.05);
+  border-color: #ff0; /* Colore giallo per hover e focus */
+}
+
+.card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: 200px; /* Altezza fissa per le immagini */
+  border-bottom: 2px solid #fff;
+}
+
+.btn-secondary {
+  background-color: #000;
+  border: 2px solid #fff;
+  color: #fff;
+  font-family: 'OldGame', cursive;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #fff;
+  color: #000;
+  border-color: #ff0; /* Colore giallo per hover e focus */
+}
+
+.game-details img.cover {
+  border: 2px solid #fff;
+  margin-bottom: 20px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.game-details img.cover:hover,
+.game-details img.cover:focus {
+  transform: scale(1.05);
+  border-color: #ff0; /* Colore giallo per hover e focus */
+}
+
+.fixed-size-card {
+  height: 300px; /* Altezza fissa per le card */
   margin-bottom: 20px;
 }
-.sidebar {
-  position: fixed;
-}
-.main {
-  margin-left: 17%;
-}
-.nav-item img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-  object-fit: cover;
-}
-.game-details {
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-}
-.cover {
-  height: 600px;
-  width: 800px;
-  object-fit: cover;
-}
-.game-details {
-  margin-top: 20px;
-  border-top: 1px solid #ccc;
-  padding-top: 20px;
-  text-align: center; /* Centra il contenuto all'interno del contenitore */
+
+.fixed-size-img {
+  width: 100%;
+  height: 200px; /* Altezza fissa per le immagini nelle card */
+  object-fit: cover; /* Adatta l'immagine alle dimensioni del contenitore */
 }
