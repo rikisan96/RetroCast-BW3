@@ -50,4 +50,8 @@
   transform: scale(1.05) !important;
   border-color: yellow !important;
   /* Aggiungi l'effetto di blur */
+}
+
+.text-truncate {
+  max-width: 1000px !important;
 }/*# sourceMappingURL=arcade.component.css.map */

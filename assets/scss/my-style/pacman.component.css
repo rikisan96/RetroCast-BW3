@@ -1,0 +1,54 @@
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+}
+
+.wall {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}
+
+.empty {
+  width: 20px;
+  height: 20px;
+  background-color: black;
+}
+
+.pacman {
+  width: 20px;
+  height: 20px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+
+.food {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+.ghost {
+  width: 20px;
+  height: 20px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.scoreboard {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.game-over {
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+}/*# sourceMappingURL=pacman.component.css.map */
