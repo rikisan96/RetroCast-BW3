@@ -17,11 +17,20 @@
             >Home</a
           >
         </li>
-        <li>
-          <a class="nav-link" routerLink="/login" routerLinkActive="active">Accedi</a>
+        <li *ngIf="!isLoggedIn">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active"
+            >Accedi</a
+          >
         </li>
-        <li>
-          <a class="nav-link" routerLink="/library" routerLinkActive="active">Libreria</a>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/library" routerLinkActive="active"
+            >Libreria</a
+          >
+        </li>
+        <li *ngIf="isLoggedIn" class="nav-item">
+          <button (click)="logout()" class="nav-link" routerLinkActive="active">
+            Logout
+          </button>
         </li>
       </ul>
     </div>

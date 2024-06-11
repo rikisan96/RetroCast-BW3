@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { iUser } from '../../Models/i-user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -30,7 +31,7 @@ export class RegisterComponent {
 
   ];
 
-  constructor(private authSvc: AuthService) {}
+  constructor(private authSvc: AuthService, private router: Router) {}
 
   register() {
     if (this.newUser.password !== this.confirmPassword) {
@@ -42,7 +43,7 @@ export class RegisterComponent {
       return;
     }
     this.authSvc.register(this.newUser).subscribe(() => {
-      // Handle successful registration
+      this.router.navigate(['/login']);
     });
   }
 

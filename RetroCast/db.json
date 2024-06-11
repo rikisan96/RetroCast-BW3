@@ -2,15 +2,15 @@
   "users": [
     {
       "email": "stefananto1@gmail.com",
-      "password": "$2a$10$zHtXYORk2eQ1QPTqQjHOr.TqRNbGXXKWFvpXlNJnp2lGdvXw0IF0K",
+      "password": "$2a$10$G4cnWjoJfsU0oNzvLG86Seb9WFld3q2v8gwfTSqKfTckM9/mOqD1K",
+      "firstName": "antonio",
+      "lastName": "gantolea",
+      "username": "stefananto1@gmail.com",
+      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
       "id": 1
-    },
-    {
-      "email": "administrator",
-      "password": "password"
     }
   ],
-    "games": [
+  "games": [
     {
       "Title": "The Elder Scrolls V: Skyrim",
       "genre": "Action RPG",
@@ -352,5 +352,5 @@
       "plot": "Gordon Freeman si trova coinvolto in un disastroso esperimento scientifico che porta all'invasione di una razza aliena nella Terra.",
       "devName": "Valve"
     }
-]
+  ]
 }
