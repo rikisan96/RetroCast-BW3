@@ -51,7 +51,13 @@
   </div>
 
   <div class="mb-4">
-    <input type="text" [(ngModel)]="searchTerm" (input)="filterByName()" placeholder="Search by name" class="form-control"/>
+    <input
+      type="text"
+      [(ngModel)]="searchTerm"
+      (input)="filterByName()"
+      placeholder="Search by name"
+      class="form-control"
+    />
   </div>
 
   <div *ngIf="activeFilter === 'platform'" class="filter-form mb-2">
@@ -60,26 +66,24 @@
       class="btn btn-outline-light my-1 me-1"
       (click)="filterByPlatform('Windows XP')"
       type="button"
-      [ngClass]="{'active-button': selectedPlatform === 'Windows XP'}">
-
-
+      [ngClass]="{ 'active-button': selectedPlatform === 'Windows XP' }"
+    >
       Windows XP
     </button>
     <button
       class="btn btn-outline-light my-1 me-1"
       (click)="filterByPlatform('Windows Vista')"
       type="button"
-      [ngClass]="{'active-button': selectedPlatform === 'Windows Vista'}">
-
+      [ngClass]="{ 'active-button': selectedPlatform === 'Windows Vista' }"
+    >
       Windows Vista
     </button>
     <button
       class="btn btn-outline-light my-1 me-1"
       (click)="filterByPlatform('Windows 7')"
       type="button"
-      [ngClass]="{'active-button': selectedPlatform === 'Windows 7'}">
-
-
+      [ngClass]="{ 'active-button': selectedPlatform === 'Windows 7' }"
+    >
       Windows 7
     </button>
     <button
@@ -98,32 +102,104 @@
     </button>
   </div>
 
-  <div *ngIf="activeFilter === 'year'" class="filter-form">
-    <h3>Filter by Year</h3>
-    <button (click)="filterByYear(1997, 1999)" type="button">1997-1999</button>
-    <button (click)="filterByYear(2000, 2005)" type="button">2000-2005</button>
-    <button (click)="filterByYear(2005, 2010)" type="button">2005-2010</button>
-    <button (click)="filterByYear(2010, 2015)" type="button">2010-2015</button>
-    <button type="button" (click)="hideForm()">Close</button>
-    <button type="button" (click)="showAllGames()">Show All</button>
+  <div *ngIf="activeFilter === 'year'" class="filter-form mb-2">
+    <h3 class="text-light personal-fontQuattro">Filter by Year</h3>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      (click)="filterByYear(1997, 1999)"
+      type="button"
+    >
+      1997-1999
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      (click)="filterByYear(2000, 2005)"
+      type="button"
+    >
+      2000-2005
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      (click)="filterByYear(2005, 2010)"
+      type="button"
+    >
+      2005-2010
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      (click)="filterByYear(2010, 2015)"
+      type="button"
+    >
+      2010-2015
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      type="button"
+      (click)="hideForm()"
+    >
+      Close
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      type="button"
+      (click)="showAllGames()"
+    >
+      Show All
+    </button>
   </div>
 
-  <div *ngIf="activeFilter === 'genre'" class="filter-form">
-    <h3>Filter by Genre</h3>
-    <button (click)="filterByGenre('Action RPG')" type="button">
+  <div *ngIf="activeFilter === 'genre'" class="filter-form mb-2">
+    <h3 class="text-light personal-fontQuattro">Filter by Genre</h3>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      (click)="filterByGenre('Action RPG')"
+      type="button"
+      [ngClass]="{ 'active-button': selectedGenre === 'Action RPG' }"
+
+    >
       Action RPG
     </button>
-    <button (click)="filterByGenre('First-Person Shooter')" type="button">
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      (click)="filterByGenre('First-Person Shooter')"
+      type="button"
+      [ngClass]="{ 'active-button': selectedGenre === 'First-Person Shooter' }"
+
+    >
       First-Person Shooter
     </button>
-    <button (click)="filterByGenre('Action-Adventure')" type="button">
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      (click)="filterByGenre('Action-Adventure')"
+      type="button"
+      [ngClass]="{ 'active-button': selectedGenre === 'Action-Adventure' }"
+
+    >
       Action-Adventure
     </button>
-    <button (click)="filterByGenre('Real-Time Strategy')" type="button">
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      (click)="filterByGenre('Real-Time Strategy')"
+      type="button"
+      [ngClass]="{ 'active-button': selectedGenre === 'Real-Time Strategy' }"
+
+    >
       Real-Time Strategy
     </button>
-    <button type="button" (click)="hideForm()">Close</button>
-    <button type="button" (click)="showAllGames()">Show All</button>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      type="button"
+      (click)="hideForm()"
+    >
+      Close
+    </button>
+    <button
+      class="btn btn-outline-light my-1 me-1"
+      type="button"
+      (click)="showAllGames()"
+    >
+      Show All
+    </button>
   </div>
 
   <div class="row justify-content-center">
@@ -137,14 +213,14 @@
           <img [src]="game.gameImg" class="img-fluid rounded-start" alt="" />
         </div>
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body justify-content-evenly">
             <h5 class="card-title">{{ game.Title }}</h5>
             <p class="card-text">{{ game.plot }}</p>
             <p class="card-text">{{ game.year }}</p>
             <p class="card-text">{{ game.sysRequirement }}</p>
-            <p class="card-text">
-              <small class="text-body-secondary">Last updated 3 mins ago</small>
-            </p>
+            <button class="btn btn-primary me-2">{{ game.genre }}</button>
+            <button class="btn btn-secondary me-2">{{ game.price }}</button>
+            <button class="btn btn-success">{{ game.gameVote }}</button>
           </div>
         </div>
       </div>
