@@ -5,7 +5,6 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { AuthComponent } from './auth.component';
 import { RegisterComponent } from './register/register.component';
 import { FormsModule } from '@angular/forms';
-import { RecaptchaModule } from 'ng-recaptcha';
 
 
 @NgModule({
@@ -16,8 +15,7 @@ import { RecaptchaModule } from 'ng-recaptcha';
   imports: [
     CommonModule,
     AuthRoutingModule,
-    FormsModule,
-    RecaptchaModule
+    FormsModule
   ]
 })
 export class AuthModule { }
