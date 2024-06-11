@@ -11,7 +11,8 @@ const routes: Routes = [
     path:'login',
     loadChildren:() => import('./auth/auth.module').then((m) => m.AuthModule)
   },
-  { path: 'library', loadChildren: () => import('./pages/library/library.module').then(m => m.LibraryModule) }
+  { path: 'library', loadChildren: () => import('./pages/library/library.module').then(m => m.LibraryModule) },
+  { path: 'pingpong', loadChildren: () => import('./pages/pingpong/pingpong.module').then(m => m.PingpongModule) }
 ];
 
 @NgModule({
