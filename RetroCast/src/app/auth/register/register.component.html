@@ -1,20 +1,30 @@
-<h1>Registrati</h1>
+<div class="login-container">
+  <div class="login-box">
+    <div class="row">
+      <div class="col-6">
+        <h1 class="personal-font">Registrati</h1>
+        <form>
+          <input
+            type="text"
+            name="email"
+            [(ngModel)]="newUser.email"
+            placeholder="Il tuo email"
+            class="form-control long-input"
+          />
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="newUser.password"
+            placeholder="password"
+            class="form-control mt-3 long-input"
+          />
 
-<form>
-  <input
-    type="text"
-    name="email"
-    [(ngModel)]="newUser.email"
-    placeholder="Il tuo email"
-    class="form-control"
-  />
-  <input
-    type="password"
-    name="password"
-    [(ngModel)]="newUser.password"
-    placeholder="password"
-    class="form-control mt-3"
-  />
-
-  <button (click)="register()" class="btn btn-primary mt-3">Registrati</button>
-</form>
+          <button (click)="register()" class="btn btn-primary mt-3">
+            Registrati
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="background-blur"></div>
+</div>
