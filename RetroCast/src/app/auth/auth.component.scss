@@ -44,11 +44,18 @@
   }
   
   .long-input {
-    width: 100%; 
-    background-color: #333;
-    color: white; 
-    border: 1px solid #555; 
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0; /* Bordo squadrato per look retrò */
+    padding: 0.5rem;
   }
+
+  .long-input:hover,
+  .long-input:focus {
+  border-color: #ff0; /* Colore giallo per hover e focus */
+  outline: none; /* Rimuove l'outline default */
+}
   
   .long-input::placeholder {
     color: #bbb;
@@ -69,4 +76,21 @@
   
   a:hover {
     color: #0056b3; 
+  }
+  .btn-primary {
+    background-color: #000;
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0; /* Bordo squadrato per look retrò */
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #fff;
+    color: #000;
+    border-color: #ff0; /* Colore giallo per hover e focus */
   }
