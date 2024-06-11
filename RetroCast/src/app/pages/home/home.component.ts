@@ -51,3 +51,4 @@ export class HomeComponent implements OnInit {
     console.log('Showing all games:', this.filteredGameList);
   }
 }
+
