@@ -2,10 +2,14 @@
   <div class="row">
     <!-- Sidebar -->
     <nav class="col-md-3 col-lg-2 d-md-block bg-light sidebar">
-      <div class="sidebar-sticky">
+      <div class="">
         <ul class="nav flex-column">
           <li class="nav-item" *ngFor="let game of gameList">
-            <a class="nav-link d-flex align-items-center" href="#">
+            <a
+              class="nav-link d-flex align-items-center"
+              href="#"
+              (click)="onSelectGame(game); $event.preventDefault()"
+            >
               <img
                 [src]="game.gameImg"
                 [alt]="game.Title"
@@ -20,21 +24,47 @@
 
     <!-- Main content -->
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 main">
-      <div
-        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-      >
-        <h1 class="h2">Library</h1>
-      </div>
-      <div class="row">
-        <div class="col-md-3" *ngFor="let game of gameList">
-          <div class="card fixed-size-card">
-            <img
-              [src]="game.gameImg"
-              class="card-img-top fixed-size-img"
-              [alt]="game.Title"
-            />
+      <div *ngIf="!showGameDetails">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
+        >
+          <h1 class="h2">Library</h1>
+        </div>
+        <div class="row">
+          <div class="col-md-3" *ngFor="let game of gameList">
+            <div class="card fixed-size-card">
+              <img
+                [src]="game.gameImg"
+                class="card-img-top fixed-size-img"
+                [alt]="game.Title"
+              />
+            </div>
           </div>
         </div>
+      </div>
+
+      <div>
+        <button (click)="onBackToList()" class="btn btn-secondary mb-3">
+          Back to List
+        </button>
+      </div>
+      <div *ngIf="showGameDetails" class="game-details">
+        <h2>{{ selectedGame?.Title }}</h2>
+        <img
+          [src]="selectedGame?.gameImg"
+          [alt]="selectedGame?.Title"
+          class="cover"
+        />
+        <p><strong>Genre:</strong> {{ selectedGame?.genre }}</p>
+        <p><strong>Year:</strong> {{ selectedGame?.year }}</p>
+        <p><strong>Price:</strong> \${{ selectedGame?.price }}</p>
+        <p><strong>Game Vote:</strong> {{ selectedGame?.gameVote }}</p>
+        <p>
+          <strong>System Requirements:</strong>
+          {{ selectedGame?.sysRequirement }}
+        </p>
+        <p><strong>Plot:</strong> {{ selectedGame?.plot }}</p>
+        <p><strong>Developer Name:</strong> {{ selectedGame?.devName }}</p>
       </div>
     </main>
   </div>
