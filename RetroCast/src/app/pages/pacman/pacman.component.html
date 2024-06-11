@@ -1,0 +1,18 @@
+<div class="game-container">
+    <div *ngFor="let row of grid; let rowIndex = index" class="row">
+      <div *ngFor="let cell of row; let colIndex = index"
+           [ngClass]="{
+             'wall': cell === 1,
+             'empty': cell === 0,
+             'pacman': cell === 2,
+             'food': cell === 3,
+             'ghost': cell === 4
+           }"></div>
+    </div>
+  </div>
+  <div class="scoreboard">
+    <p>Score: {{ score }}</p>
+    <p *ngIf="isGameOver" class="game-over">Game Over</p>
+    <button *ngIf="isGameOver" (click)="resetGame()">Restart</button>
+  </div>
+  
