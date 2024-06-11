@@ -9,15 +9,27 @@ import { GamesService } from '../../Service/games.service';
 })
 export class LibraryComponent {
 
-  gameList: iGameList[]= [];
+  gameList: iGameList[] = [];
+  selectedGame: iGameList | null = null;
+  showGameDetails = false;
 
-  constructor(private gameSvc:GamesService){}
+  constructor(private gameSvc: GamesService) {}
 
-  ngOnInit(){
-    this.gameSvc.getAllGames().subscribe((game) => {
+  ngOnInit() {
+    this.gameSvc.getAllGames().subscribe((game: iGameList[]) => {
       this.gameList = game;
       console.log(this.gameList);
-    })
+    });
+  }
+
+  onSelectGame(game: iGameList) {
+    this.selectedGame = game;
+    this.showGameDetails = true;
+  }
+
+  onBackToList() {
+    this.showGameDetails = false;
+    this.selectedGame = null;
   }
 
 }

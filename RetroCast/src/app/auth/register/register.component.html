@@ -1,30 +1,157 @@
 <div class="login-container">
   <div class="login-box">
-    <div class="row">
-      <div class="col-6">
-        <h1 class="personal-font">Registrati</h1>
-        <form>
-          <input
-            type="text"
-            name="email"
-            [(ngModel)]="newUser.email"
-            placeholder="Il tuo email"
-            class="form-control long-input"
-          />
-          <input
-            type="password"
-            name="password"
-            [(ngModel)]="newUser.password"
-            placeholder="password"
-            class="form-control mt-3 long-input"
-          />
+    <h1 class="personal-font text-center">Registrati</h1>
+    <form (ngSubmit)="register()">
+      <div class="row">
+        <div class="col-6">
+          <div class="form-group">
+            <label for="firstName">Nome</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              [(ngModel)]="newUser.firstName"
+              placeholder="Nome"
+              class="form-control long-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="lastName">Cognome</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              [(ngModel)]="newUser.lastName"
+              placeholder="Cognome"
+              class="form-control long-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="age">Eta'</label>
+            <input
+              type="number"
+              id="age"
+              name="age"
+              [(ngModel)]="newUser.age"
+              placeholder="Età"
+              class="form-control long-input"
+              required
+              min="18"
+            />
+          </div>
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              [(ngModel)]="newUser.username"
+              placeholder="Username"
+              class="form-control long-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              name="email"
+              [(ngModel)]="newUser.email"
+              placeholder="La tua email"
+              class="form-control long-input"
+              required
+            />
+          </div>
+        </div>
+        <div class="col-6 text-center">
+          <div class="profile-icon-container" (click)="openProfileModal()">
+            <img [src]="newUser.profileImageUrl || selectedImage" alt="Profile Icon" class="img-thumbnail profile-thumbnail" />
+          </div>
+          <div class="form-group mt-4">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              [(ngModel)]="newUser.password"
+              placeholder="Password"
+              class="form-control long-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Conferma Pass</label>
+            <input
+              type="password"
+              id="confirmPassword"
+              name="confirmPassword"
+              [(ngModel)]="confirmPassword"
+              placeholder="Conferma Password"
+              class="form-control long-input"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="securityQuestion">3 + 4?</label>
+            <input
+              type="text"
+              id="securityQuestion"
+              name="securityQuestion"
+              [(ngModel)]="securityAnswer"
+              placeholder="Rispondi qui"
+              class="form-control long-input"
+              required
+            />
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary mt-3">
+        Registrati
+      </button>
+    </form>
+  </div>
+  <div class="background-blur"></div>
 
-          <button (click)="register()" class="btn btn-primary mt-3">
-            Registrati
-          </button>
-        </form>
+  <!-- Modal for Profile Picture Selection -->
+  <div class="modal" tabindex="-1" [ngClass]="{'show': showModal}" style="display: block;" *ngIf="showModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Scegli immagine profilo</h5>
+          <button type="button" class="close" (click)="closeProfileModal()">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="predefined-images">
+            <img *ngFor="let img of predefinedImages" [src]="img" (click)="selectPredefinedImage(img)" class="predefined-thumbnail" />
+          </div>
+          <div class="form-group">
+            <label for="profileImageUrl">URL immagine profilo</label>
+            <input
+              type="text"
+              id="profileImageUrl"
+              name="profileImageUrl"
+              [(ngModel)]="newUser.profileImageUrl"
+              placeholder="URL immagine profilo"
+              class="form-control long-input"
+            />
+          </div>
+          <div class="form-group">
+            <label for="profileImage">Carica immagine profilo</label>
+            <input
+              type="file"
+              id="profileImage"
+              (change)="onFileSelected($event)"
+              class="form-control long-input"
+            />
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeProfileModal()">Chiudi</button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="background-blur"></div>
 </div>

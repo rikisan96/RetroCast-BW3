@@ -21,4 +21,5 @@ export class GamesService {
       console.log(array);
     }
   }
+  
 }

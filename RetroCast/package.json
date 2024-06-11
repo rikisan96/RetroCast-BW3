@@ -21,8 +21,10 @@
     "@auth0/angular-jwt": "^5.2.0",
     "@ng-bootstrap/ng-bootstrap": "^16.0.0",
     "@popperjs/core": "^2.11.8",
+    "@types/bootstrap": "^5.2.10",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.3",
+    "ng-recaptcha": "^13.2.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.3"
