@@ -1,13 +1,19 @@
 @font-face {
-  font-family: OldGame ;
-  src: url(../../../assets/fonts/pacfont-good-font/Pacfont-ZEBZ.ttf);
+  font-family: 'OldGame';
+  src: url('../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf');
 }
-.personal-font{
-  font-family: OldGame;
-  color:white
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'OldGame', cursive; /* Font retrò */
 }
+
+label {
+  font-family: 'OldGame', cursive;
+}
+
 .login-container {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,58 +21,104 @@
 }
 
 .login-box {
-  position: relative;
-  z-index: 10;
-  background-color: rgba(0, 0, 0, 0.9);
-  color: white;
-  padding: 20px;
+  background-color: #000;
+  padding: 2rem;
+  border: 2px solid #fff; /* Colore bianco per i bordi */
   border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  max-width: 800px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Ombra bianca */
   width: 100%;
+  max-width: 600px;
 }
 
-.background-blur {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  z-index: 1;
+h1.personal-font {
+  font-family: 'OldGame', cursive;
+  font-size: 1.5rem; /* Dimensione font per un aspetto retrò */
+  margin-bottom: 1.5rem;
+  color: #fff;
 }
 
-.logo {
-  width: 150px;
-  height: auto;
-  margin-bottom: 20px;
+.form-group label {
+  color: #fff;
 }
 
-.long-input {
-  width: 100%;
-  background-color: #333;
-  color: white;
-  border: 1px solid #555;
+.form-group {
+  margin-bottom: 1em;
 }
 
-.long-input::placeholder {
-  color: #bbb;
+.form-control {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0; /* Bordo squadrato per look retrò */
+  padding: 0.5rem;
 }
 
-.qr-code-container {
-  margin-top: 20px;
+.form-control::placeholder {
+  color: #ccc;
 }
 
-.qr-code {
+.form-control:hover,
+.form-control:focus {
+  border-color: #ff0; /* Colore giallo per hover e focus */
+  outline: none; /* Rimuove l'outline default */
+}
+
+.btn-primary {
+  background-color: #000;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 0; /* Bordo squadrato per look retrò */
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #fff;
+  color: #000;
+  border-color: #ff0; /* Colore giallo per hover e focus */
+}
+
+.img-thumbnail {
   width: 150px;
   height: 150px;
+  object-fit: cover;
+  border-radius: 0; /* Bordo squadrato per look retrò */
+  border: 2px solid #fff;
+  transition: transform 0.3s, border-color 0.3s;
 }
 
-a {
-  color: #007bff;
+.img-thumbnail:hover,
+.img-thumbnail:focus {
+  transform: scale(1.05);
+  border-color: #ff0; /* Colore giallo per hover e focus */
 }
 
-a:hover {
-  color: #0056b3;
+.modal-content {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0; /* Bordo squadrato per look retrò */
+}
+
+.modal-header, .modal-footer {
+  border-color: #fff;
+}
+
+.predefined-thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 0; /* Bordo squadrato per look retrò */
+  cursor: pointer;
+  transition: transform 0.3s, border-color 0.3s;
+  border: 2px solid #fff;
+}
+
+.predefined-thumbnail:hover,
+.predefined-thumbnail:focus {
+  transform: scale(1.1);
+  border-color: #ff0; /* Colore giallo per hover e focus */
 }
