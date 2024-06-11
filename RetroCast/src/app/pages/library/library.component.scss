@@ -18,11 +18,27 @@
   position: fixed;
 }
 .main {
-  margin-left: 16%;
+  margin-left: 17%;
 }
 .nav-item img {
   width: 30px;
   height: 30px;
   margin-right: 10px;
   object-fit: cover;
+}
+.game-details {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+.cover {
+  height: 600px;
+  width: 800px;
+  object-fit: cover;
+}
+.game-details {
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+  text-align: center; /* Centra il contenuto all'interno del contenitore */
 }
