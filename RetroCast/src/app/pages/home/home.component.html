@@ -220,8 +220,8 @@
             <p class="card-text">{{ game.year }}</p>
             <button class="btn btn-primary me-2">{{ game.genre }}</button>
             <button class="btn btn-secondary me-2">{{ game.price | currency }}</button>
-            <button class="btn btn-success">{{ game.gameVote }}</button>
-            <button class="btn btn-info" (click)="viewGameDetails(game)">View Game</button>
+            <button class="btn btn-success me-2">{{ game.gameVote }}</button>
+            <button class="btn btn-info me-2" (click)="viewGameDetails(game)">View Game</button>
           </div>
         </div>
       </div>
