@@ -27,6 +27,11 @@
             >Libreria</a
           >
         </li>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/arcade" routerLinkActive="active"
+            >Arcade <i class="bi bi-controller"></i></a
+          >
+        </li>
         <li *ngIf="isLoggedIn" class="nav-item">
           <button (click)="logout()" class="nav-link" routerLinkActive="active">
             Logout

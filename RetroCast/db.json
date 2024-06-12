@@ -18,6 +18,26 @@
       "age": 22,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
       "id": 2
+    },
+    {
+      "email": "example@example.com",
+      "password": "$2a$10$jSBBKeuzR19j4dFHcrDHuOMZY7EqAaPVFHUvrS35rmA40gWv8ouB6",
+      "firstName": "Stefano",
+      "lastName": "Spitaleri",
+      "username": "marte",
+      "age": 23,
+      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
+      "id": 3
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "$2a$10$gSUmhsmTE07P5AkoQC/.2.gYCvfD8HCpgfJY9FyTrw9kEAi1a1K..",
+      "firstName": "hello",
+      "lastName": "hello",
+      "username": "hello",
+      "age": 21,
+      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
+      "id": 4
     }
   ],
   "games": [

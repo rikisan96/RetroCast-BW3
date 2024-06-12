@@ -32,6 +32,37 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/cart/cart.module').then((m) => m.CartModule),
   },
+  {
+    path: 'arcade',
+    loadChildren: () =>
+      import('./pages/arcade/arcade.module').then((m) => m.ArcadeModule),
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+  },
+  {
+    path: 'pingpong',
+    loadChildren: () =>
+      import('./pages/pingpong/pingpong.module').then((m) => m.PingpongModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'pacman',
+    loadChildren: () =>
+      import('./pages/pacman/pacman.module').then((m) => m.PacmanModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'snake',
+    loadChildren: () =>
+      import('./pages/snake/snake.module').then((m) => m.SnakeModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'breakout',
+    loadChildren: () =>
+      import('./pages/breakout/breakout.module').then((m) => m.BreakoutModule),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
