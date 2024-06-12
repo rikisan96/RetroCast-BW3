@@ -45,6 +45,12 @@ const routes: Routes = [
     loadChildren:() =>
       import('./pages/pacman/pacman.module').then((m) => m.PacmanModule),
     canActivate: [AuthGuard],
+  },
+  {
+    path:'snake',
+    loadChildren:() =>
+      import('./pages/snake/snake.module').then((m) => m.SnakeModule),
+    canActivate: [AuthGuard],
   }
 ];
 
