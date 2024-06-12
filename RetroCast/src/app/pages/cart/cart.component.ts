@@ -16,7 +16,7 @@ export class CartComponent {
   cartGames: ICartItem[] = [];
   isLoggedIn: boolean = false;
 
-  constructor(private authSvc: AuthService, private cartSvc: CartService, private purchaseSvc: BoughtGamesService) {}
+  constructor(private authSvc: AuthService, private cartSvc: CartService) {}
 
   ngOnInit() {
     this.authSvc.isLoggedIn$.subscribe(
@@ -30,22 +30,29 @@ export class CartComponent {
 
   loadCartGames() {
     if (this.user) {
-      this.cartSvc
-        .getCartGames(this.user.id)
-        .subscribe((games: ICartItem[]) => {
-          this.cartGames = games;
-          console.log(this.cartGames);
-        });
+      this.cartSvc.getCartGames(this.user.id).subscribe((games: ICartItem[]) => {
+        this.cartGames = games;
+        console.log(this.cartGames);
+      });
     }
   }
 
+  removeFromCart(cartItemId: number) {
+    this.cartSvc.removeFromCart(cartItemId).subscribe(() => {
+      this.loadCartGames();
+    });
+  }
+
   purchaseGames() {
-    if (this.user && this.cartGames.length > 0) {
-      this.purchaseSvc.purchaseGames(this.user.id, this.cartGames).subscribe(() => {
-        this.cartGames = [];
+    this.cartSvc.purchaseGames().subscribe(
+      () => {
         console.log('Purchase successful');
-      });
-    }
+        this.loadCartGames();
+      },
+      (error) => {
+        console.error('Purchase failed:', error);
+      }
+    );
   }
 
 }

@@ -26,7 +26,10 @@
             </div>
           </div>
         </div>
-        <button class="custom-button px-3 py-3">
+        <button
+          class="custom-button px-3 py-3"
+          (click)="removeFromCart(cartItem.id)"
+        >
           <i class="bi bi-trash-fill fs-5"></i>
         </button>
       </div>
@@ -35,14 +38,6 @@
       <button class="btn btn-primary" (click)="purchaseGames()">
         Acquista
       </button>
-    </div>
-  </div>
-  <div class="row py-5" *ngIf="!isLoggedIn">
-    <div class="col-12 pb-5">
-      <h1 class="text-center">Il tuo carrello e' vuoto</h1>
-    </div>
-    <div class="col-12 text-center">
-      <a routerLink="/" class="link-warning text-center"> Torna alla home </a>
     </div>
   </div>
 </div>

@@ -74,6 +74,14 @@ export class CartService {
     }
   }
 
+  removeFromCart(cartItemId: number): Observable<void> {
+    return this.http.delete<void>(`${this.cartUrl}/${cartItemId}`).pipe(
+      tap(() => {
+        this.cartLength$.next(this.cartLength$.value - 1);
+      })
+    );
+  }
+
   getCartGamesLength(): Observable<number> {
     if (this.user) {
       return this.http.get<ICartItem[]>(`${this.cartUrl}?userId=${this.user.id}`).pipe(
