@@ -12,6 +12,7 @@ import { ICartItem } from '../Models/i-cart-item';
 export class CartService {
   cartUrl = 'http://localhost:3000/cart';
   user!: iUser;
+  cartGames: ICartItem[] = [];
 
   cartLength$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
@@ -53,5 +54,28 @@ export class CartService {
     } else {
       return throwError(() => new Error('User not authenticated'));
     }
+  }
+
+  loadCartGames() {
+    if (this.user) {
+      this.getCartGames(this.user.id).subscribe((games: ICartItem[]) => {
+        this.cartGames = games;
+        console.log(this.cartGames);
+        const cartLength = this.cartGames.length;
+        this.cartLength$.next(cartLength);
+      });
+    }
+  }
+
+  deleteGame(cartItemId: number) {
+    return this.http.delete(`${this.cartUrl}/${cartItemId}`).pipe(
+      tap(() => {
+        this.cartGames = this.cartGames.filter(
+          (cart) => cart.id !== cartItemId
+        );
+        this.cartLength$.next(this.cartGames.length);
+        console.log('Updated cartGames:', this.cartGames);
+      })
+    );
   }
 }
