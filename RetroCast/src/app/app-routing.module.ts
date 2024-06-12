@@ -63,6 +63,18 @@ const routes: Routes = [
       import('./pages/breakout/breakout.module').then((m) => m.BreakoutModule),
     canActivate: [AuthGuard],
   },
+  {
+    path: 'cross',
+    loadChildren: () =>
+      import('./pages/cross/cross.module').then((m) => m.CrossModule),
+    canActivate: [AuthGuard],
+  },
+  {
+    path: 'memory',
+    loadChildren: () =>
+      import('./pages/memory/memory.module').then((m) => m.MemoryModule),
+    canActivate: [AuthGuard],
+  }
 ];
 
 @NgModule({
