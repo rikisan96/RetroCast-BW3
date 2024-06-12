@@ -41,9 +41,20 @@
   transition: all 0.3s ease;
 }
 
+.custom-button-2 {
+  border: 5px solid white;
+  background: transparent;
+  color: #0dcaf0;
+  transition: all 0.3s ease;
+}
+
 .custom-button:hover {
   background: #ffdc00;
   i {
     color: rgb(199, 3, 3);
   }
+}
+.custom-button-2:hover {
+  background-color: #0dcaf0;
+  color: white;
 }

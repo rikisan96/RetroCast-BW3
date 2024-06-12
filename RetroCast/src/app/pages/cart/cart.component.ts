@@ -32,4 +32,10 @@ export class CartComponent {
       console.log('oggetto eliminato');
     });
   }
+
+  buyCartItem(cartItemId: number) {
+    this.cartSvc.buyGame(cartItemId).subscribe(() => {
+      console.log('Oggetto acquistato');
+    });
+  }
 }

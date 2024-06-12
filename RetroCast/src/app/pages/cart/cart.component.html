@@ -26,12 +26,20 @@
             </div>
           </div>
         </div>
-        <button
-          class="custom-button px-3 py-3"
-          (click)="deleteCartItem(cartItem.id)"
-        >
-          <i class="bi bi-trash-fill fs-5"></i>
-        </button>
+        <div class="d-flex gap-3">
+          <button
+            class="custom-button-2 px-2 py-3"
+            (click)="buyCartItem(cartItem.id)"
+          >
+            ACQUISTA
+          </button>
+          <button
+            class="custom-button px-3 py-3"
+            (click)="deleteCartItem(cartItem.id)"
+          >
+            <i class="bi bi-trash-fill fs-5"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>

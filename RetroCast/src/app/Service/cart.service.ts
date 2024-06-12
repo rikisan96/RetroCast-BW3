@@ -11,8 +11,10 @@ import { ICartItem } from '../Models/i-cart-item';
 })
 export class CartService {
   cartUrl = 'http://localhost:3000/cart';
+  boughtUrl = 'http://localhost:3000/boughtGames';
   user!: iUser;
   cartGames: ICartItem[] = [];
+  boughtGames: ICartItem[] = [];
 
   cartLength$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
@@ -77,5 +79,27 @@ export class CartService {
         console.log('Updated cartGames:', this.cartGames);
       })
     );
+  }
+
+  buyGame(cartItemId: number) {
+    const gameIndex = this.cartGames.findIndex(
+      (game) => game.id === cartItemId
+    );
+    if (gameIndex > -1) {
+      const cartItem = this.cartGames[gameIndex];
+      return this.http.post(`${this.boughtUrl}`, cartItem).pipe(
+        tap(() => {
+          this.cartGames.splice(gameIndex, 1);
+          this.boughtGames.push(cartItem);
+          this.cartLength$.next(this.cartGames.length);
+        })
+      );
+    } else {
+      return throwError(() => new Error('Cart item not found'));
+    }
+  }
+
+  getBoughtGames(userId: number) {
+    return this.http.get<ICartItem[]>(`${this.boughtUrl}?userId=${userId}`);
   }
 }
