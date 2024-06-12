@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="game-container">
+    <div class="game-container mt-2">
       <div *ngFor="let row of grid; let rowIndex = index" class="row">
         <div
           *ngFor="let cell of row; let colIndex = index"
@@ -17,4 +17,3 @@
       <p *ngIf="isGameOver" class="game-over">Game Over</p>
     </div>
   </div>
-  
