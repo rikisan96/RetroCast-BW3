@@ -107,6 +107,10 @@ export class SnakeComponent implements OnInit {
 
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
+    // Prevenire il comportamento predefinito per evitare lo scrolling
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+      event.preventDefault();
+    }
     switch (event.key) {
       case 'ArrowUp':
         if (this.direction !== 'DOWN') this.direction = 'UP';
