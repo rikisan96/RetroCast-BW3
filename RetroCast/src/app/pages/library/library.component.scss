@@ -116,13 +116,6 @@
 .fixed-size-card {
   height: 300px; /* Altezza fissa per le card */
   margin-bottom: 20px;
-  cursor: pointer;
-  .card-header {
-    background-color: #000;
-    border-bottom: 2px solid #fff;
-    color: #fff;
-    font-family: "OldGame", cursive;
-  }
 }
 
 .fixed-size-img {

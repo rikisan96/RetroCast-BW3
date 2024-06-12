@@ -24,12 +24,9 @@ export class NavbarComponent {
   }
 
   ngOnInit() {
-    this.authSvc.isLoggedIn$.subscribe((isLoggedIn) => {
-      this.isLoggedIn = isLoggedIn;
-      if (isLoggedIn) {
-        this.cartSvc.loadCartGames();
-      }
-    });
+    this.authSvc.isLoggedIn$.subscribe(
+      (isLoggedIn) => (this.isLoggedIn = isLoggedIn)
+    );
   }
 
   logout() {

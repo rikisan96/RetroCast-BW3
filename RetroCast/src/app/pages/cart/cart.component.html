@@ -1,9 +1,9 @@
 <div class="container">
   <div class="row pt-3">
-    <div class="col-12" *ngIf="isLoggedIn">
+    <div class="col-12" *ngIf="cartGames.length > 0">
       <h1>Il tuo carrello</h1>
     </div>
-    <div class="col-12 py-3" *ngFor="let cartItem of this.cartSvc.cartGames">
+    <div class="col-12 py-3" *ngFor="let cartItem of cartGames">
       <div
         class="d-flex justify-content-between align-items-center cart-item flex-wrap"
       >
@@ -26,29 +26,18 @@
             </div>
           </div>
         </div>
-        <div class="d-flex gap-3">
-          <button
-            class="custom-button-2 px-2 py-3"
-            (click)="buyCartItem(cartItem.id)"
-          >
-            ACQUISTA
-          </button>
-          <button
-            class="custom-button px-3 py-3"
-            (click)="deleteCartItem(cartItem.id)"
-          >
-            <i class="bi bi-trash-fill fs-5"></i>
-          </button>
-        </div>
+        <button
+          class="custom-button px-3 py-3"
+          (click)="removeFromCart(cartItem.id)"
+        >
+          <i class="bi bi-trash-fill fs-5"></i>
+        </button>
       </div>
     </div>
-  </div>
-  <div class="row py-5" *ngIf="!isLoggedIn">
-    <div class="col-12 pb-5">
-      <h1 class="text-center">Il tuo carrello e' vuoto</h1>
-    </div>
     <div class="col-12 text-center">
-      <a routerLink="/" class="link-warning text-center"> Torna alla home </a>
+      <button class="btn btn-primary" (click)="purchaseGames()">
+        Acquista
+      </button>
     </div>
   </div>
 </div>

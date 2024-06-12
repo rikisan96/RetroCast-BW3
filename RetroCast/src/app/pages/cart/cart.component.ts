@@ -2,6 +2,9 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { CartService } from '../../Service/cart.service';
 import { iUser } from '../../Models/i-user';
+import { iGameList } from '../../Models/i-game-list';
+import { ICartItem } from '../../Models/i-cart-item';
+import { BoughtGamesService } from '../../bought-games.service';
 
 @Component({
   selector: 'app-cart',
@@ -10,32 +13,47 @@ import { iUser } from '../../Models/i-user';
 })
 export class CartComponent {
   user!: iUser;
+  cartGames: ICartItem[] = [];
   isLoggedIn: boolean = false;
 
-  constructor(private authSvc: AuthService, protected cartSvc: CartService) {}
+  constructor(private authSvc: AuthService, private cartSvc: CartService) {}
 
   ngOnInit() {
-    this.authSvc.isLoggedIn$.subscribe((isLoggedIn) => {
-      this.isLoggedIn = isLoggedIn;
-    });
-
+    this.authSvc.isLoggedIn$.subscribe(
+      (isLoggedIn) => (this.isLoggedIn = isLoggedIn)
+    );
     this.authSvc.user$.subscribe((user) => {
-      if (user) {
-        this.user = user;
-        this.cartSvc.loadCartGames();
+      if (user) this.user = user;
+    });
+    this.loadCartGames();
+  }
+
+  loadCartGames() {
+    if (this.user) {
+      this.cartSvc
+        .getCartGames(this.user.id)
+        .subscribe((games: ICartItem[]) => {
+          this.cartGames = games;
+          console.log(this.cartGames);
+        });
+    }
+  }
+
+  removeFromCart(cartItemId: number) {
+    this.cartSvc.removeFromCart(cartItemId).subscribe(() => {
+      this.loadCartGames();
+    });
+  }
+
+  purchaseGames() {
+    this.cartSvc.purchaseGames().subscribe(
+      () => {
+        console.log('Purchase successful');
+        this.loadCartGames();
+      },
+      (error) => {
+        console.error('Purchase failed:', error);
       }
-    });
-  }
-
-  deleteCartItem(cartItemId: number) {
-    this.cartSvc.deleteGame(cartItemId).subscribe(() => {
-      console.log('oggetto eliminato');
-    });
-  }
-
-  buyCartItem(cartItemId: number) {
-    this.cartSvc.buyGame(cartItemId).subscribe(() => {
-      console.log('Oggetto acquistato');
-    });
+    );
   }
 }
