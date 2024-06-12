@@ -36,11 +36,13 @@
           class="nav-item align-self-center position-fixed fs-4"
           *ngIf="isLoggedIn"
         >
-          <i class="bi bi-cart-fill position-relative"></i>
-          <span
-            class="position-absolute translate-middle badge rounded-pill bg-danger"
-          >
-            {{ cartLength$ | async }}</span
+          <a routerLink="/cart" routerLinkActive="">
+            <i class="bi bi-cart-fill position-relative"></i>
+            <span
+              class="position-absolute translate-middle badge rounded-pill bg-danger"
+            >
+              {{ cartLength$ | async }}</span
+            ></a
           >
         </li>
       </ul>

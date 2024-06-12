@@ -50,14 +50,15 @@
 ul li:last-of-type {
   top: 1em;
   right: 2em;
-  cursor: pointer;
-  color: white;
-  &:hover {
-    color: #ff0;
-  }
-  span {
-    left: 120%;
-    top: 1px;
-    font-size: small;
+  a {
+    color: white;
+    &:hover {
+      color: #ff0;
+    }
+    span {
+      left: 120%;
+      top: 1px;
+      font-size: small;
+    }
   }
 }
