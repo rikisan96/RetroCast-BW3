@@ -20,12 +20,21 @@
       "id": 2
     },
     {
+<<<<<<< Updated upstream
       "email": "madonnariccardo12@gmail.com",
       "password": "$2a$10$kDbnTL1H0WL4fyQYLwxoOOlOqVM/giL9pSYdua61cwl6SX8SkFYC2",
       "firstName": "antonio",
       "lastName": "gantolea",
       "username": "arcobaleno",
       "age": 22,
+=======
+      "email": "example@example.com",
+      "password": "$2a$10$IupeDMfwXyjrGjWCpl37F.1aoqoutM2PCy.n/CxIFELIM2JUChSd.",
+      "firstName": "Stefano",
+      "lastName": "Spitaleri",
+      "username": "marte",
+      "age": 23,
+>>>>>>> Stashed changes
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
       "id": 3
     }
@@ -886,6 +895,7 @@
       "id": 30
     },
     {
+<<<<<<< Updated upstream
       "userId": 1,
       "game": {
         "Title": "The Elder Scrolls V: Skyrim",
@@ -898,10 +908,25 @@
         "plot": "Il giocatore è il Dovakhiin, un guerriero destinato a salvare il mondo da un'antica profezia mentre combatte draghi e altre creature.",
         "devName": "Bethesda Game Studios",
         "id": 1
+=======
+      "userId": 3,
+      "game": {
+        "Title": "Dead Space",
+        "genre": "Survival Horror",
+        "year": 2008,
+        "price": 19.99,
+        "gameImg": "https://cdn1.epicgames.com/offer/4ec958d5e4b6429aadbc116cee0b6ea0/EGS_DeadSpace_MotiveStudio_S2_1200x1600-551c16d068cab45b02149e15a43c2413",
+        "gameVote": 9.4,
+        "sysRequirement": "Windows XP or Vista, 2.8 GHz or faster processor, 1 GB RAM or more, NVIDIA GeForce 6800 or better (7300, 7600 GS, and 8500 are below minimum system requirements), ATI X1600 Pro or better (X1300, X1300 Pro and HD2400 are below minimum system requirements), DirectX 9.0c compatible sound card",
+        "plot": "Un ingegnere spaziale deve sopravvivere a bordo di una nave infestata da creature aliene mutanti.",
+        "devName": "EA Redwood Shores",
+        "id": 20
+>>>>>>> Stashed changes
       },
       "id": 31
     },
     {
+<<<<<<< Updated upstream
       "userId": 1,
       "game": {
         "Title": "The Witcher 2: Assassins of Kings",
@@ -914,6 +939,20 @@
         "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
         "devName": "CD Projekt Red",
         "id": 2
+=======
+      "userId": 3,
+      "game": {
+        "Title": "Tomb Raider",
+        "genre": "Action-Adventure",
+        "year": 2013,
+        "price": 19.99,
+        "gameImg": "https://image.api.playstation.com/vulcan/img/cfn/11307GuAHH7iQiOD4izIk0LfwiEqxk8YuSh6_6z4bBNpNiakl7J0slnPcDaZ3MTFoT0bCw0D0iLyFrXhc8Au0FGTv80hw0wU.png",
+        "gameVote": 9.5,
+        "sysRequirement": "Windows XP Service Pack 3, Windows Vista,7,8 (32bit/64bit), Processor: Dual core CPU: AMD Athlon64 X2 2.1 Ghz (4050+), Intel Core2 Duo 1.86 Ghz (E6300), Memory: 1GB Memory (2GB on Vista)",
+        "plot": "Una giovane Lara Croft naufraga su un'isola misteriosa e deve imparare a sopravvivere e a scoprire i segreti dell'isola.",
+        "devName": "Crystal Dynamics",
+        "id": 19
+>>>>>>> Stashed changes
       },
       "id": 32
     }
