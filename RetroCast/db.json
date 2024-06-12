@@ -18,6 +18,16 @@
       "age": 22,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
       "id": 2
+    },
+    {
+      "email": "madonnariccardo12@gmail.com",
+      "password": "$2a$10$kDbnTL1H0WL4fyQYLwxoOOlOqVM/giL9pSYdua61cwl6SX8SkFYC2",
+      "firstName": "antonio",
+      "lastName": "gantolea",
+      "username": "arcobaleno",
+      "age": 22,
+      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
+      "id": 3
     }
   ],
   "games": [
