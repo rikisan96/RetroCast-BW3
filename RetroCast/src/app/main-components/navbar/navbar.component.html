@@ -29,14 +29,20 @@
         </li>
         <li *ngIf="isLoggedIn">
           <a class="nav-link" routerLink="/arcade" routerLinkActive="active"
-            >Arcade <i class="bi bi-controller"></i></a
-          >
+            >Arcade <i class="bi bi-controller"></i
+          ></a>
         </li>
-        <li *ngIf="isLoggedIn" class="nav-item">
-          <button (click)="logout()" class="nav-link">
-            Logout
+      </ul>
+      <ul class="navbar-nav me-personal">
+        <div *ngIf="isLoggedIn" ngbDropdown class="nav-item d-flex personal-border">
+          <img src="{{user.profileImageUrl}}" alt="userImg" class="img-thumbnail profile-thumbnail">
+          <button type="button" class="btn btn-personal" id="dropdownBasic1" ngbDropdownToggle>
+            {{user.username}}
           </button>
-        </li>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="bg-personal">
+            <button (click)="logout()" class="nav-link-personal btn">Logout</button>
+          </div>
+        </div>
         <li
           class="nav-item align-self-center position-fixed fs-4"
           *ngIf="isLoggedIn"

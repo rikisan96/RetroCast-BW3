@@ -37,6 +37,10 @@ export class AuthService {
     return this.http.post<iAuthResponse>(this.registerUrl, newUser);
   }
 
+  getUser(newUser: Partial<iUser>): Observable<iAuthResponse> {
+    return this.http.post<iAuthResponse>(this.registerUrl, newUser);
+  }
+
   login(authData: iAuthData): Observable<iAuthResponse> {
     return this.http.post<iAuthResponse>(this.loginUrl, authData)
     .pipe(tap(data => {
