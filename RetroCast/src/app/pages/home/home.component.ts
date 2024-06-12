@@ -50,19 +50,17 @@ export class HomeComponent implements OnInit {
       return;
     }
 
-    const isGameAlreadyInCart = this.shoppingCartArr.find(
-      (item) => item.id === game.id
-    );
-    if (isGameAlreadyInCart) {
-      console.log('gioco già presente nel carrello');
-
-      return;
-    }
-    this.cartSvc.addToCart(game).subscribe(() => {
-      this.shoppingCartArr.push(game);
-      this.cartSvc.cartLength$.next(this.shoppingCartArr.length);
+    this.cartSvc.addToCart(game).subscribe({
+      next: () => {
+        this.shoppingCartArr.push(game);
+        this.cartSvc.cartLength$.next(this.shoppingCartArr.length);
+      },
+      error: (error) => {
+        console.error(error);
+      }
     });
   }
+
   filterByYear(startYear: number, endYear: number) {
     this.startYear = startYear;
     this.endYear = endYear;

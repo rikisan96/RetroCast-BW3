@@ -4,6 +4,7 @@ import { CartService } from '../../Service/cart.service';
 import { iUser } from '../../Models/i-user';
 import { iGameList } from '../../Models/i-game-list';
 import { ICartItem } from '../../Models/i-cart-item';
+import { BoughtGamesService } from '../../bought-games.service';
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +16,7 @@ export class CartComponent {
   cartGames: ICartItem[] = [];
   isLoggedIn: boolean = false;
 
-  constructor(private authSvc: AuthService, private cartSvc: CartService) {}
+  constructor(private authSvc: AuthService, private cartSvc: CartService, private purchaseSvc: BoughtGamesService) {}
 
   ngOnInit() {
     this.authSvc.isLoggedIn$.subscribe(
@@ -37,4 +38,14 @@ export class CartComponent {
         });
     }
   }
+
+  purchaseGames() {
+    if (this.user && this.cartGames.length > 0) {
+      this.purchaseSvc.purchaseGames(this.user.id, this.cartGames).subscribe(() => {
+        this.cartGames = [];
+        console.log('Purchase successful');
+      });
+    }
+  }
+
 }

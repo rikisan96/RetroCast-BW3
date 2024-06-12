@@ -1,4 +1,5 @@
 export interface iGameList {
+  id: number;
   Title: string;
   genre: string;
   year: number;
@@ -8,5 +9,4 @@ export interface iGameList {
   sysRequirement: string;
   plot: string;
   devName: string;
-  id: number;
 }
