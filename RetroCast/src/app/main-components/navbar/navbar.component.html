@@ -27,7 +27,7 @@
             >Libreria</a
           >
         </li>
-        <li>
+        <li *ngIf="isLoggedIn">
           <a class="nav-link" routerLink="/arcade" routerLinkActive="active"
             >Arcade <i class="bi bi-controller"></i></a
           >

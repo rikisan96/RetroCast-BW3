@@ -18,6 +18,16 @@
       "age": 22,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
       "id": 2
+    },
+    {
+      "email": "example@example.com",
+      "password": "$2a$10$jSBBKeuzR19j4dFHcrDHuOMZY7EqAaPVFHUvrS35rmA40gWv8ouB6",
+      "firstName": "Stefano",
+      "lastName": "Spitaleri",
+      "username": "marte",
+      "age": 23,
+      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
+      "id": 3
     }
   ],
   "games": [

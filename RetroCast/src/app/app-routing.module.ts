@@ -27,6 +27,13 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
   },
+  {
+    path:'arcade',
+    loadChildren:() =>
+      import('./pages/arcade/arcade.module').then((m) => m.ArcadeModule),
+    canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard],
+  }
 ];
 
 @NgModule({
