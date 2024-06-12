@@ -3,7 +3,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 @Component({
   selector: 'app-breakout',
   templateUrl: './breakout.component.html',
-  styleUrls: ['./breakout.component.scss']
+  styleUrls: ['./breakout.component.scss'],
 })
 export class BreakoutComponent implements OnInit {
   canvas: HTMLCanvasElement | undefined;
@@ -76,7 +76,12 @@ export class BreakoutComponent implements OnInit {
       for (let r = 0; r < this.brickRowCount; r++) {
         let b = this.bricks[c][r];
         if (b.status == 1) {
-          if (this.x > b.x && this.x < b.x + this.brickWidth && this.y > b.y && this.y < b.y + this.brickHeight) {
+          if (
+            this.x > b.x &&
+            this.x < b.x + this.brickWidth &&
+            this.y > b.y &&
+            this.y < b.y + this.brickHeight
+          ) {
             this.dy = -this.dy;
             b.status = 0;
             this.score++;
@@ -103,7 +108,12 @@ export class BreakoutComponent implements OnInit {
   drawPaddle() {
     if (this.context) {
       this.context.beginPath();
-      this.context.rect(this.paddleX, this.canvas!.height - this.paddleHeight, this.paddleWidth, this.paddleHeight);
+      this.context.rect(
+        this.paddleX,
+        this.canvas!.height - this.paddleHeight,
+        this.paddleWidth,
+        this.paddleHeight
+      );
       this.context.fillStyle = '#0095DD';
       this.context.fill();
       this.context.closePath();
@@ -115,12 +125,19 @@ export class BreakoutComponent implements OnInit {
       for (let c = 0; c < this.brickColumnCount; c++) {
         for (let r = 0; r < this.brickRowCount; r++) {
           if (this.bricks[c][r].status == 1) {
-            let brickX = c * (this.brickWidth + this.brickPadding) + this.brickOffsetLeft;
-            let brickY = r * (this.brickHeight + this.brickPadding) + this.brickOffsetTop;
+            let brickX =
+              c * (this.brickWidth + this.brickPadding) + this.brickOffsetLeft;
+            let brickY =
+              r * (this.brickHeight + this.brickPadding) + this.brickOffsetTop;
             this.bricks[c][r].x = brickX;
             this.bricks[c][r].y = brickY;
             this.context.beginPath();
-            this.context.rect(brickX, brickY, this.brickWidth, this.brickHeight);
+            this.context.rect(
+              brickX,
+              brickY,
+              this.brickWidth,
+              this.brickHeight
+            );
             this.context.fillStyle = '#0095DD';
             this.context.fill();
             this.context.closePath();
@@ -142,7 +159,11 @@ export class BreakoutComponent implements OnInit {
     if (this.context) {
       this.context.font = '16px Arial';
       this.context.fillStyle = '#0095DD';
-      this.context.fillText('Lives: ' + this.lives, this.canvas!.width - 65, 20);
+      this.context.fillText(
+        'Lives: ' + this.lives,
+        this.canvas!.width - 65,
+        20
+      );
     }
   }
 
@@ -156,7 +177,10 @@ export class BreakoutComponent implements OnInit {
       this.drawLives();
       this.collisionDetection();
 
-      if (this.x + this.dx > this.canvas!.width - this.ballRadius || this.x + this.dx < this.ballRadius) {
+      if (
+        this.x + this.dx > this.canvas!.width - this.ballRadius ||
+        this.x + this.dx < this.ballRadius
+      ) {
         this.dx = -this.dx;
       }
       if (this.y + this.dy < this.ballRadius) {
@@ -179,7 +203,10 @@ export class BreakoutComponent implements OnInit {
         }
       }
 
-      if (this.rightPressed && this.paddleX < this.canvas!.width - this.paddleWidth) {
+      if (
+        this.rightPressed &&
+        this.paddleX < this.canvas!.width - this.paddleWidth
+      ) {
         this.paddleX += 7;
       } else if (this.leftPressed && this.paddleX > 0) {
         this.paddleX -= 7;
@@ -188,6 +215,14 @@ export class BreakoutComponent implements OnInit {
       this.x += this.dx;
       this.y += this.dy;
       requestAnimationFrame(this.draw.bind(this));
+    }
+  }
+  @HostListener('window:keydown', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    if (
+      ['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)
+    ) {
+      event.preventDefault();
     }
   }
 }
