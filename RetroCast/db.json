@@ -884,6 +884,38 @@
         "id": 8
       },
       "id": 30
+    },
+    {
+      "userId": 1,
+      "game": {
+        "Title": "The Elder Scrolls V: Skyrim",
+        "genre": "Action RPG",
+        "year": 2011,
+        "price": 39.99,
+        "gameImg": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheElderScrollsVSkyrim_image1600w.jpg",
+        "gameVote": 9.3,
+        "sysRequirement": "Windows 7/Vista/XP PC (32 or 64 bit), Intel Dual Core 2.0 GHz or equivalent processor, 2GB RAM, DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)",
+        "plot": "Il giocatore è il Dovakhiin, un guerriero destinato a salvare il mondo da un'antica profezia mentre combatte draghi e altre creature.",
+        "devName": "Bethesda Game Studios",
+        "id": 1
+      },
+      "id": 31
+    },
+    {
+      "userId": 1,
+      "game": {
+        "Title": "The Witcher 2: Assassins of Kings",
+        "genre": "Action RPG",
+        "year": 2011,
+        "price": 19.99,
+        "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/header.jpg?t=1700481810",
+        "gameVote": 8.8,
+        "sysRequirement": "Windows XP/Vista/7, Intel Core 2 Duo 2.2 GHz or AMD equivalent, 1GB RAM for Windows XP / 2GB RAM for Windows Vista and Windows 7, Nvidia GeForce 8800 or ATI Radeon HD 3850",
+        "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
+        "devName": "CD Projekt Red",
+        "id": 2
+      },
+      "id": 32
     }
   ]
 }
