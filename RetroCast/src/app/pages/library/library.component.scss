@@ -26,7 +26,7 @@
 
 .nav-link:hover,
 .nav-link:focus {
-  background-color: #fff;
+  background-color: #e4d212;
   color: #000;
   border-color: #ff0; /* Colore giallo per hover e focus */
 }
@@ -34,8 +34,8 @@
 .img-thumbnail {
   width: 50px;
   height: 50px;
+  background-color: transparent!important;
   object-fit: cover;
-  border: 2px solid #fff;
   transition: transform 0.3s, border-color 0.3s;
   margin-right: 10px;
 }
@@ -60,7 +60,6 @@
 
 .card {
   background-color: #000;
-  border: 2px solid #fff;
   transition: transform 0.3s, border-color 0.3s;
   height: 100%; /* Assicura che tutte le card abbiano la stessa altezza */
   display: flex;
@@ -79,7 +78,6 @@
   object-fit: cover;
   width: 100%;
   height: 200px; /* Altezza fissa per le immagini */
-  border-bottom: 2px solid #fff;
 }
 
 .btn-secondary {
