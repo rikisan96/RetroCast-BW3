@@ -62,3 +62,46 @@ ul li:last-of-type {
     }
   }
 }
+.me-personal{
+  margin-right:5rem!important;
+}
+
+.img-thumbnail {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 0; /* Bordo squadrato per look retrò */
+  border: 2px solid #fff;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.personal-border{
+  border:1px solid white !important;
+  padding: 1px;
+}
+
+
+.nav-link-personal{
+  font-family: "Navbar";
+  color: white;
+}
+
+.personal-border:hover{
+  border:1px solid #ff0 !important;
+}
+.btn-personal{
+  font-family: "Navbar";
+  color: white;
+  border: none !important;
+}
+
+.bg-personal{
+  background-color: #141414;
+}
+
+.bg-personal:hover{
+  background-color: #ff0;
+}
+.bg-personal:hover .nav-link-personal{
+  color: #141414!important;
+}
