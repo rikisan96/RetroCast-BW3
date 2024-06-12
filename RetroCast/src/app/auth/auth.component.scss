@@ -1,0 +1,96 @@
+@font-face {
+    font-family: OldGame ;
+    src: url(../../assets/fonts/pacfont-good-font/Pacfont-ZEBZ.ttf);
+}
+.personal-font{
+    font-family: OldGame;
+    color:white
+}
+.login-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .login-box {
+    position: relative;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    z-index: 1;
+  }
+  
+  .logo {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .long-input {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0; /* Bordo squadrato per look retrò */
+    padding: 0.5rem;
+  }
+
+  .long-input:hover,
+  .long-input:focus {
+  border-color: #ff0; /* Colore giallo per hover e focus */
+  outline: none; /* Rimuove l'outline default */
+}
+  
+  .long-input::placeholder {
+    color: #bbb;
+  }
+  
+  .qr-code-container {
+    margin-top: 20px;
+  }
+  
+  .qr-code {
+    width: 150px;
+    height: 150px;
+  }
+  
+  a {
+    color: #007bff;
+  }
+  
+  a:hover {
+    color: #0056b3; 
+  }
+  .btn-primary {
+    background-color: #000;
+    border: 2px solid #fff;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 0; /* Bordo squadrato per look retrò */
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #fff;
+    color: #000;
+    border-color: #ff0; /* Colore giallo per hover e focus */
+  }
