@@ -5,6 +5,7 @@ import { iUser } from '../../Models/i-user';
 import { iGameList } from '../../Models/i-game-list';
 import { ICartItem } from '../../Models/i-cart-item';
 import { BoughtGamesService } from '../../bought-games.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -16,7 +17,7 @@ export class CartComponent {
   cartGames: ICartItem[] = [];
   isLoggedIn: boolean = false;
 
-  constructor(private authSvc: AuthService, private cartSvc: CartService) {}
+  constructor(private authSvc: AuthService, private cartSvc: CartService, private route: Router) {}
 
   ngOnInit() {
     this.authSvc.isLoggedIn$.subscribe(
@@ -50,6 +51,7 @@ export class CartComponent {
       () => {
         console.log('Purchase successful');
         this.loadCartGames();
+        this.route.navigate(['/library']);
       },
       (error) => {
         console.error('Purchase failed:', error);

@@ -31,7 +31,10 @@
         </div>
         <div class="row offset-md-2 offset-lg-0">
           <div class="col-md-6 col-lg-3" *ngFor="let game of gameList">
-            <div class="card fixed-size-card">
+            <div
+              class="card fixed-size-card"
+              (click)="onSelectGame(game); $event.preventDefault()"
+            >
               <img
                 [src]="game.gameImg"
                 class="card-img-top fixed-size-img"

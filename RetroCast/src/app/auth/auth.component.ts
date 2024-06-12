@@ -23,7 +23,7 @@ export class AuthComponent {
   login(){
     this.authSvc.login(this.authData)
     .subscribe(()=>{
-      this.router.navigate(['/library']);
+      this.router.navigate(['/']);
     })
   }
 

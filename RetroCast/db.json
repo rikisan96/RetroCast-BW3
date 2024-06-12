@@ -416,5 +416,27 @@
   ],
   "cart": [],
   "boughtGames": [
+    {
+      "userId": 1,
+      "cartItems": [
+        {
+          "userId": 1,
+          "game": {
+            "Title": "Minecraft",
+            "genre": "Sandbox",
+            "year": 2011,
+            "price": 26.95,
+            "gameImg": "https://image.api.playstation.com/vulcan/img/cfn/11307x4B5WLoVoIUtdewG4uJ_YuDRTwBxQy0qP8ylgazLLc01PBxbsFG1pGOWmqhZsxnNkrU3GXbdXIowBAstzlrhtQ4LCI4.png",
+            "gameVote": 9.3,
+            "sysRequirement": "Windows XP or better, Mac OS 10.5.8 or better, Linux",
+            "plot": "Un gioco sandbox in cui i giocatori possono costruire e esplorare mondi generati proceduralmente.",
+            "devName": "Mojang",
+            "id": 6
+          },
+          "id": 1
+        }
+      ],
+      "id": 1718209736645
+    }
   ]
 }
