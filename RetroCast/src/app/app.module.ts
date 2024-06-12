@@ -12,7 +12,7 @@ import { UserprofileComponent } from './main-components/user-profile/userprofile
 import { UserService } from './main-components/user-profile/user.service';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, NavbarComponent, NavbarFooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
