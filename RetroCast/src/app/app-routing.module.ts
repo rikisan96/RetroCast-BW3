@@ -51,6 +51,12 @@ const routes: Routes = [
     loadChildren:() =>
       import('./pages/snake/snake.module').then((m) => m.SnakeModule),
     canActivate: [AuthGuard],
+  },
+  {
+    path:'breakout',
+    loadChildren:() =>
+      import('./pages/breakout/breakout.module').then((m) => m.BreakoutModule),
+    canActivate: [AuthGuard],
   }
 ];
 
