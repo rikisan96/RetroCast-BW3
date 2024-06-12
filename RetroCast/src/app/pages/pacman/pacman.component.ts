@@ -92,7 +92,7 @@ export class PacmanComponent implements OnInit {
     console.log(`Trying to move Pacman to (${newX}, ${newY})`);
 
     if (this.grid[newY][newX] !== 1 && !this.isGhostAt(newX, newY)) { // Check if not a wall or ghost
-      if (this.grid[newY][newX] === 3) { 
+      if (this.grid[newY][newX] === 3) {
         this.score++;
       }
 
@@ -184,6 +184,9 @@ export class PacmanComponent implements OnInit {
 
   @HostListener('window:keydown', ['$event'])
   handleKeyDown(event: KeyboardEvent) {
+    if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+      event.preventDefault();
+    }
     switch (event.key) {
       case 'ArrowUp':
         this.direction = 'UP';
