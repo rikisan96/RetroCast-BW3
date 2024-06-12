@@ -38,11 +38,11 @@ export class RegisterComponent {
     }
     if (this.securityAnswer !== '7') {
       // Verifica la risposta alla domanda di sicurezza
-      alert('Compila Correttamente');
+      alert('Risposta alla domanda di verifica errata');
       return;
     }
     this.authSvc.register(this.newUser).subscribe(() => {
-      this.UserService.setUser(this.newUser); //imposto i dati dell'utente nel servizio
+      this.UserService.setUser(this.newUser);
       // Handle successful registration
     });
   }

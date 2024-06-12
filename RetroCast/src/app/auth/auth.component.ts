@@ -6,25 +6,19 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
-  styleUrl: './auth.component.scss'
+  styleUrl: './auth.component.scss',
 })
 export class AuthComponent {
-
-  authData:iAuthData = {
+  authData: iAuthData = {
     email: '',
-    password: ''
+    password: '',
+  };
+
+  constructor(private authSvc: AuthService, private router: Router) {}
+
+  login() {
+    this.authSvc.login(this.authData).subscribe(() => {
+      this.router.navigate(['/register']);
+    });
   }
-
-  constructor(
-    private authSvc:AuthService,
-    private router:Router
-  ){}
-
-  login(){
-    this.authSvc.login(this.authData)
-    .subscribe(()=>{
-      this.router.navigate(['/library']);
-    })
-  }
-
 }
