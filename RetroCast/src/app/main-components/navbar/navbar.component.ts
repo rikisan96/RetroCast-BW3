@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { CartService } from '../../Service/cart.service';
 import { BehaviorSubject } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -13,7 +14,11 @@ export class NavbarComponent {
   isLoggedIn: boolean = false;
   cartLength$: BehaviorSubject<number> = new BehaviorSubject<number>(0);
 
-  constructor(private authSvc: AuthService, private cartSvc: CartService) {
+  constructor(
+    private authSvc: AuthService,
+    private cartSvc: CartService,
+    private route: Router
+  ) {
     this.cartLength$ = this.cartSvc.cartLength$;
     console.log('NavbarComponent constructor:', this.cartLength$.getValue());
   }
@@ -26,5 +31,6 @@ export class NavbarComponent {
 
   logout() {
     this.authSvc.logout();
+    this.route.navigate(['/login'])
   }
 }

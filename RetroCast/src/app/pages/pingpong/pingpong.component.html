@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="game-container">
+    <div class="score">
+      <span>Player 1: {{ player1Score }}</span>
+      <span>Player 2: {{ player2Score }}</span>
+    </div>
+    <div class="ball" [ngStyle]="{'left.%': ballX, 'top.%': ballY}"></div>
+    <div class="paddle1" [ngStyle]="{'top.%': paddle1Y}"></div>
+    <div class="paddle2" [ngStyle]="{'top.%': paddle2Y}"></div>
+  </div>
+</div>

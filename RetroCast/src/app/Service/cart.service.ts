@@ -4,6 +4,7 @@ import { AuthService } from '../auth/auth.service';
 import { iUser } from '../Models/i-user';
 import { iGameList } from '../Models/i-game-list';
 import { BehaviorSubject, Observable, map, tap, throwError } from 'rxjs';
+import { ICartItem } from '../Models/i-cart-item';
 
 @Injectable({
   providedIn: 'root',
@@ -23,7 +24,7 @@ export class CartService {
   }
 
   getCartGames(userId: number) {
-    return this.http.get<iGameList[]>(`${this.cartUrl}/${userId}`);
+    return this.http.get<ICartItem[]>(`${this.cartUrl}?userId=${userId}`);
   }
 
   addToCart(game: iGameList) {

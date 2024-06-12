@@ -1,0 +1,149 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(16, 40px); /* Numero di colonne e larghezza delle celle */
+  grid-template-rows: repeat(12, 40px); /* Numero di righe e altezza delle celle */
+  gap: 2px; /* Spazio tra le celle */
+  background-color: black;
+  border: 5px solid #333;
+}
+
+.row {
+  display: contents; /* Mantiene la struttura della griglia */
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wall {
+  background-color: transparent; /* Blue color for the walls */
+  border: 4px solid #0000FF; /* Same blue color for the borders */
+  border-radius: 10px; /* Rounded corners to mimic the Pac-Man walls */
+  box-sizing: border-box;
+}
+
+.pacman {
+  width: 100%;
+  height: 100%;
+  background: yellow;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+  animation: pacman-chomp 0.4s infinite;
+}
+
+@keyframes pacman-chomp {
+  0%, 100% {
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
+  }
+  50% {
+    clip-path: polygon(0% 50%, 100% 25%, 100% 75%);
+  }
+}
+
+.food {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.ghost {
+  width: 100%;
+  height: 100%;
+  border-radius: 50% 50% 0 0; /* Top rounded corners */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.ghost.red {
+  background: red;
+  width: 100px;
+}
+
+.ghost.blue {
+  background: blue;
+  width: 100px;
+}
+
+.ghost::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  background: inherit;
+  border-radius: 50%;
+}
+
+.ghost::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  clip-path: polygon(0% 100%, 25% 75%, 50% 100%, 75% 75%, 100% 100%);
+}
+
+.ghost .eye {
+  position: absolute;
+  top: 10px;
+  width: 30%;
+  height: 30%;
+  background: white;
+  border-radius: 50%;
+}
+
+.ghost .eye.left {
+  left: 25%;
+}
+
+.ghost .eye.right {
+  right: 25%;
+}
+
+.ghost .pupil {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  background: blue;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.empty {
+  background-color: black;
+}
+
+.scoreboard {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.game-over {
+  color: red;
+  font-weight: bold;
+  margin-top: 20px;
+}

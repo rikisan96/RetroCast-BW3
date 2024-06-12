@@ -1,0 +1,38 @@
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  background-color: black;
+}
+
+.score {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 20px;
+}
+
+.ball {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.paddle1, .paddle2 {
+  position: absolute;
+  width: 10px;
+  height: 60px;
+  background-color: white;
+}
+
+.paddle1 {
+  left: 10px;
+}
+
+.paddle2 {
+  right: 10px;
+}/*# sourceMappingURL=pingpong.component.css.map */
