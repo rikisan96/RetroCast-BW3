@@ -1,5 +1,5 @@
 <div class="tic-tac-toe">
-  <h1>Tic Tac Toe</h1>
+  <h1 class="text-white">Tic Tac Toe</h1>
   <div class="board">
     <div *ngFor="let row of board; let rowIndex = index" class="row">
       <div *ngFor="let cell of row; let colIndex = index" class="cell" (click)="makeMove(rowIndex, colIndex)">
