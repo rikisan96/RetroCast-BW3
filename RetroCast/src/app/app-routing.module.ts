@@ -33,7 +33,13 @@ const routes: Routes = [
       import('./pages/arcade/arcade.module').then((m) => m.ArcadeModule),
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
-  }
+  },
+  { path: 'pingpong', loadChildren: () => import('./pages/pingpong/pingpong.module').then(m => m.PingpongModule),canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard] },
+  { path: 'arcade', loadChildren: () => import('./pages/arcade/arcade.module').then(m => m.ArcadeModule),canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard], },
+  { path: 'pacman', loadChildren: () => import('./pages/pacman/pacman.module').then(m => m.PacmanModule),canActivate: [AuthGuard],
+    canActivateChild: [AuthGuard], }
 ];
 
 @NgModule({
