@@ -156,4 +156,5 @@ export class HomeComponent implements OnInit {
       console.error('Modal element not found');
     }
   }
+
 }

@@ -1,5 +1,22 @@
-/* You can add global styles to this file, and also import other style files */
-
 /* Importing Bootstrap SCSS file. */
 @import "bootstrap/scss/bootstrap";
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+
+$giallo-neon: #FFFF00;
+$blu-neon: #1919A6;
+$blu-neon-chiaro: #2121DE;
+$rosso-neon: #FD0000;
+$verde-neon: #00FF00;
+
+
+.bordoNEON {
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 10px 5px;
+  border-style: solid;
+  border-spacing: 30px;
+  border: 10px solid;
+  border-color: $blu-neon $rosso-neon $verde-neon $giallo-neon;
+  box-shadow: 10px 1px 1em 20px $blu-neon-chiaro;
+}

@@ -7,6 +7,10 @@ import { GamesService } from '../../Service/games.service';
   templateUrl: './library.component.html',
   styleUrl: './library.component.scss'
 })
+
+//Lybrary deve contenere la libreria di TUTTI i giochi di x Utente
+
+
 export class LibraryComponent {
 
   gameList: iGameList[] = [];

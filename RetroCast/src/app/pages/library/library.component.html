@@ -5,16 +5,9 @@
       <div class="">
         <ul class="nav flex-column">
           <li class="nav-item" *ngFor="let game of gameList">
-            <a
-              class="nav-link d-flex align-items-center"
-              href="#"
-              (click)="onSelectGame(game); $event.preventDefault()"
-            >
-              <img
-                [src]="game.gameImg"
-                [alt]="game.Title"
-                class="img-thumbnail"
-              />
+            <a class="nav-link d-flex align-items-center" href="#"
+              (click)="onSelectGame(game); $event.preventDefault()">
+              <img [src]="game.gameImg" [alt]="game.Title" class="img-thumbnail" />
               {{ game.Title }}
             </a>
           </li>
@@ -26,18 +19,16 @@
     <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 main">
       <div *ngIf="!showGameDetails">
         <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom"
-        >
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Library</h1>
+
+
         </div>
+
         <div class="row">
           <div class="col-md-3" *ngFor="let game of gameList">
-            <div class="card fixed-size-card">
-              <img
-                [src]="game.gameImg"
-                class="card-img-top fixed-size-img"
-                [alt]="game.Title"
-              />
+            <div class="card fixed-size-card" (click)="onSelectGame(game); $event.preventDefault()">
+              <img [src]="game.gameImg" class="card-img-top fixed-size-img" [alt]="game.Title" />
             </div>
           </div>
         </div>
@@ -51,21 +42,27 @@
         </div>
         <div class="game-details">
           <h2>{{ selectedGame?.Title }}</h2>
-          <img
-            [src]="selectedGame?.gameImg"
-            [alt]="selectedGame?.Title"
-            class="cover"
-          />
-          <p><strong>Genre:</strong> {{ selectedGame?.genre }}</p>
-          <p><strong>Year:</strong> {{ selectedGame?.year }}</p>
-          <p><strong>Price:</strong> ${{ selectedGame?.price }}</p>
-          <p><strong>Game Vote:</strong> {{ selectedGame?.gameVote }}</p>
-          <p>
-            <strong>System Requirements:</strong>
-            {{ selectedGame?.sysRequirement }}
-          </p>
-          <p><strong>Plot:</strong> {{ selectedGame?.plot }}</p>
-          <p><strong>Developer Name:</strong> {{ selectedGame?.devName }}</p>
+          <div class="container-fluid">
+
+            <span>
+              <img [src]="selectedGame?.gameImg" [alt]="selectedGame?.Title" class=" cover" />
+              <button class="btn btn-secondary  gap-3 mx-3" type="button">Aggiungi al carrello </button>
+            </span>
+            <div class="bordoNEON p-2">
+
+              <p><strong>Genre:</strong> {{ selectedGame?.genre }}</p>
+              <p><strong>Year:</strong> {{ selectedGame?.year }}</p>
+              <p><strong>Price:</strong> ${{ selectedGame?.price }}</p>
+              <p><strong>Game Vote:</strong> {{ selectedGame?.gameVote }}</p>
+              <p>
+                <strong>System Requirements:</strong>
+                {{ selectedGame?.sysRequirement }}
+              </p>
+              <p><strong>Plot:</strong> {{ selectedGame?.plot }}</p>
+              <p><strong>Developer Name:</strong> {{ selectedGame?.devName }}</p>
+            </div>
+
+          </div>
         </div>
       </div>
     </main>

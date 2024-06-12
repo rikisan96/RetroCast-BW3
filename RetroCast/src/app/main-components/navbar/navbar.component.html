@@ -1,47 +1,30 @@
 <nav class="navbar navbar-expand bg-info pb-2 sticky-top">
   <div class="container-fluid">
-    <img
-      src="../../../assets/imgs/retrocast-logo-zip-file/svg/logo-no-background.svg"
-      alt="logo"
-      class="logo"
-    />
+    <img src="../../../assets/imgs/retrocast-logo-zip-file/svg/logo-no-background.svg" alt="logo" class="logo" />
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex position-relative">
         <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-current="page"
-            routerLink="/"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Home</a
-          >
+          <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }">Home</a>
         </li>
         <li *ngIf="!isLoggedIn">
-          <a class="nav-link" routerLink="/login" routerLinkActive="active"
-            >Accedi</a
-          >
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Accedi</a>
         </li>
         <li *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/library" routerLinkActive="active"
-            >Libreria</a
-          >
+          <a class="nav-link" routerLink="/library" routerLinkActive="active">Libreria</a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/arcade" routerLinkActive="active">Arcade <i class="bi bi-controller"></i></a>
         </li>
         <li *ngIf="isLoggedIn" class="nav-item">
           <button (click)="logout()" class="nav-link" routerLinkActive="active">
             Logout
           </button>
         </li>
-        <li
-          class="nav-item text-light align-self-center position-fixed fs-4"
-          *ngIf="isLoggedIn"
-        >
-          <i>Carrello - </i><i class="bi bi-cart-fill position-relative"></i>
-          <span
-            class="position-absolute translate-middle badge rounded-pill bg-danger"
-          >
-            {{ cartLength$ | async }}</span
-          >
+        <li class="nav-item text-light align-self-center position-fixed fs-4" *ngIf="isLoggedIn">
+          <p class="d-inline">Carrello - </p><i class="bi bi-cart-fill position-relative"></i>
+          <span class="pallino position-absolute translate-middle badge rounded-pill bg-danger">
+            {{ cartLength$ | async }}</span>
         </li>
       </ul>
     </div>

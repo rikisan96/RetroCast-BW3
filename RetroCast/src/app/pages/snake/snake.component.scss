@@ -1,0 +1,55 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+  }
+  
+  .game-container {
+    display: grid;
+    grid-template-columns: repeat(20, 20px); 
+    grid-template-rows: repeat(20, 20px); 
+    gap: 1px;
+    background-color: black;
+    border: 5px solid #333;
+  }
+  
+  .row {
+    display: contents; 
+  }
+  
+  .cell {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .snake {
+    background-color: green;
+  }
+  
+  .food {
+    background-color: red;
+  }
+  
+  .empty {
+    background-color: black;
+  }
+  
+  .scoreboard {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .game-over {
+    color: red;
+    font-weight: bold;
+    margin-top: 20px;
+  }
+  
