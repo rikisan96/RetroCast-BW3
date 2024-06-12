@@ -51,7 +51,8 @@
       "sysRequirement": "Windows 7/Vista/XP PC (32 or 64 bit), Intel Dual Core 2.0 GHz or equivalent processor, 2GB RAM, DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)",
       "plot": "Il giocatore è il Dovakhiin, un guerriero destinato a salvare il mondo da un'antica profezia mentre combatte draghi e altre creature.",
       "devName": "Bethesda Game Studios",
-      "id": 1
+      "id": 1,
+      "trailerUrl": "https://www.youtube.com/embed/JSRtYpNRoN0"
     },
     {
       "Title": "The Witcher 2: Assassins of Kings",
@@ -63,7 +64,8 @@
       "sysRequirement": "Windows XP/Vista/7, Intel Core 2 Duo 2.2 GHz or AMD equivalent, 1GB RAM for Windows XP / 2GB RAM for Windows Vista and Windows 7, Nvidia GeForce 8800 or ATI Radeon HD 3850",
       "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
       "devName": "CD Projekt Red",
-      "id": 2
+      "id": 2,
+      "trailerUrl": "https://www.youtube.com/embed/4Q6ks-MQBpQ"
     },
     {
       "Title": "Portal 2",
@@ -75,7 +77,8 @@
       "sysRequirement": "Windows 7/Vista/XP, 3.0 GHz P4, Dual Core 2.0 (or higher) or AMD64X2 (or higher), 2GB RAM, DirectX 9 compatible video card",
       "plot": "Un ex soggetto di test di Aperture Science e GLaDOS devono lavorare insieme per fuggire da un laboratorio di ricerca.",
       "devName": "Valve",
-      "id": 3
+      "id": 3,
+      "trailerUrl": "https://www.youtube.com/embed/tQ6s37Uvfiw"
     },
     {
       "Title": "Dark Souls",
@@ -87,7 +90,8 @@
       "sysRequirement": "Windows XP, Windows Vista, Windows 7, or newer, 2.6 GHz Dual-Core, 1 GB RAM, DirectX 9.0c, 512 MB RAM video card",
       "plot": "Un cavaliere non morto cerca di sopravvivere in un mondo oscuro e ostile mentre combatte creature spaventose e boss imponenti.",
       "devName": "FromSoftware",
-      "id": 4
+      "id": 4,
+      "trailerUrl": "https://www.youtube.com/embed/Olk8Yplf_GI"
     },
     {
       "Title": "Batman: Arkham City",
@@ -99,7 +103,8 @@
       "sysRequirement": "Microsoft Windows XP, Vista or 7, Intel Core 2 Duo 2.4 GHz or AMD Athlon X2 4800+ processor, 2GB RAM (Windows XP) / 2.5GB (Windows Vista and 7), DirectX 9.0c compatible NVIDIA GeForce 8800 GT or ATI Radeon HD 3850 video card",
       "plot": "Batman deve navigare attraverso Arkham City, una prigione di massima sicurezza per i criminali di Gotham, per sventare i piani di Hugo Strange e Joker.",
       "devName": "Rocksteady Studios",
-      "id": 5
+      "id": 5,
+      "trailerUrl": "https://www.youtube.com/embed/9lC8LOp4zH4"
     },
     {
       "Title": "Minecraft",
@@ -111,7 +116,8 @@
       "sysRequirement": "Windows XP or better, Mac OS 10.5.8 or better, Linux",
       "plot": "Un gioco sandbox in cui i giocatori possono costruire e esplorare mondi generati proceduralmente.",
       "devName": "Mojang",
-      "id": 6
+      "id": 6,
+      "trailerUrl": "https://www.youtube.com/embed/MmB9b5njVbA"
     },
     {
       "Title": "Portal",
@@ -123,7 +129,8 @@
       "sysRequirement": "Microsoft Windows XP/Vista/7/8, 1.7 GHz Processor, 512MB RAM, DirectX 8.1 level Graphics Card (Requires support for SSE), Windows",
       "plot": "Un soggetto di test di Aperture Science deve risolvere enigmi basati su portali per sfuggire da un laboratorio di ricerca.",
       "devName": "Valve",
-      "id": 7
+      "id": 7,
+      "trailerUrl": "https://www.youtube.com/embed/TluRVBhmf8w"
     },
     {
       "Title": "BioShock",
@@ -135,7 +142,8 @@
       "sysRequirement": "Microsoft Windows XP/Vista, 2.4GHz Intel Pentium 4 or equivalent processor, 1GB RAM, 8GB free hard disk space, DirectX 9.0c compliant video card supporting 128 MB RAM and Pixel Shader 3.0",
       "plot": "Un uomo sopravvissuto a un incidente aereo si ritrova in una città sottomarina utopica piena di orrore e follia.",
       "devName": "2K Boston",
-      "id": 8
+      "id": 8,
+      "trailerUrl": "https://www.youtube.com/embed/Lmw78t8NgIE"
     },
     {
       "Title": "Mass Effect 2",
@@ -147,7 +155,8 @@
       "sysRequirement": "Microsoft Windows XP SP3 / Windows Vista SP1 / Windows 7, Intel Core 2 Duo at 1.8 GHz / AMD Athlon 64 X2, 1 GB RAM for Windows XP / 2 GB RAM for Windows Vista and Windows 7, 15 GB free disk space",
       "plot": "Il comandante Shepard deve reclutare una squadra per combattere contro una minaccia aliena nota come I Razziatori.",
       "devName": "BioWare",
-      "id": 9
+      "id": 9,
+      "trailerUrl": "https://www.youtube.com/embed/VTsD2FjmLsw"
     },
     {
       "Title": "Red Dead Redemption",
@@ -159,7 +168,8 @@
       "sysRequirement": "PlayStation 3, Xbox 360",
       "plot": "John Marston, un ex criminale, deve cacciare i suoi ex compagni per salvare la sua famiglia.",
       "devName": "Rockstar San Diego",
-      "id": 10
+      "id": 10,
+      "trailerUrl": "https://www.youtube.com/embed/2LUjtLJ6PzA"
     },
     {
       "Title": "Assassin's Creed II",
@@ -171,7 +181,8 @@
       "sysRequirement": "Intel Core 2 Duo 1.8 GHZ or AMD Athlon X2 64 2.4GHZ, 1.5 GB Windows XP / 2 GB Windows Vista - Windows 7, NVIDIA GeForce 8800 GT or ATI Radeon HD 4700 or better",
       "plot": "Un assassino del Rinascimento italiano, Ezio Auditore da Firenze, deve vendicare la sua famiglia e svelare una cospirazione contro i suoi.",
       "devName": "Ubisoft Montreal",
-      "id": 11
+      "id": 11,
+      "trailerUrl": "https://www.youtube.com/embed/-pUhraVG7Ow"
     },
     {
       "Title": "Borderlands",
@@ -183,7 +194,8 @@
       "sysRequirement": "Windows XP/Vista, 2.4 GHz processor, 1GB RAM (2GB recommended for Vista), 8GB free hard drive space, NVIDIA GeForce 8600 or better / ATI Radeon HD 2600 or better",
       "plot": "Un gruppo di cacciatori di tesori cerca fortune in un pianeta ostile pieno di bande criminali e creature pericolose.",
       "devName": "Gearbox Software",
-      "id": 12
+      "id": 12,
+      "trailerUrl": "https://www.youtube.com/embed/6lG6f5biW6M"
     },
     {
       "Title": "Dragon Age: Origins",
@@ -195,7 +207,8 @@
       "sysRequirement": "Microsoft Windows XP SP3, Windows Vista SP1, or Windows 7, Intel Core 2 (or equivalent) running at 1.4Ghz or greater, AMD X2 (or equivalent) running at 1.8Ghz or greater, 1 GB RAM",
       "plot": "Un Grey Warden deve unire le forze contro un esercito di creature oscure conosciute come l'Orda Oscura.",
       "devName": "BioWare",
-      "id": 13
+      "id": 13,
+      "trailerUrl": "https://www.youtube.com/embed/DJ2hEmyMxcw"
     },
     {
       "Title": "Fallout 3",
@@ -207,7 +220,8 @@
       "sysRequirement": "Microsoft Windows XP / Vista, 2.4 Ghz Intel Pentium 4 or equivalent processor, 1 GB (XP) / 2 GB (Vista) system RAM, 512 MB DirectX 9.0c compliant video card, 8 GB free hard disk space",
       "plot": "Un abitante del Vault 101 deve trovare suo padre nel mondo post-apocalittico della zona di Washington, D.C.",
       "devName": "Bethesda Game Studios",
-      "id": 14
+      "id": 14,
+      "trailerUrl": "https://www.youtube.com/embed/O7a1GVbHc4s"
     },
     {
       "Title": "Left 4 Dead",
@@ -219,7 +233,8 @@
       "sysRequirement": "Microsoft Windows XP / Vista / Vista64, Pentium 4 3.0GHz, 1 GB for XP / 2GB for Vista, DirectX 9 compatible video card, ATI X800, NVidia 6600 or better",
       "plot": "Un gruppo di sopravvissuti deve attraversare una città infestata da zombie mentre cerca di fuggire.",
       "devName": "Valve South",
-      "id": 15
+      "id": 15,
+      "trailerUrl": "https://www.youtube.com/embed/yd0x2CE1VEU"
     },
     {
       "Title": "Grand Theft Auto IV",
@@ -231,7 +246,8 @@
       "sysRequirement": "Windows Vista - Service Pack 1 / Windows XP - Service Pack 3, Intel Core 2 Duo 1.8GHz, 1 GB RAM for Windows XP / 1.5 GB for Windows Vista, 16 GB free hard drive space, 512MB NVIDIA 7900 or 512MB ATI X1900",
       "plot": "Niko Bellic, un immigrato dalla Serbia, cerca di farsi una vita nell'ambiente criminale di Liberty City mentre cerca vendetta.",
       "devName": "Rockstar North",
-      "id": 16
+      "id": 16,
+      "trailerUrl": "https://www.youtube.com/embed/CtRbEgoTqQs"
     },
     {
       "Title": "Call of Duty 4: Modern Warfare",
@@ -243,7 +259,8 @@
       "sysRequirement": "Microsoft Windows XP / Vista, Intel Pentium 4 2.4 GHz or AMD Athlon 64 2800+ processor, 512 MB RAM (768 MB for Windows Vista), NVIDIA GeForce 6600 or ATI Radeon 9800Pro or better",
       "plot": "Una serie di missioni militari in tutto il mondo mentre si lotta contro il terrorismo.",
       "devName": "Infinity Ward",
-      "id": 17
+      "id": 17,
+      "trailerUrl": "https://www.youtube.com/embed/Jy5YPHm2CNo"
     },
     {
       "Title": "Bioshock Infinite",
@@ -255,7 +272,8 @@
       "sysRequirement": "Windows Vista Service Pack 2 32-bit, Processor: Intel Core 2 DUO 2.4 GHz / AMD Athlon X2 2.7 GHz, Memory: 2 GB, Hard Disk Space: 20 GB free, Video Card: DirectX10 Compatible ATI Radeon HD 3870 / NVIDIA 8800 GT / Intel HD 3000 Integrated Graphics",
       "plot": "Un ex agente Pinkerton, Booker DeWitt, deve salvare una donna di nome Elizabeth da una città fluttuante chiamata Columbia.",
       "devName": "Irrational Games",
-      "id": 18
+      "id": 18,
+      "trailerUrl": "https://www.youtube.com/embed/EsJj0O5fsyo"
     },
     {
       "Title": "Tomb Raider",
@@ -267,7 +285,8 @@
       "sysRequirement": "Windows XP Service Pack 3, Windows Vista,7,8 (32bit/64bit), Processor: Dual core CPU: AMD Athlon64 X2 2.1 Ghz (4050+), Intel Core2 Duo 1.86 Ghz (E6300), Memory: 1GB Memory (2GB on Vista)",
       "plot": "Una giovane Lara Croft naufraga su un'isola misteriosa e deve imparare a sopravvivere e a scoprire i segreti dell'isola.",
       "devName": "Crystal Dynamics",
-      "id": 19
+      "id": 19,
+      "trailerUrl": "https://www.youtube.com/embed/ol_-QGlwRqc"
     },
     {
       "Title": "Dead Space",
@@ -279,7 +298,8 @@
       "sysRequirement": "Windows XP or Vista, 2.8 GHz or faster processor, 1 GB RAM or more, NVIDIA GeForce 6800 or better (7300, 7600 GS, and 8500 are below minimum system requirements), ATI X1600 Pro or better (X1300, X1300 Pro and HD2400 are below minimum system requirements), DirectX 9.0c compatible sound card",
       "plot": "Un ingegnere spaziale deve sopravvivere a bordo di una nave infestata da creature aliene mutanti.",
       "devName": "EA Redwood Shores",
-      "id": 20
+      "id": 20,
+      "trailerUrl": "https://www.youtube.com/embed/laLI3bH3kYY"
     },
     {
       "Title": "Half-Life 2",
@@ -291,7 +311,8 @@
       "sysRequirement": "1.2 GHz processor, 256MB RAM, DirectX 7 level graphics card, Windows XP/2000/ME/98, Mouse, Keyboard, Internet Connection",
       "plot": "Gordon Freeman combatte una razza aliena invasiva mentre cerca di fermare il controllo del mondo da parte del misterioso Dr. Wallace Breen.",
       "devName": "Valve",
-      "id": 21
+      "id": 21,
+      "trailerUrl": "https://www.youtube.com/embed/Uz3p8ZffrP4"
     },
     {
       "Title": "World of Warcraft: Wrath of the Lich King",
@@ -303,7 +324,8 @@
       "sysRequirement": "Windows XP (Service Pack 2), Windows Vista, or Windows 7, Intel Pentium 4 1.3 GHz or AMD Athlon XP 1500+, 1GB or more of RAM, NVIDIA GeForce FX or ATI Radeon 9500 or better video card",
       "plot": "I giocatori devono affrontare il Re dei Lich e il suo esercito di non morti nella terra ghiacciata di Northrend.",
       "devName": "Blizzard Entertainment",
-      "id": 22
+      "id": 22,
+      "trailerUrl": "https://www.youtube.com/embed/BCr7y4SLhck"
     },
     {
       "Title": "StarCraft II: Wings of Liberty",
@@ -315,7 +337,8 @@
       "sysRequirement": "Windows XP/Windows Vista/Windows 7 (latest service packs) with DirectX 9.0c, 2.6 GHz Pentium IV or equivalent AMD Athlon processor, 1 GB system RAM/1.5 GB for Vista and Windows 7, 128 MB PCIe NVIDIA GeForce 6600 GT or ATI Radeon 9800 PRO video card",
       "plot": "Gli umani, i Protoss e i Terran si combattono in una guerra galattica per il controllo della galassia.",
       "devName": "Blizzard Entertainment",
-      "id": 23
+      "id": 23,
+      "trailerUrl": "https://www.youtube.com/embed/5ypU9j4w3_w"
     },
     {
       "Title": "Age of Empires III",
@@ -327,7 +350,8 @@
       "sysRequirement": "Microsoft Windows XP, PC with 1.4 GHz equivalent or higher processor, 256 MB of system RAM, 64 MB video card with support for hardware transformation and lighting",
       "plot": "I giocatori costruiscono e gestiscono un impero durante l'età coloniale, affrontando altre civiltà e cercando di ottenere la supremazia.",
       "devName": "Ensemble Studios",
-      "id": 24
+      "id": 24,
+      "trailerUrl": "https://www.youtube.com/embed/C_E83GfWM-A"
     },
     {
       "Title": "The Sims 3",
@@ -339,7 +363,8 @@
       "sysRequirement": "Windows XP (Service Pack 2) / Windows Vista (Service Pack 1) / Windows 7, 2.0 GHz P4 processor or equivalent, 1 GB RAM for XP / 1.5 GB for Vista and Windows 7, 128 MB video card with support for Pixel Shader 2.0",
       "plot": "I giocatori controllano la vita virtuale di Sim mentre cercano di raggiungere i loro obiettivi personali e di carriera.",
       "devName": "Maxis",
-      "id": 25
+      "id": 25,
+      "trailerUrl": "https://www.youtube.com/embed/q7LVH9_GpW8"
     },
     {
       "Title": "Diablo II",
@@ -351,7 +376,8 @@
       "sysRequirement": "Windows 2000, Windows XP, or Mac OS, 233 MHz Pentium or equivalent, 32 MB RAM, 650 MB available hard drive space, 4X CD-ROM drive",
       "plot": "I giocatori esplorano dungeon, combattono mostri e raccolgono bottino mentre cercano di fermare il Signore del Terrore, Diablo.",
       "devName": "Blizzard North",
-      "id": 26
+      "id": 26,
+      "trailerUrl": "https://www.youtube.com/embed/Q2evIg-aYw8"
     },
     {
       "Title": "Final Fantasy VII",
@@ -363,7 +389,8 @@
       "sysRequirement": "Windows XP/Vista/7/8, 2 GHz Processor or faster, 1 GB RAM, DirectX 9-compatible graphics card",
       "plot": "Un ex soldato di nome Cloud Strife si unisce a un gruppo di ribelli per combattere una potente azienda e salvare il pianeta dalla distruzione.",
       "devName": "Square Enix",
-      "id": 27
+      "id": 27,
+      "trailerUrl": "https://www.youtube.com/embed/I06_bNwXf0Y"
     },
     {
       "Title": "Star Wars: Knights of the Old Republic",
@@ -375,7 +402,8 @@
       "sysRequirement": "Windows XP / Vista / 7 / 8 / 10, 1.8 GHz Processor, 1 GB RAM, 3D graphics card compatible with DirectX 9.0c and 256 MB VRAM",
       "plot": "I giocatori assumono il controllo di un Jedi durante la guerra civile galattica mentre combattono contro i Sith e prendono decisioni morali.",
       "devName": "BioWare",
-      "id": 28
+      "id": 28,
+      "trailerUrl": "https://www.youtube.com/embed/lPuhU1l20iY"
     },
     {
       "Title": "Super Mario 64",
@@ -387,7 +415,8 @@
       "sysRequirement": "N/A (Nintendo 64)",
       "plot": "Mario deve salvare la Principessa Peach dal malvagio Bowser, raccogliendo stelle nei vari mondi del castello di Peach.",
       "devName": "Nintendo EAD",
-      "id": 29
+      "id": 29,
+      "trailerUrl": "https://www.youtube.com/embed/74DF9XWDE1M"
     },
     {
       "Title": "The Legend of Zelda: Ocarina of Time",
@@ -399,7 +428,8 @@
       "sysRequirement": "N/A (Nintendo 64)",
       "plot": "Link deve viaggiare attraverso il tempo e sconfiggere Ganondorf per salvare il regno di Hyrule.",
       "devName": "Nintendo EAD",
-      "id": 30
+      "id": 30,
+      "trailerUrl": "https://www.youtube.com/embed/TuMO8T4cwQ8"
     },
     {
       "Title": "Half-Life",
@@ -411,32 +441,51 @@
       "sysRequirement": "400 MHz processor, 96 MB RAM, 16 MB video card, Windows 95/98/NT/2000",
       "plot": "Gordon Freeman si trova coinvolto in un disastroso esperimento scientifico che porta all'invasione di una razza aliena nella Terra.",
       "devName": "Valve",
-      "id": 31
+      "id": 31,
+      "trailerUrl": "https://www.youtube.com/embed/wu8x9QBVoPE"
     }
   ],
   "cart": [],
   "boughtGames": [
     {
-      "userId": 1,
+      "userId": 4,
       "cartItems": [
         {
-          "userId": 1,
+          "userId": 4,
           "game": {
-            "Title": "Minecraft",
-            "genre": "Sandbox",
+            "Title": "The Elder Scrolls V: Skyrim",
+            "genre": "Action RPG",
             "year": 2011,
-            "price": 26.95,
-            "gameImg": "https://image.api.playstation.com/vulcan/img/cfn/11307x4B5WLoVoIUtdewG4uJ_YuDRTwBxQy0qP8ylgazLLc01PBxbsFG1pGOWmqhZsxnNkrU3GXbdXIowBAstzlrhtQ4LCI4.png",
+            "price": 39.99,
+            "gameImg": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheElderScrollsVSkyrim_image1600w.jpg",
             "gameVote": 9.3,
-            "sysRequirement": "Windows XP or better, Mac OS 10.5.8 or better, Linux",
-            "plot": "Un gioco sandbox in cui i giocatori possono costruire e esplorare mondi generati proceduralmente.",
-            "devName": "Mojang",
-            "id": 6
+            "sysRequirement": "Windows 7/Vista/XP PC (32 or 64 bit), Intel Dual Core 2.0 GHz or equivalent processor, 2GB RAM, DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)",
+            "plot": "Il giocatore è il Dovakhiin, un guerriero destinato a salvare il mondo da un'antica profezia mentre combatte draghi e altre creature.",
+            "devName": "Bethesda Game Studios",
+            "id": 1,
+            "trailerUrl": "https://www.youtube.com/embed/JSRtYpNRoN0"
           },
           "id": 1
+        },
+        {
+          "userId": 4,
+          "game": {
+            "Title": "The Witcher 2: Assassins of Kings",
+            "genre": "Action RPG",
+            "year": 2011,
+            "price": 19.99,
+            "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/header.jpg?t=1700481810",
+            "gameVote": 8.8,
+            "sysRequirement": "Windows XP/Vista/7, Intel Core 2 Duo 2.2 GHz or AMD equivalent, 1GB RAM for Windows XP / 2GB RAM for Windows Vista and Windows 7, Nvidia GeForce 8800 or ATI Radeon HD 3850",
+            "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
+            "devName": "CD Projekt Red",
+            "id": 2,
+            "trailerUrl": "https://www.youtube.com/embed/4Q6ks-MQBpQ"
+          },
+          "id": 2
         }
       ],
-      "id": 1718209736645
+      "id": 1718211039478
     }
   ]
 }
