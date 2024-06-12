@@ -41,7 +41,7 @@ export class AuthService {
     return this.http.post<iAuthResponse>(this.loginUrl, authData)
     .pipe(tap(data => {
         this.authSubject.next(data.user);
-        localStorage.setItem('accessData', JSON.stringify(data));
+        localStorage.setItem('accessData', JSON.stringify(data.accessToken));
       }));
   }
 

@@ -884,6 +884,22 @@
         "id": 8
       },
       "id": 30
+    },
+    {
+      "userId": 3,
+      "game": {
+        "Title": "The Elder Scrolls V: Skyrim",
+        "genre": "Action RPG",
+        "year": 2011,
+        "price": 39.99,
+        "gameImg": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheElderScrollsVSkyrim_image1600w.jpg",
+        "gameVote": 9.3,
+        "sysRequirement": "Windows 7/Vista/XP PC (32 or 64 bit), Intel Dual Core 2.0 GHz or equivalent processor, 2GB RAM, DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)",
+        "plot": "Il giocatore è il Dovakhiin, un guerriero destinato a salvare il mondo da un'antica profezia mentre combatte draghi e altre creature.",
+        "devName": "Bethesda Game Studios",
+        "id": 1
+      },
+      "id": 31
     }
   ]
 }
