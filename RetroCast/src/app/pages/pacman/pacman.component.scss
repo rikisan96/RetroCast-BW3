@@ -4,22 +4,21 @@
   align-items: center;
   flex-direction: column;
   background-color: black;
-
   color: white;
   font-family: 'Press Start 2P', cursive;
 }
 
 .game-container {
   display: grid;
-  grid-template-columns: repeat(10, 40px); /* Numero di colonne e larghezza delle celle */
-  grid-template-rows: repeat(10, 40px); /* Numero di righe e altezza delle celle */
-  gap: 2px; 
+  grid-template-columns: repeat(16, 40px); /* Numero di colonne e larghezza delle celle */
+  grid-template-rows: repeat(12, 40px); /* Numero di righe e altezza delle celle */
+  gap: 2px; /* Spazio tra le celle */
   background-color: black;
   border: 5px solid #333;
 }
 
 .row {
-  display: contents; 
+  display: contents; /* Mantiene la struttura della griglia */
 }
 
 .cell {
@@ -31,9 +30,9 @@
 }
 
 .wall {
-  background-color: transparent;
-  border: 4px solid #0000FF;
-  border-radius: 10px;
+  background-color: transparent; /* Blue color for the walls */
+  border: 4px solid #0000FF; /* Same blue color for the borders */
+  border-radius: 10px; /* Rounded corners to mimic the Pac-Man walls */
   box-sizing: border-box;
 }
 
@@ -44,41 +43,29 @@
   border-radius: 50%;
   position: relative;
   overflow: hidden;
-}
-
-.pacman::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: yellow;
-  border-radius: 50%;
-  clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+  clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
   animation: pacman-chomp 0.4s infinite;
 }
 
 @keyframes pacman-chomp {
   0%, 100% {
-    clip-path: polygon(50% 50%, 100% 0%, 100% 100%);
+    clip-path: polygon(0% 50%, 100% 0%, 100% 100%);
   }
   50% {
-    clip-path: polygon(50% 50%, 100% 25%, 100% 75%);
+    clip-path: polygon(0% 50%, 100% 25%, 100% 75%);
   }
 }
 
 .food {
-  width: 15px;
-  height: 15px;
+  width: 10px;
+  height: 10px;
   background-color: white;
   border-radius: 50%;
-  margin-left: 10px;
-  margin-top: 10px;
 }
 
 .ghost {
   width: 100%;
   height: 100%;
-  background: red;
   border-radius: 50% 50% 0 0; /* Top rounded corners */
   position: relative;
   display: flex;
@@ -87,13 +74,23 @@
   overflow: hidden;
 }
 
+.ghost.red {
+  background: red;
+  width: 100px;
+}
+
+.ghost.blue {
+  background: blue;
+  width: 100px;
+}
+
 .ghost::before {
   content: '';
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 50%;
-  background: red;
+  background: inherit;
   border-radius: 50%;
 }
 
@@ -103,7 +100,7 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: red;
+  background: inherit;
   clip-path: polygon(0% 100%, 25% 75%, 50% 100%, 75% 75%, 100% 100%);
 }
 

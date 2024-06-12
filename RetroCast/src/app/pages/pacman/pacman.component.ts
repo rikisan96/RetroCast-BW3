@@ -9,7 +9,8 @@ export class PacmanComponent implements OnInit {
   grid: number[][] = [];
   pacman = { x: 1, y: 1 };
   ghosts = [
-    { x: 8, y: 8 }
+    { x: 8, y: 8, color: 'red' },
+    { x: 10, y: 10, color: 'blue' }
   ];
   food: { x: number, y: number }[] = [];
   direction = 'RIGHT';
@@ -26,25 +27,27 @@ export class PacmanComponent implements OnInit {
 
   initializeGrid() {
     this.grid = [
-      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-      [1, 2, 0, 0, 0, 0, 0, 0, 0, 1],
-      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1],
-      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1],
-      [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1],
-      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1],
-      [1, 0, 0, 0, 0, 0, 0, 0, 0, 1],
-      [1, 0, 1, 1, 0, 1, 1, 1, 4, 1],
-      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1],
+      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1],
+      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 0, 1, 1, 0, 1, 1, 1, 4, 1, 1, 1, 0, 1, 0, 1],
+      [1, 0, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 0, 1],
+      [1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
     ];
   }
 
   placeFood() {
     this.food = [];
-    for (let i = 1; i < 9; i++) {
-      for (let j = 1; j < 9; j++) {
+    for (let i = 1; i < 11; i++) {
+      for (let j = 1; j < 15; j++) {
         if (this.grid[i][j] === 0) {
-          this.grid[i][j] = 3; 
+          this.grid[i][j] = 3; // Place food
           this.food.push({ x: j, y: i });
         }
       }
@@ -56,6 +59,7 @@ export class PacmanComponent implements OnInit {
       if (!this.isGameOver) {
         this.movePacman();
         this.updateGhosts();
+        this.checkCollision(); // Ensure collision check is called here
       }
     }, 200);
 
@@ -63,7 +67,7 @@ export class PacmanComponent implements OnInit {
       if (!this.isGameOver) {
         this.resetFood();
       }
-    }, 15000);
+    }, 15000); // Reset food every 15 seconds
   }
 
   movePacman() {
@@ -87,7 +91,7 @@ export class PacmanComponent implements OnInit {
 
     console.log(`Trying to move Pacman to (${newX}, ${newY})`);
 
-    if (this.grid[newY][newX] !== 1 && this.grid[newY][newX] !== 4) { // Check if not a wall or ghost
+    if (this.grid[newY][newX] !== 1 && !this.isGhostAt(newX, newY)) { // Check if not a wall or ghost
       if (this.grid[newY][newX] === 3) { 
         this.score++;
       }
@@ -97,8 +101,6 @@ export class PacmanComponent implements OnInit {
       this.pacman.y = newY;
       this.grid[this.pacman.y][this.pacman.x] = 2;
     }
-
-    this.checkCollision();
   }
 
   updateGhosts() {
@@ -117,7 +119,7 @@ export class PacmanComponent implements OnInit {
           case 'RIGHT': newX++; break;
         }
 
-        if (this.grid[newY][newX] !== 1 && this.grid[newY][newX] !== 2 && this.grid[newY][newX] !== 4) {
+        if (this.grid[newY][newX] !== 1 && !this.isGhostAt(newX, newY) && this.grid[newY][newX] !== 2) {
           validMoves.push({ x: newX, y: newY });
         }
       });
@@ -128,16 +130,18 @@ export class PacmanComponent implements OnInit {
         ghost.x = move.x;
         ghost.y = move.y;
         this.grid[ghost.y][ghost.x] = 4; // Set new position
-        console.log(`Moved Ghost to (${ghost.x}, ${ghost.y})`); 
+        console.log(`Moved Ghost to (${ghost.x}, ${ghost.y})`);
       }
     });
+  }
 
-    this.checkCollision();
+  isGhostAt(x: number, y: number): boolean {
+    return this.ghosts.some(ghost => ghost.x === x && ghost.y === y);
   }
 
   checkCollision() {
     this.ghosts.forEach(ghost => {
-      console.log(`Checking collision: Pacman (${this.pacman.x}, ${this.pacman.y}), Ghost (${ghost.x}, ${ghost.y})`); 
+      console.log(`Checking collision: Pacman (${this.pacman.x}, ${this.pacman.y}), Ghost (${ghost.x}, ${ghost.y})`);
 
       if (Math.abs(ghost.x - this.pacman.x) <= 1 && Math.abs(ghost.y - this.pacman.y) <= 1) {
         console.log('Collision detected');
@@ -147,7 +151,7 @@ export class PacmanComponent implements OnInit {
   }
 
   gameOver() {
-    console.log('Game over'); 
+    console.log('Game over');
     this.isGameOver = true;
     clearInterval(this.interval);
     clearInterval(this.foodInterval);
@@ -161,7 +165,10 @@ export class PacmanComponent implements OnInit {
     this.score = 0;
     this.isGameOver = false;
     this.pacman = { x: 1, y: 1 };
-    this.ghosts = [{ x: 8, y: 8 }];
+    this.ghosts = [
+      { x: 8, y: 8, color: 'red' },
+      { x: 10, y: 10, color: 'blue' }
+    ];
     this.initializeGrid();
     this.placeFood();
     this.startGameLoop();
@@ -191,5 +198,10 @@ export class PacmanComponent implements OnInit {
         this.direction = 'RIGHT';
         break;
     }
+  }
+
+  getGhostClass(row: number, col: number): string {
+    const ghost = this.ghosts.find(g => g.x === col && g.y === row);
+    return ghost ? `ghost ${ghost.color}` : '';
   }
 }
