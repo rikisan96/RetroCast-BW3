@@ -9,12 +9,13 @@ import { Modal } from 'bootstrap';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-  gameList: iGameList[]  = [];
+  gameList: iGameList[] = [];
   shoppingCartArr: iGameList[] = [];
-  filteredGameList: iGameList[] = [];  user!: iUser;
+  filteredGameList: iGameList[] = [];
+  user!: iUser;
 
   activeFilter: string | null = null;
   searchTerm: string = '';
@@ -26,10 +27,10 @@ export class HomeComponent implements OnInit {
   selectedGame: iGameList | null = null;
 
   constructor(
-    private gameSvc:  GamesService,
+    private gameSvc: GamesService,
     private authSvc: AuthService,
     private cartSvc: CartService
-  )  {}
+  ) {}
 
   ngOnInit() {
     this.gameSvc.getAllGames().subscribe((games) => {
@@ -42,20 +43,34 @@ export class HomeComponent implements OnInit {
         this.user = user;
       }
     });
-
-  };
+  }
 
   addToCart(game: iGameList) {
+    if (!this.user) {
+      return;
+    }
+
+    const isGameAlreadyInCart = this.shoppingCartArr.find(
+      (item) => item.id === game.id
+    );
+    if (isGameAlreadyInCart) {
+      console.log('gioco già presente nel carrello');
+
+      return;
+    }
     this.cartSvc.addToCart(game).subscribe(() => {
       this.shoppingCartArr.push(game);
-      console.log(this.shoppingCartArr);
+      this.cartSvc.cartLength$.next(this.shoppingCartArr.length);
     });
   }
   filterByYear(startYear: number, endYear: number) {
     this.startYear = startYear;
     this.endYear = endYear;
     this.applyFilters();
-    console.log(`Filtered games from ${startYear} to ${endYear}:`, this.filteredGameList);
+    console.log(
+      `Filtered games from ${startYear} to ${endYear}:`,
+      this.filteredGameList
+    );
   }
 
   filterByGenre(genre: string) {
@@ -67,31 +82,47 @@ export class HomeComponent implements OnInit {
   filterByPlatform(platform: string) {
     this.selectedPlatform = platform;
     this.applyFilters();
-    console.log(`Filtered games by platform (${platform}):`, this.filteredGameList);
+    console.log(
+      `Filtered games by platform (${platform}):`,
+      this.filteredGameList
+    );
   }
 
   filterByName() {
     this.applyFilters();
-    console.log(`Filtered games by name (${this.searchTerm}):`, this.filteredGameList);
+    console.log(
+      `Filtered games by name (${this.searchTerm}):`,
+      this.filteredGameList
+    );
   }
 
   applyFilters() {
     let filteredList = this.gameList;
 
     if (this.startYear !== null && this.endYear !== null) {
-      filteredList = filteredList.filter(game => game.year >= this.startYear! && game.year <= this.endYear!);
+      filteredList = filteredList.filter(
+        (game) => game.year >= this.startYear! && game.year <= this.endYear!
+      );
     }
 
     if (this.selectedGenre) {
-      filteredList = filteredList.filter(game => game.genre === this.selectedGenre);
+      filteredList = filteredList.filter(
+        (game) => game.genre === this.selectedGenre
+      );
     }
 
     if (this.selectedPlatform) {
-      filteredList = filteredList.filter(game => this.selectedPlatform && game.sysRequirement.includes(this.selectedPlatform));
+      filteredList = filteredList.filter(
+        (game) =>
+          this.selectedPlatform &&
+          game.sysRequirement.includes(this.selectedPlatform)
+      );
     }
 
     if (this.searchTerm) {
-      filteredList = filteredList.filter(game => game.Title.toLowerCase().includes(this.searchTerm.toLowerCase()));
+      filteredList = filteredList.filter((game) =>
+        game.Title.toLowerCase().includes(this.searchTerm.toLowerCase())
+      );
     }
 
     this.filteredGameList = filteredList;
@@ -114,7 +145,6 @@ export class HomeComponent implements OnInit {
     this.selectedGenre = null;
     console.log('Showing all games:', this.filteredGameList);
   }
-
 
   viewGameDetails(game: iGameList) {
     this.selectedGame = game;
