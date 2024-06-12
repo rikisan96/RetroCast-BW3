@@ -3,9 +3,9 @@ import { Component, HostListener, OnInit } from '@angular/core';
 @Component({
   selector: 'app-pacman',
   templateUrl: './pacman.component.html',
-  styleUrl: './pacman.component.scss'
+  styleUrls: ['./pacman.component.scss']
 })
-export class PacmanComponent implements OnInit{
+export class PacmanComponent implements OnInit {
   grid: number[][] = [];
   pacman = { x: 1, y: 1 };
   ghosts = [
@@ -40,10 +40,11 @@ export class PacmanComponent implements OnInit{
   }
 
   placeFood() {
+    this.food = [];
     for (let i = 1; i < 9; i++) {
       for (let j = 1; j < 9; j++) {
         if (this.grid[i][j] === 0) {
-          this.grid[i][j] = 3; // Place food
+          this.grid[i][j] = 3; 
           this.food.push({ x: j, y: i });
         }
       }
@@ -55,7 +56,6 @@ export class PacmanComponent implements OnInit{
       if (!this.isGameOver) {
         this.movePacman();
         this.updateGhosts();
-        this.checkCollision();
       }
     }, 200);
 
@@ -63,7 +63,7 @@ export class PacmanComponent implements OnInit{
       if (!this.isGameOver) {
         this.resetFood();
       }
-    }, 10000); // Reset food every 10 seconds
+    }, 15000);
   }
 
   movePacman() {
@@ -85,8 +85,10 @@ export class PacmanComponent implements OnInit{
         break;
     }
 
+    console.log(`Trying to move Pacman to (${newX}, ${newY})`);
+
     if (this.grid[newY][newX] !== 1 && this.grid[newY][newX] !== 4) { // Check if not a wall or ghost
-      if (this.grid[newY][newX] === 3) { // If food
+      if (this.grid[newY][newX] === 3) { 
         this.score++;
       }
 
@@ -95,51 +97,71 @@ export class PacmanComponent implements OnInit{
       this.pacman.y = newY;
       this.grid[this.pacman.y][this.pacman.x] = 2;
     }
+
+    this.checkCollision();
   }
 
   updateGhosts() {
     this.ghosts.forEach(ghost => {
       const directions = ['UP', 'DOWN', 'LEFT', 'RIGHT'];
-      const direction = directions[Math.floor(Math.random() * directions.length)];
-      let newX = ghost.x;
-      let newY = ghost.y;
+      const validMoves: { x: number, y: number }[] = [];
 
-      switch (direction) {
-        case 'UP': newY--; break;
-        case 'DOWN': newY++; break;
-        case 'LEFT': newX--; break;
-        case 'RIGHT': newX++; break;
-      }
+      directions.forEach(direction => {
+        let newX = ghost.x;
+        let newY = ghost.y;
 
-      if (this.grid[newY][newX] !== 1 && this.grid[newY][newX] !== 2 && this.grid[newY][newX] !== 4) { // Check if not a wall, Pac-Man, or another ghost
-        this.grid[ghost.y][ghost.x] = 0;
-        ghost.x = newX;
-        ghost.y = newY;
-        this.grid[ghost.y][ghost.x] = 4;
+        switch (direction) {
+          case 'UP': newY--; break;
+          case 'DOWN': newY++; break;
+          case 'LEFT': newX--; break;
+          case 'RIGHT': newX++; break;
+        }
+
+        if (this.grid[newY][newX] !== 1 && this.grid[newY][newX] !== 2 && this.grid[newY][newX] !== 4) {
+          validMoves.push({ x: newX, y: newY });
+        }
+      });
+
+      if (validMoves.length > 0) {
+        const move = validMoves[Math.floor(Math.random() * validMoves.length)];
+        this.grid[ghost.y][ghost.x] = 0; // Clear old position
+        ghost.x = move.x;
+        ghost.y = move.y;
+        this.grid[ghost.y][ghost.x] = 4; // Set new position
+        console.log(`Moved Ghost to (${ghost.x}, ${ghost.y})`); 
       }
     });
+
+    this.checkCollision();
   }
 
   checkCollision() {
     this.ghosts.forEach(ghost => {
-      if (ghost.x === this.pacman.x && ghost.y === this.pacman.y) {
+      console.log(`Checking collision: Pacman (${this.pacman.x}, ${this.pacman.y}), Ghost (${ghost.x}, ${ghost.y})`); 
+
+      if (Math.abs(ghost.x - this.pacman.x) <= 1 && Math.abs(ghost.y - this.pacman.y) <= 1) {
+        console.log('Collision detected');
         this.gameOver();
       }
     });
   }
 
   gameOver() {
+    console.log('Game over'); 
+    this.isGameOver = true;
     clearInterval(this.interval);
     clearInterval(this.foodInterval);
-    this.isGameOver = true;
+    setTimeout(() => {
+      this.resetGame();
+    }, 2000);
   }
 
   resetGame() {
+    console.log('Resetting game');
     this.score = 0;
     this.isGameOver = false;
     this.pacman = { x: 1, y: 1 };
     this.ghosts = [{ x: 8, y: 8 }];
-    this.food = [];
     this.initializeGrid();
     this.placeFood();
     this.startGameLoop();

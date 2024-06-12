@@ -10,12 +10,23 @@
           food: cell === 3,
           ghost: cell === 4
         }"
-      ></div>
+        class="cell"
+      >
+        <div *ngIf="cell === 2" class="pacman"></div>
+        <div *ngIf="cell === 3" class="food"></div>
+        <div *ngIf="cell === 4" class="ghost">
+          <div class="eye left">
+            <div class="pupil"></div>
+          </div>
+          <div class="eye right">
+            <div class="pupil"></div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="scoreboard">
     <p class="m-0">Score: {{ score }}</p>
     <p *ngIf="isGameOver" class="game-over">Game Over</p>
-    <button *ngIf="isGameOver" (click)="resetGame()">Restart</button>
   </div>
 </div>
