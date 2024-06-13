@@ -125,3 +125,12 @@ h1.personal-font {
   transform: scale(1.1);
   border-color: #ff0; /* Colore giallo per hover e focus */
 }
+
+.favorites-container{
+  background-color: #000;
+  padding: 2rem;
+  border: 2px solid #fff; /* Colore bianco per i bordi */
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Ombra bianca */
+  max-width: 600px;
+}

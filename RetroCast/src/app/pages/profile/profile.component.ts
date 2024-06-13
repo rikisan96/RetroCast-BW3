@@ -34,6 +34,7 @@ export class ProfileComponent implements OnInit {
     '../../assets/imgs/profile/toad.png'
   ];
   favoriteUsers: iUser[] = []; // Lista degli utenti preferiti
+  showFavorites: boolean = true; // Stato per mostrare/nascondere i preferiti
 
   constructor(private authSvc: AuthService, private router: Router) { }
 
@@ -151,6 +152,10 @@ export class ProfileComponent implements OnInit {
   removeFromFavorites(user: iUser): void {
     this.favoriteUsers = this.favoriteUsers.filter(favUser => favUser.id !== user.id);
     this.saveFavorites();
+  }
+
+  toggleFavorites(): void {
+    this.showFavorites = !this.showFavorites;
   }
 
   onFileSelected(event: any) {
