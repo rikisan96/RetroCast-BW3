@@ -14,7 +14,7 @@
             required
             email
           />
-          <span *ngIf="email.invalid && email.touched"
+          <span class="personal-span" *ngIf="email.invalid && email.touched"
             >Inserisci una email valida</span
           >
 
@@ -28,7 +28,7 @@
             required
           />
           <div>
-            <span *ngIf="password.invalid && password.touched"
+            <span class="personal-span" *ngIf="password.invalid && password.touched"
               >Inserisci la password</span
             >
           </div>

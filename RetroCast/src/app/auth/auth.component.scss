@@ -13,7 +13,7 @@
     align-items: center;
     height: 100vh;
   }
-  
+
   .login-box {
     position: relative;
     z-index: 10;
@@ -25,7 +25,7 @@
     max-width: 800px;
     width: 100%;
   }
-  
+
   .background-blur {
     position: absolute;
     top: 0;
@@ -36,13 +36,13 @@
     backdrop-filter: blur(10px);
     z-index: 1;
   }
-  
+
   .logo {
     width: 150px;
     height: auto;
     margin-bottom: 20px;
   }
-  
+
   .long-input {
     background-color: #000;
     color: #fff;
@@ -56,26 +56,26 @@
   border-color: #ff0; /* Colore giallo per hover e focus */
   outline: none; /* Rimuove l'outline default */
 }
-  
+
   .long-input::placeholder {
     color: #bbb;
   }
-  
+
   .qr-code-container {
     margin-top: 20px;
   }
-  
+
   .qr-code {
     width: 150px;
     height: 150px;
   }
-  
+
   a {
     color: #007bff;
   }
-  
+
   a:hover {
-    color: #0056b3; 
+    color: #0056b3;
   }
   .btn-primary {
     background-color: #000;
@@ -87,10 +87,14 @@
     color: #fff;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   }
-  
+
   .btn-primary:hover,
   .btn-primary:focus {
     background-color: #fff;
     color: #000;
     border-color: #ff0; /* Colore giallo per hover e focus */
+  }
+
+  .personal-span{
+    color: #ff0;
   }
