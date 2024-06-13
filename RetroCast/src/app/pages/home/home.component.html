@@ -136,7 +136,7 @@
   <div *ngIf="activeFilter === 'genre'" class="filter-form mb-2">
     <h3 class="text-light personal-fontQuattro">Filter by Genre</h3>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByGenre('Action RPG')"
       type="button"
       [ngClass]="{ 'active-button': selectedGenre === 'Action RPG' }"
@@ -144,7 +144,7 @@
       Action RPG
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByGenre('First-Person Shooter')"
       type="button"
       [ngClass]="{ 'active-button': selectedGenre === 'First-Person Shooter' }"
@@ -152,7 +152,7 @@
       First-Person Shooter
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByGenre('Action-Adventure')"
       type="button"
       [ngClass]="{ 'active-button': selectedGenre === 'Action-Adventure' }"
@@ -160,7 +160,7 @@
       Action-Adventure
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByGenre('Real-Time Strategy')"
       type="button"
       [ngClass]="{ 'active-button': selectedGenre === 'Real-Time Strategy' }"
@@ -168,14 +168,14 @@
       Real-Time Strategy
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       type="button"
       (click)="hideForm()"
     >
       Close
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       type="button"
       (click)="showAllGames()"
     >
