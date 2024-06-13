@@ -80,4 +80,20 @@ export class AuthService {
     this.authSubject.next(accessData.user);
     this.autoLogout();
   }
+  updateUser(user: iUser): Observable<iUser> {
+    const userToUpdate = { ...user };
+
+    // Logga i dati inviati per il debugging
+    console.log('Sending update request with data:', userToUpdate);
+
+    return this.http.put<iUser>(`http://localhost:3000/users/${user.id}`, userToUpdate)
+      .pipe(tap(updatedUser => {
+        this.authSubject.next(updatedUser);
+        const accessData = this.getAccessData();
+        if (accessData) {
+          accessData.user = updatedUser;
+          localStorage.setItem('accessData', JSON.stringify(accessData));
+        }
+      }));
+  }
 }

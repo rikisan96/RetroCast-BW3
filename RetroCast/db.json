@@ -31,13 +31,25 @@
     },
     {
       "email": "hello@gmail.com",
-      "password": "$2a$10$gSUmhsmTE07P5AkoQC/.2.gYCvfD8HCpgfJY9FyTrw9kEAi1a1K..",
       "firstName": "hello",
       "lastName": "hello",
       "username": "hello",
       "age": 21,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
-      "id": 4
+      "id": 4,
+      "password": "$2a$10$vyh0zQ88vW3mI1JvKIA.tOjBz6ftWo9krLxazE7KPtXjww6upi1Se",
+      "region": "italia"
+    },
+    {
+      "email": "prova@gmail.com",
+      "firstName": "hello",
+      "lastName": "yas",
+      "username": "hello",
+      "age": 22,
+      "profileImageUrl": "../../assets/imgs/profile/bowser.jpg",
+      "id": 5,
+      "region": "italy",
+      "password": "$2a$10$96WJqqQP7iCENkLknmGOuOQy4A.60Al/1cecBt/6s.1Ie6BG8l8.S"
     }
   ],
   "games": [
