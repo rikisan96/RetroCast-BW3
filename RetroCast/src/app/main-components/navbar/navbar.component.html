@@ -62,18 +62,15 @@
             </button>
           </div>
         </div>
-        <li
-          class="nav-item align-self-center position-fixed fs-4"
-          *ngIf="isLoggedIn"
-        >
+        <li class="nav-item position-fixed fs-4" *ngIf="isLoggedIn">
           <a routerLink="/cart" routerLinkActive="">
-            <i class="bi bi-cart-fill position-relative"></i>
+            <i class="bi bi-cart-fill position-relative fs-2"></i>
             <span
               class="position-absolute translate-middle badge rounded-pill bg-danger"
             >
-              {{ cartLength$ | async }}</span
-            ></a
-          >
+              {{ cartLength$ | async }}
+            </span>
+          </a>
         </li>
       </ul>
     </div>
