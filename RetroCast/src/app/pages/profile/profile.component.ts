@@ -33,6 +33,7 @@ export class ProfileComponent implements OnInit {
     '../../assets/imgs/profile/mario1.jpg',
     '../../assets/imgs/profile/toad.png'
   ];
+  favoriteUsers: iUser[] = []; // Lista degli utenti preferiti
 
   constructor(private authSvc: AuthService, private router: Router) { }
 
@@ -47,6 +48,7 @@ export class ProfileComponent implements OnInit {
         console.error('Failed to load user', err);
       }
     });
+    this.loadFavorites(); // Carica i preferiti dal localStorage
   }
 
   confirmEdit() {
@@ -133,6 +135,22 @@ export class ProfileComponent implements OnInit {
         alert('Failed to delete profile');
       }
     });
+  }
+
+  loadFavorites(): void {
+    const favorites = localStorage.getItem('favoriteUsers');
+    if (favorites) {
+      this.favoriteUsers = JSON.parse(favorites);
+    }
+  }
+
+  saveFavorites(): void {
+    localStorage.setItem('favoriteUsers', JSON.stringify(this.favoriteUsers));
+  }
+
+  removeFromFavorites(user: iUser): void {
+    this.favoriteUsers = this.favoriteUsers.filter(favUser => favUser.id !== user.id);
+    this.saveFavorites();
   }
 
   onFileSelected(event: any) {

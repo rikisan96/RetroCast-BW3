@@ -32,6 +32,14 @@
       </div>
       <button (click)="confirmEdit()" class="btn btn-secondary">Edit Profile</button>
     </div>
+    <div class="favorites-section">
+      <h2 class="personal-font text-center">Preferiti</h2>
+      <div *ngIf="favoriteUsers.length === 0">Non hai ancora aggiunto nessun utente ai preferiti.</div>
+      <div *ngFor="let favorite of favoriteUsers" class="favorite-user-card">
+        <p>{{ favorite.username }}</p>
+        <button (click)="removeFromFavorites(favorite)" class="btn btn-danger">Rimuovi</button>
+      </div>
+    </div>
     <form (ngSubmit)="updateProfile()" *ngIf="isEditing" class="profile-form">
       <div class="row">
         <div class="col-6">

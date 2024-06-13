@@ -14,6 +14,12 @@
           <p class="user-username">{{ user.username }}</p>
           <p class="user-name">{{ user.firstName }} {{ user.lastName }}</p>
           <p class="user-region">{{ user.region }}</p>
+          <button 
+          (click)="addToFavorites(user)" 
+          [disabled]="isFavorite(user)"
+          class="btn btn-secondary">
+          {{ isFavorite(user) ? 'Aggiunto ai Preferiti' : 'Aggiungi ai Preferiti' }}
+        </button>
         </div>
       </div>
     </div>
