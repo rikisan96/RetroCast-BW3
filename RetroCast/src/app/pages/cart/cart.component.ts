@@ -58,4 +58,8 @@ export class CartComponent {
       }
     );
   }
+
+  getTotalPrice(): number {
+    return this.cartGames.reduce((total, item) => total + item.game.price, 0);
+  }
 }
