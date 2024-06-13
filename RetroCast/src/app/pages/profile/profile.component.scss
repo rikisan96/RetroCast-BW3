@@ -1,16 +1,16 @@
 @font-face {
-  font-family: 'OldGame';
-  src: url('../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf');
+  font-family: "OldGame";
+  src: url("../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf");
 }
 
 body {
   background-color: #000;
   color: #fff;
-  font-family: 'OldGame', cursive; /* Font retrò */
+  font-family: "OldGame", cursive; /* Font retrò */
 }
 
 label {
-  font-family: 'OldGame', cursive;
+  font-family: "OldGame", cursive;
 }
 
 .login-container {
@@ -31,7 +31,7 @@ label {
 }
 
 h1.personal-font {
-  font-family: 'OldGame', cursive;
+  font-family: "OldGame", cursive;
   font-size: 1.5rem; /* Dimensione font per un aspetto retrò */
   margin-bottom: 1.5rem;
   color: #fff;
@@ -56,7 +56,7 @@ h1.personal-font {
 .form-control::placeholder {
   color: #ccc;
 }
-.profile-info{
+.profile-info {
   color: #ccc;
 }
 
@@ -64,6 +64,23 @@ h1.personal-font {
 .form-control:focus {
   border-color: #ff0; /* Colore giallo per hover e focus */
   outline: none; /* Rimuove l'outline default */
+}
+
+.custom-button {
+  background-color: #000;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  font-family: "OldGame";
+  font-size: 1rem;
+  border-radius: 0;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #ff0; /* Colore giallo per hover e focus */
+  }
 }
 
 .btn-primary {
@@ -106,7 +123,8 @@ h1.personal-font {
   border-radius: 0; /* Bordo squadrato per look retrò */
 }
 
-.modal-header, .modal-footer {
+.modal-header,
+.modal-footer {
   border-color: #fff;
 }
 
@@ -124,4 +142,16 @@ h1.personal-font {
 .predefined-thumbnail:focus {
   transform: scale(1.1);
   border-color: #ff0; /* Colore giallo per hover e focus */
+}
+
+.favorites-container{
+  font-family: 'OldGame', cursive;
+  background-color: #000;
+  color: white;
+  padding: 2rem;
+  border: 2px solid #fff; /* Colore bianco per i bordi */
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Ombra bianca */
+  max-width: 600px;
+  margin-top: 10em;
 }

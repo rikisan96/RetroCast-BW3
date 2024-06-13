@@ -41,15 +41,14 @@
       "region": "italia"
     },
     {
-      "email": "prova@gmail.com",
-      "firstName": "hello",
-      "lastName": "yas",
-      "username": "hello",
-      "age": 22,
-      "profileImageUrl": "../../assets/imgs/profile/bowser.jpg",
-      "id": 5,
-      "region": "italy",
-      "password": "$2a$10$96WJqqQP7iCENkLknmGOuOQy4A.60Al/1cecBt/6s.1Ie6BG8l8.S"
+      "email": "jasmine@gmail.com",
+      "password": "$2a$10$PmorGtK7o3mtx/mQxRKfdOHh9bZ1RzA2LtJ4HkYMoKc/dwPnxleT.",
+      "firstName": "yasmin",
+      "lastName": "mahfouz",
+      "username": "jas",
+      "age": 99,
+      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
+      "id": 5
     }
   ],
   "games": [
@@ -214,7 +213,7 @@
       "genre": "Action RPG",
       "year": 2009,
       "price": 19.99,
-      "gameImg": "https://static.wikia.nocookie.net/dragon-age/images/e/e6/RedDragonwithlogo.png/revision/latest?cb=20190212133431&path-prefix=it",
+      "gameImg": "https://gaming-cdn.com/images/products/196/orig/dragon-age-origins-ultimate-edition-ultimate-edition-pc-gioco-ea-app-cover.jpg?v=1705418479",
       "gameVote": 9.1,
       "sysRequirement": "Microsoft Windows XP SP3, Windows Vista SP1, or Windows 7, Intel Core 2 (or equivalent) running at 1.4Ghz or greater, AMD X2 (or equivalent) running at 1.8Ghz or greater, 1 GB RAM",
       "plot": "Un Grey Warden deve unire le forze contro un esercito di creature oscure conosciute come l'Orda Oscura.",
@@ -617,6 +616,165 @@
         }
       ],
       "id": 1718276261210
+    },
+    {
+      "userId": 1,
+      "cartItems": [
+        {
+          "userId": 1,
+          "game": {
+            "Title": "The Elder Scrolls V: Skyrim",
+            "genre": "Action RPG",
+            "year": 2011,
+            "price": 39.99,
+            "gameImg": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheElderScrollsVSkyrim_image1600w.jpg",
+            "gameVote": 9.3,
+            "sysRequirement": "Windows 7/Vista/XP PC (32 or 64 bit), Intel Dual Core 2.0 GHz or equivalent processor, 2GB RAM, DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)",
+            "plot": "Il giocatore è il Dovakhiin, un guerriero destinato a salvare il mondo da un'antica profezia mentre combatte draghi e altre creature.",
+            "devName": "Bethesda Game Studios",
+            "id": 1,
+            "trailerUrl": "https://www.youtube.com/embed/PjqsYzBrP-M"
+          },
+          "id": 1
+        },
+        {
+          "userId": 1,
+          "game": {
+            "Title": "The Witcher 2: Assassins of Kings",
+            "genre": "Action RPG",
+            "year": 2011,
+            "price": 19.99,
+            "gameImg": "https://gaming-cdn.com/images/products/789/orig/the-witcher-2-assassins-of-kings-enhanced-edition-enhanced-edition-pc-gioco-gog-com-cover.jpg?v=1701271719",
+            "gameVote": 8.8,
+            "sysRequirement": "Windows XP/Vista/7, Intel Core 2 Duo 2.2 GHz or AMD equivalent, 1GB RAM for Windows XP / 2GB RAM for Windows Vista and Windows 7, Nvidia GeForce 8800 or ATI Radeon HD 3850",
+            "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
+            "devName": "CD Projekt Red",
+            "id": 2,
+            "trailerUrl": "https://www.youtube.com/embed/SdiK8uaduZs?si=uGgnqH01_OYETl-5"
+          },
+          "id": 2
+        },
+        {
+          "userId": 1,
+          "game": {
+            "Title": "Dark Souls",
+            "genre": "Action RPG",
+            "year": 2011,
+            "price": 19.99,
+            "gameImg": "https://sm.ign.com/t/ign_it/screenshot/d/dark-souls/dark-souls-1-concept-cover_3syr.1080.jpg",
+            "gameVote": 9.2,
+            "sysRequirement": "Windows XP, Windows Vista, Windows 7, or newer, 2.6 GHz Dual-Core, 1 GB RAM, DirectX 9.0c, 512 MB RAM video card",
+            "plot": "Un cavaliere non morto cerca di sopravvivere in un mondo oscuro e ostile mentre combatte creature spaventose e boss imponenti.",
+            "devName": "FromSoftware",
+            "id": 4,
+            "trailerUrl": "https://www.youtube.com/embed/o1780AqAa20?si=pd0sJ9mB7LsloucB"
+          },
+          "id": 3
+        },
+        {
+          "userId": 1,
+          "game": {
+            "Title": "Red Dead Redemption",
+            "genre": "Action-Adventure",
+            "year": 2010,
+            "price": 29.99,
+            "gameImg": "https://gaming-cdn.com/images/products/7047/orig/red-dead-redemption-pc-gioco-cover.jpg?v=1705660598",
+            "gameVote": 9.7,
+            "sysRequirement": "PlayStation 3, Xbox 360",
+            "plot": "John Marston, un ex criminale, deve cacciare i suoi ex compagni per salvare la sua famiglia.",
+            "devName": "Rockstar San Diego",
+            "id": 10,
+            "trailerUrl": "https://www.youtube.com/embed/-o7rES_3ymA?si=VZK1Xv6ZoqeGhPYa"
+          },
+          "id": 1
+        },
+        {
+          "userId": 1,
+          "game": {
+            "Title": "Mass Effect 2",
+            "genre": "Action RPG",
+            "year": 2010,
+            "price": 19.99,
+            "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2362420/capsule_616x353.jpg?t=1708017054",
+            "gameVote": 9.5,
+            "sysRequirement": "Microsoft Windows XP SP3 / Windows Vista SP1 / Windows 7, Intel Core 2 Duo at 1.8 GHz / AMD Athlon 64 X2, 1 GB RAM for Windows XP / 2 GB RAM for Windows Vista and Windows 7, 15 GB free disk space",
+            "plot": "Il comandante Shepard deve reclutare una squadra per combattere contro una minaccia aliena nota come I Razziatori.",
+            "devName": "BioWare",
+            "id": 9,
+            "trailerUrl": "https://www.youtube.com/embed/VTsD2FjmLsw"
+          },
+          "id": 2
+        },
+        {
+          "userId": 1,
+          "game": {
+            "Title": "Assassin's Creed II",
+            "genre": "Action-Adventure",
+            "year": 2009,
+            "price": 19.99,
+            "gameImg": "https://cdn1.epicgames.com/salesEvent/salesEvent/AC2_GameName_Store_Portrait_1200x1600_1200x1600-2c5e000213988c5dde375bb2602e9986",
+            "gameVote": 9.5,
+            "sysRequirement": "Intel Core 2 Duo 1.8 GHZ or AMD Athlon X2 64 2.4GHZ, 1.5 GB Windows XP / 2 GB Windows Vista - Windows 7, NVIDIA GeForce 8800 GT or ATI Radeon HD 4700 or better",
+            "plot": "Un assassino del Rinascimento italiano, Ezio Auditore da Firenze, deve vendicare la sua famiglia e svelare una cospirazione contro i suoi.",
+            "devName": "Ubisoft Montreal",
+            "id": 11,
+            "trailerUrl": "https://www.youtube.com/embed/a12e3iKzqlw?si=CTlPL4ZJ-bj0P_bp"
+          },
+          "id": 3
+        },
+        {
+          "userId": 1,
+          "game": {
+            "Title": "Age of Empires III",
+            "genre": "Real-Time Strategy",
+            "year": 2005,
+            "price": 19.99,
+            "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2477660/capsule_616x353.jpg?t=1691100434",
+            "gameVote": 9.1,
+            "sysRequirement": "Microsoft Windows XP, PC with 1.4 GHz equivalent or higher processor, 256 MB of system RAM, 64 MB video card with support for hardware transformation and lighting",
+            "plot": "I giocatori costruiscono e gestiscono un impero durante l'età coloniale, affrontando altre civiltà e cercando di ottenere la supremazia.",
+            "devName": "Ensemble Studios",
+            "id": 24,
+            "trailerUrl": "https://www.youtube.com/embed/C_E83GfWM-A"
+          },
+          "id": 4
+        },
+        {
+          "userId": 1,
+          "game": {
+            "Title": "Diablo II",
+            "genre": "Action RPG",
+            "year": 2000,
+            "price": 19.99,
+            "gameImg": "https://image.api.playstation.com/vulcan/ap/rnd/202106/0202/TaSFMTZoICnUWcXVmmBsBKlj.jpg",
+            "gameVote": 9.4,
+            "sysRequirement": "Windows 2000, Windows XP, or Mac OS, 233 MHz Pentium or equivalent, 32 MB RAM, 650 MB available hard drive space, 4X CD-ROM drive",
+            "plot": "I giocatori esplorano dungeon, combattono mostri e raccolgono bottino mentre cercano di fermare il Signore del Terrore, Diablo.",
+            "devName": "Blizzard North",
+            "id": 26,
+            "trailerUrl": "https://www.youtube.com/embed/KxnWjyvmpnI?si=pAaJSddjM4Ynai0u"
+          },
+          "id": 5
+        },
+        {
+          "userId": 1,
+          "game": {
+            "Title": "Star Wars: Knights of the Old Republic",
+            "genre": "RPG",
+            "year": 2003,
+            "price": 9.99,
+            "gameImg": "https://i.ytimg.com/vi/xUHAIvC45lE/maxresdefault.jpg",
+            "gameVote": 9.6,
+            "sysRequirement": "Windows XP / Vista / 7 / 8 / 10, 1.8 GHz Processor, 1 GB RAM, 3D graphics card compatible with DirectX 9.0c and 256 MB VRAM",
+            "plot": "I giocatori assumono il controllo di un Jedi durante la guerra civile galattica mentre combattono contro i Sith e prendono decisioni morali.",
+            "devName": "BioWare",
+            "id": 28,
+            "trailerUrl": "https://www.youtube.com/embed/xSbpETpkE9M?si=bg6KxO0WDOQ6lVdK"
+          },
+          "id": 1
+        }
+      ],
+      "id": 1718289569225
     }
   ]
 }

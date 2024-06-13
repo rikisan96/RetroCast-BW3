@@ -85,6 +85,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/profile/profile.module').then((m) => m.ProfileModule),
     canActivate: [AuthGuard],
+  },{
+    path: 'community',
+    loadChildren: () =>
+      import('./pages/community/community.module').then((m) => m.CommunityModule),
+    canActivate: [AuthGuard],
   },
   { path: '**', loadChildren: () => import('./pages/page404/page404.module').then(m => m.Page404Module) },
 ];

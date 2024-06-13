@@ -30,11 +30,14 @@
           <h1 class="h2">Library</h1>
         </div>
         <div class="row offset-md-2 offset-lg-0">
-          <div class="col-md-6 col-lg-3" *ngFor="let game of gameList">
+          <div class="col-md-6 col-lg-3 p-3" *ngFor="let game of gameList">
             <div
               class="card fixed-size-card"
               (click)="onSelectGame(game); $event.preventDefault()"
             >
+              <div class="game-title p-2 text-center">
+                {{ game.Title }}
+              </div>
               <img
                 [src]="game.gameImg"
                 class="card-img-top fixed-size-img"
@@ -52,7 +55,9 @@
           </button>
         </div>
         <div class="game-details">
-          <h2>{{ selectedGame?.Title }}</h2>
+          <h2 class="rounded p-2 text-center my-3">
+            {{ selectedGame?.Title }}
+          </h2>
           <div class="img-container">
             <img
               [src]="selectedGame?.gameImg"
@@ -60,17 +65,18 @@
               class="cover img-fluid"
             />
           </div>
-
-          <p><strong>Genre:</strong> {{ selectedGame?.genre }}</p>
-          <p><strong>Year:</strong> {{ selectedGame?.year }}</p>
-          <p><strong>Price:</strong> ${{ selectedGame?.price }}</p>
-          <p><strong>Game Vote:</strong> {{ selectedGame?.gameVote }}</p>
-          <p>
-            <strong>System Requirements:</strong>
-            {{ selectedGame?.sysRequirement }}
-          </p>
-          <p><strong>Plot:</strong> {{ selectedGame?.plot }}</p>
-          <p><strong>Developer Name:</strong> {{ selectedGame?.devName }}</p>
+          <div>
+            <p><strong>Genre:</strong> {{ selectedGame?.genre }}</p>
+            <p><strong>Year:</strong> {{ selectedGame?.year }}</p>
+            <p><strong>Price:</strong> ${{ selectedGame?.price }}</p>
+            <p><strong>Game Vote:</strong> {{ selectedGame?.gameVote }}</p>
+            <p>
+              <strong>System Requirements:</strong>
+              {{ selectedGame?.sysRequirement }}
+            </p>
+            <p><strong>Plot:</strong> {{ selectedGame?.plot }}</p>
+            <p><strong>Developer Name:</strong> {{ selectedGame?.devName }}</p>
+          </div>
         </div>
       </div>
     </main>

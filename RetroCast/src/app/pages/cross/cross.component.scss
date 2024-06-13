@@ -1,3 +1,12 @@
+@font-face {
+  font-family: "OldGame";
+  src: url("../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf");
+}
+
+.container {
+  min-height: 59vh;
+}
+
 .tic-tac-toe {
   text-align: center;
   font-family: Arial, sans-serif;
@@ -42,5 +51,33 @@
       font-size: 16px;
       cursor: pointer;
     }
+  }
+}
+
+.custom-text {
+  font-family: "OldGame";
+  font-size: 1.5rem;
+  color: #31d1f1;
+  text-align: center;
+}
+
+.cell {
+  font-family: "OldGame";
+}
+
+.custom-button {
+  background-color: #000;
+  border: 2px solid #fff;
+  padding: 0.5rem 1rem;
+  font-family: "OldGame";
+  font-size: 1rem;
+  border-radius: 0;
+  cursor: pointer;
+  color: #fff;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+    border-color: #ff0; /* Colore giallo per hover e focus */
   }
 }

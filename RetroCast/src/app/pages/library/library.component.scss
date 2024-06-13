@@ -55,6 +55,10 @@
   color: #fff;
 }
 
+strong {
+  color: #ff0;
+}
+
 .h2 {
   font-family: "OldGame", cursive;
   color: #fff;
@@ -101,10 +105,17 @@
   border-color: #ff0; /* Colore giallo per hover e focus */
 }
 
-.game-details img.cover {
-  border: 2px solid #fff;
-  margin-bottom: 20px;
-  transition: transform 0.3s, border-color 0.3s;
+.game-details {
+  font-family: "OldGame", cursive;
+  h2 {
+    background-color: #ff0;
+    color: black;
+  }
+  img.cover {
+    border: 2px solid #fff;
+    margin-bottom: 20px;
+    transition: transform 0.3s, border-color 0.3s;
+  }
 }
 
 .img-container {
@@ -121,6 +132,14 @@
 .fixed-size-card {
   height: 300px; /* Altezza fissa per le card */
   margin-bottom: 20px;
+  .game-title {
+    font-family: "OldGame";
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
+  box-shadow: 0px 0px 12px 1px gray;
 }
 
 .fixed-size-img {

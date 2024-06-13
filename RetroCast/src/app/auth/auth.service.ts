@@ -96,4 +96,13 @@ export class AuthService {
         }
       }));
   }
+  deleteUser(userId: number): Observable<void> {
+    return this.http.delete<void>(`http://localhost:3000/users/${userId}`)
+      .pipe(tap(() => {
+        this.authSubject.next(null);
+        localStorage.removeItem('accessData');
+        this.router.navigate(['/']);
+      }));
+  }
+  
 }
