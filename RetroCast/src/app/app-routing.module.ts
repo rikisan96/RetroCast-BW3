@@ -90,6 +90,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/community/community.module').then((m) => m.CommunityModule),
     canActivate: [AuthGuard],
+  },{
+    path: 'quiz',
+    loadChildren: () =>
+      import('./pages/quiz/quiz.module').then((m) => m.QuizModule),
+    canActivate: [AuthGuard],
   },
   { path: '**', loadChildren: () => import('./pages/page404/page404.module').then(m => m.Page404Module) },
 ];

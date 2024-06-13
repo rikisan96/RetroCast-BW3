@@ -24,6 +24,7 @@
     "@types/bootstrap": "^5.2.10",
     "bootstrap": "^5.3.2",
     "bootstrap-icons": "^1.11.3",
+    "fireworks-js": "^2.10.7",
     "ng-recaptcha": "^13.2.1",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",

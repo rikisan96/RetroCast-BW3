@@ -42,13 +42,14 @@
     },
     {
       "email": "jasmine@gmail.com",
-      "password": "$2a$10$PmorGtK7o3mtx/mQxRKfdOHh9bZ1RzA2LtJ4HkYMoKc/dwPnxleT.",
       "firstName": "yasmin",
       "lastName": "mahfouz",
       "username": "jas",
       "age": 99,
-      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
-      "id": 5
+      "profileImageUrl": "../../assets/imgs/profile/mario.png",
+      "id": 5,
+      "password": "$2a$10$dV.3N1ie9qPUbX05p4bSkeTZTaesM0DIdJLN2Tb7haJ9zTjrneP..",
+      "region": "italia"
     }
   ],
   "games": [

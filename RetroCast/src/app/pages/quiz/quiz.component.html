@@ -1,0 +1,28 @@
+<div class="quiz-container">
+  <div *ngIf="!quizStarted && !quizFinished">
+    <h2>Benvenuto al Quiz sui Giochi Arcade!</h2>
+    <p>
+      Metti alla prova le tue conoscenze sui classici giochi arcade. Questo quiz contiene 10 domande che coprono vari aspetti dei giochi arcade, dai personaggi famosi ai giochi iconici che hanno definito l'era. Rispondi correttamente ad almeno il 70% delle domande per vincere!
+    </p>
+    <p>
+      Quando sei pronto, clicca sul pulsante "Inizia il Quiz" per cominciare. Buona fortuna!
+    </p>
+    <button (click)="startQuiz()">Inizia il Quiz</button>
+  </div>
+  <div *ngIf="quizStarted && !quizFinished">
+    <h2>Domanda {{ currentQuestionIndex + 1 }} / {{ totalQuestions }}</h2>
+    <p>{{ currentQuestion?.text }}</p>
+    <div class="options">
+      <button *ngFor="let option of currentQuestion?.options" (click)="selectAnswer(option)" [class.selected]="selectedAnswer === option">
+        {{ option }}
+      </button>
+    </div>
+    <button (click)="nextQuestion()" [disabled]="!selectedAnswer">Prossima domanda</button>
+  </div>
+  <div *ngIf="quizFinished">
+    <h2>Quiz Completato!</h2>
+    <p>Punteggio: {{ score }} / {{ totalQuestions }}</p>
+    <button (click)="restartQuiz()">Ricomincia il Quiz</button>
+  </div>
+  <div #fireworksContainer class="fireworks-container"></div>
+</div>
