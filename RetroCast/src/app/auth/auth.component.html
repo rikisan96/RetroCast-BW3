@@ -1,29 +1,43 @@
 <div class="login-container">
-  <div class="login-box ">
+  <div class="login-box">
     <div class="row">
       <div class="col-6">
         <h1 class="personal-font">Accedi</h1>
-        <form class="">
+        <form #form="ngForm" (ngSubmit)="login()">
           <input
             type="email"
             name="email"
             [(ngModel)]="authData.email"
+            #email="ngModel"
             placeholder="email"
             class="form-control long-input"
+            required
+            email
           />
+          <span *ngIf="email.invalid && email.touched"
+            >Inserisci una email valida</span
+          >
+
           <input
             type="password"
             name="password"
             [(ngModel)]="authData.password"
+            #password="ngModel"
             placeholder="password"
             class="form-control mt-3 long-input"
+            required
           />
-          <button (click)="login()" class="btn btn-primary mt-3">Accedi</button>
+          <div>
+            <span *ngIf="password.invalid && password.touched"
+              >Inserisci la password</span
+            >
+          </div>
+          <button type="submit" class="btn btn-primary mt-3">Accedi</button>
         </form>
       </div>
       <div class="col-6 text-center">
         <div class="qr-code-container">
-          <h3 class= "personal-font">Accedi con QR Code</h3>
+          <h3 class="personal-font">Accedi con QR Code</h3>
           <img
             src="https://example.com/qrcode.png"
             alt="QR Code"
@@ -33,9 +47,11 @@
       </div>
     </div>
     <div class="text-right mt-3">
-      <span>Non hai un account? <a routerLink="/login/register">Registrati</a></span>
+      <span
+        >Non hai un account?
+        <a routerLink="/login/register">Registrati</a></span
+      >
     </div>
   </div>
   <div class="background-blur"></div>
 </div>
-
