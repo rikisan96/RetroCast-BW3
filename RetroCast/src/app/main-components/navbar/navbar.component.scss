@@ -83,6 +83,14 @@ ul li:last-of-type {
 .nav-link-personal {
   font-family: "Navbar";
   color: white;
+  margin: 4px;
+  padding: 4px;
+}
+.nav-link-personalDue {
+  font-family: "Navbar";
+  color: white;
+  margin: 4px;
+  padding: 4px;
 }
 
 .personal-border:hover {
@@ -98,9 +106,20 @@ ul li:last-of-type {
   background-color: #141414;
 }
 
-.bg-personal:hover {
-  background-color: #ff0;
+// .bg-personal:hover {
+//   background-color: #ff0;
+// }
+.nav-link-personal:hover {
+  background-color: #ff0 !important;
+  color:#141414;
+  transition: 0.2s;
+  cursor: pointer;
+
 }
-.bg-personal:hover .nav-link-personal {
-  color: #141414 !important;
+.nav-link-personalDue:hover{
+  background-color: #ff0 !important;
+  color:#141414;
+  transition: 0.2s;
+  cursor: pointer;
+
 }

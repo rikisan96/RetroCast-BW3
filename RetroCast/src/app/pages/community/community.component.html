@@ -1,0 +1,28 @@
+<div class="community-container">
+    <h1 class="personal-font text-center">Community</h1>
+    <input
+      type="text"
+      placeholder="Search by username..."
+      [(ngModel)]="searchQuery"
+      (input)="onSearchChange()"
+      class="form-control search-bar"
+    />
+    <div class="user-list">
+      <div *ngFor="let user of filteredUsers" class="user-card">
+        <img [src]="user.profileImageUrl" alt="Profile Image" class="user-image" />
+        <div class="user-info">
+          <p class="user-username">{{ user.username }}</p>
+          <p class="user-name">{{ user.firstName }} {{ user.lastName }}</p>
+          <p class="user-region">{{ user.region }}</p>
+          <button 
+            (click)="addToFavorites(user)" 
+            [disabled]="isFavorite(user)"
+            class="btn btn-secondary">
+            <i *ngIf="isFavorite(user)" class="bi bi-star-fill"></i>
+            {{ isFavorite(user) ? '' : 'Aggiungi ai Preferiti' }}
+        </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  

@@ -1,11 +1,15 @@
 <div class="container">
-  <div class="game-container">
-    <div class="score">
-      <span>Player 1: {{ player1Score }}</span>
-      <span>Player 2: {{ player2Score }}</span>
+  <div class="game-container p-5">
+    <div class="score d-flex gap-5">
+      <p>
+        Player 1:<span> {{ player1Score }}</span>
+      </p>
+      <p>
+        Player 2:<span> {{ player2Score }}</span>
+      </p>
     </div>
-    <div class="ball" [ngStyle]="{'left.%': ballX, 'top.%': ballY}"></div>
-    <div class="paddle1" [ngStyle]="{'top.%': paddle1Y}"></div>
-    <div class="paddle2" [ngStyle]="{'top.%': paddle2Y}"></div>
+    <div class="ball" [ngStyle]="{ 'left.%': ballX, 'top.%': ballY }"></div>
+    <div class="paddle1" [ngStyle]="{ 'top.%': paddle1Y }"></div>
+    <div class="paddle2" [ngStyle]="{ 'top.%': paddle2Y }"></div>
   </div>
 </div>

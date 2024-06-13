@@ -1,171 +1,232 @@
-<div class="login-container">
-  <div class="login-box">
-    <h1 class="personal-font text-center">Profilo</h1>
-    <div *ngIf="!isEditing" class="profile-info">
-      <div class="form-group">
-        <label>Username:</label>
-        <p class="form-control-static">{{ user.username }}</p>
+<div class="container">
+  <div class="row">
+    <!-- Profilo -->
+    <div class="col-md-6">
+      <div class="login-container">
+        <div class="login-box">
+          <h1 class="personal-font text-center">Profilo</h1>
+          <div *ngIf="!isEditing" class="profile-info">
+            <div class="form-group">
+              <label>Username:</label>
+              <p class="form-control-static">{{ user.username }}</p>
+            </div>
+            <div class="form-group">
+              <label>Email:</label>
+              <p class="form-control-static">{{ user.email }}</p>
+            </div>
+            <div class="form-group">
+              <label>First Name:</label>
+              <p class="form-control-static">{{ user.firstName }}</p>
+            </div>
+            <div class="form-group">
+              <label>Last Name:</label>
+              <p class="form-control-static">{{ user.lastName }}</p>
+            </div>
+            <div class="form-group">
+              <label>Age:</label>
+              <p class="form-control-static">{{ user.age }}</p>
+            </div>
+            <div class="form-group">
+              <label>Region:</label>
+              <p class="form-control-static">{{ user.region }}</p>
+            </div>
+            <div class="form-group text-center">
+              <label>Profile Image:</label>
+              <img [src]="user.profileImageUrl" alt="Profile Image" class="img-thumbnail profile-thumbnail" (click)="openProfileModal()"/>
+            </div>
+            <button (click)="confirmEdit()" class="btn btn-secondary">Edit Profile</button>
+          </div>
+          <form (ngSubmit)="updateProfile()" *ngIf="isEditing" class="profile-form">
+            <div class="row">
+              <div class="col-6">
+                <div class="form-group">
+                  <label for="firstName">Nome</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    name="firstName"
+                    [(ngModel)]="user.firstName"
+                    placeholder="Nome"
+                    class="form-control long-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Cognome</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    [(ngModel)]="user.lastName"
+                    placeholder="Cognome"
+                    class="form-control long-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="age">Eta'</label>
+                  <input
+                    type="number"
+                    id="age"
+                    name="age"
+                    [(ngModel)]="user.age"
+                    placeholder="Età"
+                    class="form-control long-input"
+                    required
+                    min="18"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="username">Username</label>
+                  <input
+                    type="text"
+                    id="username"
+                    name="username"
+                    [(ngModel)]="user.username"
+                    placeholder="Username"
+                    class="form-control long-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input
+                    type="text"
+                    id="email"
+                    name="email"
+                    [(ngModel)]="user.email"
+                    placeholder="La tua email"
+                    class="form-control long-input"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="col-6 text-center">
+                <div class="profile-icon-container" (click)="openProfileModal()">
+                  <img [src]="user.profileImageUrl || selectedImage" alt="Profile Icon" class="img-thumbnail profile-thumbnail" />
+                </div>
+                <div class="form-group mt-4">
+                  <label for="password">Password</label>
+                  <input
+                    type="password"
+                    id="password"
+                    name="password"
+                    [(ngModel)]="user.password"
+                    placeholder="Password"
+                    class="form-control long-input"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="region">Region</label>
+                  <input
+                    type="text"
+                    id="region"
+                    name="region"
+                    [(ngModel)]="user.region"
+                    placeholder="Region"
+                    class="form-control long-input"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">
+              Update Profile
+            </button>
+            <button (click)="confirmDelete()" class="btn btn-primary mt-3">Delete Profile</button>
+          </form>
+        </div>
       </div>
-      <div class="form-group">
-        <label>Email:</label>
-        <p class="form-control-static">{{ user.email }}</p>
-      </div>
-      <div class="form-group">
-        <label>First Name:</label>
-        <p class="form-control-static">{{ user.firstName }}</p>
-      </div>
-      <div class="form-group">
-        <label>Last Name:</label>
-        <p class="form-control-static">{{ user.lastName }}</p>
-      </div>
-      <div class="form-group">
-        <label>Age:</label>
-        <p class="form-control-static">{{ user.age }}</p>
-      </div>
-      <div class="form-group">
-        <label>Region:</label>
-        <p class="form-control-static">{{ user.region }}</p>
-      </div>
-      <div class="form-group text-center">
-        <label>Profile Image:</label>
-        <img [src]="user.profileImageUrl" alt="Profile Image" class="img-thumbnail profile-thumbnail" (click)="openProfileModal()"/>
-      </div>
-      <button (click)="confirmEdit()" class="btn btn-secondary">Edit Profile</button>
     </div>
-    <form (ngSubmit)="updateProfile()" *ngIf="isEditing" class="profile-form">
-      <div class="row">
-        <div class="col-6">
-          <div class="form-group">
-            <label for="firstName">Nome</label>
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              [(ngModel)]="user.firstName"
-              placeholder="Nome"
-              class="form-control long-input"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="lastName">Cognome</label>
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              [(ngModel)]="user.lastName"
-              placeholder="Cognome"
-              class="form-control long-input"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="age">Eta'</label>
-            <input
-              type="number"
-              id="age"
-              name="age"
-              [(ngModel)]="user.age"
-              placeholder="Età"
-              class="form-control long-input"
-              required
-              min="18"
-            />
-          </div>
-          <div class="form-group">
-            <label for="username">Username</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              [(ngModel)]="user.username"
-              placeholder="Username"
-              class="form-control long-input"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input
-              type="text"
-              id="email"
-              name="email"
-              [(ngModel)]="user.email"
-              placeholder="La tua email"
-              class="form-control long-input"
-              required
-            />
-          </div>
-        </div>
-        <div class="col-6 text-center">
-          <div class="profile-icon-container" (click)="openProfileModal()">
-            <img [src]="user.profileImageUrl || selectedImage" alt="Profile Icon" class="img-thumbnail profile-thumbnail" />
-          </div>
-          <div class="form-group mt-4">
-            <label for="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              name="password"
-              [(ngModel)]="user.password"
-              placeholder="Password"
-              class="form-control long-input"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <label for="region">Region</label>
-            <input
-              type="text"
-              id="region"
-              name="region"
-              [(ngModel)]="user.region"
-              placeholder="Region"
-              class="form-control long-input"
-              required
-            />
+    
+    <!-- Lista Preferiti -->
+    <div class="col-md-6">
+      <div class="favorites-container">
+        <h2 class="personal-font text-center">Preferiti</h2>
+        <button (click)="toggleFavorites()" class="btn btn-secondary my-3 ms-2">
+          {{ showFavorites ? 'Nascondi' : 'Mostra' }} Preferiti
+        </button>
+        <div *ngIf="showFavorites" class="favorites-section">
+          <div *ngIf="favoriteUsers.length === 0">Non hai ancora aggiunto nessun utente ai preferiti.</div>
+          <div *ngFor="let favorite of favoriteUsers" class="favorite-user-card d-flex align-items-center justify-content-between">
+            <p>{{ favorite.username }}</p>
+            <button (click)="removeFromFavorites(favorite)" class="btn btn-primary mt-3">Rimuovi</button>
           </div>
         </div>
       </div>
-      <button type="submit" class="btn btn-primary mt-3">
-        Update Profile
-      </button>
-    </form>
+    </div>
   </div>
 
   <!-- Modal for Verification Code -->
-  <div *ngIf="showVerificationModal" class="modal fade show" tabindex="-1" role="dialog" style="display: block;">
+  <div
+    *ngIf="showVerificationModal"
+    class="modal fade show"
+    tabindex="-1"
+    role="dialog"
+    style="display: block"
+  >
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Verification</h5>
-          <button type="button" class="close" (click)="closeVerificationModal()" aria-label="Close">
+          <button
+            type="button"
+            class="close"
+            (click)="closeVerificationModal()"
+            aria-label="Close"
+          >
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <p>3 + 7 ?</p>
-          <input type="text" [(ngModel)]="verificationCode" class="form-control long-input">
+          <input
+            type="text"
+            [(ngModel)]="verificationCode"
+            class="form-control long-input"
+          />
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-primary" (click)="verifyCode()">Verify</button>
-          <button type="button" class="btn btn-secondary" (click)="closeVerificationModal()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="verifyCode()">
+            Verify
+          </button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeVerificationModal()"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
   </div>
 
   <!-- Modal for Profile Picture Selection -->
-  <div class="modal" tabindex="-1" [ngClass]="{'show': showModal}" style="display: block;" *ngIf="showModal">
+  <div
+    class="modal"
+    tabindex="-1"
+    [ngClass]="{ show: showModal }"
+    style="display: block"
+    *ngIf="showModal"
+  >
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Scegli immagine profilo</h5>
-          <button type="button" class="close" (click)="closeProfileModal()">&times;</button>
+          <button type="button" class="close" (click)="closeProfileModal()">
+            &times;
+          </button>
         </div>
         <div class="modal-body">
           <div class="predefined-images">
-            <img *ngFor="let img of predefinedImages" [src]="img" (click)="selectPredefinedImage(img)" class="predefined-thumbnail" />
+            <img
+              *ngFor="let img of predefinedImages"
+              [src]="img"
+              (click)="selectPredefinedImage(img)"
+              class="predefined-thumbnail"
+            />
           </div>
           <div class="form-group">
             <label for="profileImageUrl">URL immagine profilo</label>
@@ -189,7 +250,13 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="closeProfileModal()">Chiudi</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="closeProfileModal()"
+          >
+            Chiudi
+          </button>
         </div>
       </div>
     </div>
