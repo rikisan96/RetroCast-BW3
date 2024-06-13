@@ -30,7 +30,7 @@
           <h1 class="h2">Library</h1>
         </div>
         <div class="row offset-md-2 offset-lg-0">
-          <div class="col-md-6 col-lg-3" *ngFor="let game of gameList">
+          <div class="col-md-6 col-lg-3 p-3" *ngFor="let game of gameList">
             <div
               class="card fixed-size-card"
               (click)="onSelectGame(game); $event.preventDefault()"
