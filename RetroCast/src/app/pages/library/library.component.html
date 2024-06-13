@@ -46,18 +46,21 @@
       </div>
 
       <div *ngIf="showGameDetails">
-        <div>
+        <div class="py-5">
           <button (click)="onBackToList()" class="btn btn-secondary mb-3">
             Back to List
           </button>
         </div>
         <div class="game-details">
           <h2>{{ selectedGame?.Title }}</h2>
-          <img
-            [src]="selectedGame?.gameImg"
-            [alt]="selectedGame?.Title"
-            class="cover"
-          />
+          <div class="img-container">
+            <img
+              [src]="selectedGame?.gameImg"
+              [alt]="selectedGame?.Title"
+              class="cover img-fluid"
+            />
+          </div>
+
           <p><strong>Genre:</strong> {{ selectedGame?.genre }}</p>
           <p><strong>Year:</strong> {{ selectedGame?.year }}</p>
           <p><strong>Price:</strong> ${{ selectedGame?.price }}</p>

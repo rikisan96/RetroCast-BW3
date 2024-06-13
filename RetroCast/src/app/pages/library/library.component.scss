@@ -107,6 +107,11 @@
   transition: transform 0.3s, border-color 0.3s;
 }
 
+.img-container {
+  width: 30em;
+  overflow: hidden;
+}
+
 .game-details img.cover:hover,
 .game-details img.cover:focus {
   transform: scale(1.05);
@@ -124,9 +129,7 @@
   object-fit: cover; /* Adatta l'immagine alle dimensioni del contenitore */
 }
 .cover {
-  width: 50rem;
-  height: 35rem;
-  object-fit: cover;
+  width: 100%;
 }
 main {
   margin-left: 17%;
