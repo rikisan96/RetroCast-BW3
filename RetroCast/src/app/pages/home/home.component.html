@@ -167,18 +167,10 @@
     >
       Real-Time Strategy
     </button>
-    <button
-      class="custom-btn my-1 me-1"
-      type="button"
-      (click)="hideForm()"
-    >
+    <button class="custom-btn my-1 me-1" type="button" (click)="hideForm()">
       Close
     </button>
-    <button
-      class="custom-btn my-1 me-1"
-      type="button"
-      (click)="showAllGames()"
-    >
+    <button class="custom-btn my-1 me-1" type="button" (click)="showAllGames()">
       Show All
     </button>
   </div>
@@ -263,11 +255,12 @@
             <p class="fs-5">{{ selectedGame?.genre }}</p>
           </div>
         </div>
-        <div class="d-flex">
+        <div class="d-flex gap-2">
           <p class="fs-6">{{ selectedGame?.price | currency }}</p>
           <div class="d-flex gap-3 align-items-start fs-6">
-            <i class="bi bi-star-fill"></i>
-            <p>| {{ selectedGame?.gameVote }}</p>
+            <p></p>
+            |<i class="bi bi-star-fill"></i>
+            <p>{{ selectedGame?.gameVote }}</p>
           </div>
         </div>
 

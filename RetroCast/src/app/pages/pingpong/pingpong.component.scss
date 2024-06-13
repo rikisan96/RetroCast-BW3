@@ -1,3 +1,16 @@
+@font-face {
+  font-family: "OldGame";
+  src: url("../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf");
+}
+
+.container {
+  min-height: 59vh;
+}
+p {
+  span {
+    color: #ff0;
+  }
+}
 .game-container {
   position: relative;
   width: 100%;
@@ -12,6 +25,7 @@
   transform: translateX(-50%);
   color: white;
   font-size: 20px;
+  font-family: "OldGame";
 }
 
 .ball {
@@ -22,7 +36,8 @@
   border-radius: 50%;
 }
 
-.paddle1, .paddle2 {
+.paddle1,
+.paddle2 {
   position: absolute;
   width: 10px;
   height: 60px;
