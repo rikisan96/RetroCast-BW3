@@ -32,10 +32,6 @@
             >Arcade <i class="bi bi-controller"></i
           ></a>
         </li>
-        <li *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/profile" routerLinkActive="active"
-            >Profile <i class="bi bi-person-bounding-box"></i></a>
-        </li>
       </ul>
       <ul class="navbar-nav me-personal">
         <div
@@ -61,6 +57,8 @@
             aria-labelledby="dropdownBasic1"
             class="bg-personal"
           >
+          <button class="nav-link-personal btn" routerLink="/profile" routerLinkActive="active"
+          >Profile <i class="bi bi-person-bounding-box"></i></button>
             <button (click)="logout()" class="nav-link-personal btn">
               Logout
             </button>
