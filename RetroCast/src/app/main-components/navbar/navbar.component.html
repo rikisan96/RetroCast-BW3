@@ -14,7 +14,7 @@
             routerLink="/"
             routerLinkActive="active"
             [routerLinkActiveOptions]="{ exact: true }"
-            >Home</a
+            >Store</a
           >
         </li>
         <li *ngIf="!isLoggedIn">
@@ -27,20 +27,52 @@
             >Libreria</a
           >
         </li>
-        <li *ngIf="isLoggedIn" class="nav-item">
-          <button (click)="logout()" class="nav-link" routerLinkActive="active">
-            Logout
-          </button>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/arcade" routerLinkActive="active"
+            >Arcade <i class="bi bi-controller"></i
+          ></a>
         </li>
+      </ul>
+      <ul class="navbar-nav me-personal">
+        <div
+          *ngIf="isLoggedIn"
+          ngbDropdown
+          class="nav-item d-flex personal-border"
+        >
+          <img
+            src="{{ user.profileImageUrl }}"
+            alt="userImg"
+            class="img-thumbnail profile-thumbnail"
+          />
+          <button
+            type="button"
+            class="btn btn-personal"
+            id="dropdownBasic1"
+            ngbDropdownToggle
+          >
+            {{ user.username }}
+          </button>
+          <div
+            ngbDropdownMenu
+            aria-labelledby="dropdownBasic1"
+            class="bg-personal"
+          >
+            <button (click)="logout()" class="nav-link-personal btn">
+              Logout
+            </button>
+          </div>
+        </div>
         <li
           class="nav-item align-self-center position-fixed fs-4"
           *ngIf="isLoggedIn"
         >
-          <i class="bi bi-cart-fill position-relative"></i>
-          <span
-            class="position-absolute translate-middle badge rounded-pill bg-danger"
-          >
-            {{ cartLength$ | async }}</span
+          <a routerLink="/cart" routerLinkActive="">
+            <i class="bi bi-cart-fill position-relative"></i>
+            <span
+              class="position-absolute translate-middle badge rounded-pill bg-danger"
+            >
+              {{ cartLength$ | async }}</span
+            ></a
           >
         </li>
       </ul>

@@ -1,10 +1,10 @@
-import { iUser } from './../Models/i-user';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { map, tap } from 'rxjs/operators';
 import { JwtHelperService } from '@auth0/angular-jwt';
+import { iUser } from '../Models/i-user';
 import { iAuthResponse } from '../Models/i-auth-response';
 import { iAuthData } from '../Models/i-auth-data';
 
@@ -78,9 +78,5 @@ export class AuthService {
 
     this.authSubject.next(accessData.user);
     this.autoLogout();
-  }
-
-  getUserInfo(): iUser | null {
-    return this.authSubject.value;
   }
 }

@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row pt-3">
+    <div class="col-12" *ngIf="cartGames.length > 0">
+      <h1>Il tuo carrello</h1>
+    </div>
+    <div class="col-12 py-3" *ngFor="let cartItem of cartGames">
+      <div
+        class="d-flex justify-content-between align-items-center cart-item flex-wrap"
+      >
+        <div class="d-flex flex-column">
+          <div class="d-flex gap-3 py-3 flex-wrap">
+            <div class="img-container p-2">
+              <img
+                [src]="cartItem.game.gameImg"
+                alt="game image"
+                class="img-fluid"
+              />
+            </div>
+            <div>
+              <div class="cart-font">
+                <h5>{{ cartItem.game.Title }}</h5>
+                <p>{{ cartItem.game.devName }}</p>
+              </div>
+              <hr />
+              <h3>{{ cartItem.game.price | currency }}</h3>
+            </div>
+          </div>
+        </div>
+        <button
+          class="custom-button px-3 py-3"
+          (click)="removeFromCart(cartItem.id)"
+        >
+          <i class="bi bi-trash-fill fs-5"></i>
+        </button>
+      </div>
+    </div>
+    <div class="col-12 text-center">
+      <button class="btn btn-primary" (click)="purchaseGames()">
+        Acquista
+      </button>
+    </div>
+  </div>
+</div>

@@ -10,6 +10,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { UserModule } from './user/user.module';
 
+
 @NgModule({
   declarations: [AppComponent, NavbarComponent, NavbarFooterComponent],
   imports: [

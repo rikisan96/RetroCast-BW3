@@ -2,14 +2,18 @@
   <!-- Sidebar -->
   <nav class="col-md-3 col-lg-2 d-md-block z-2 sidebar">
     <ul class="nav flex-column">
-      <li class="nav-item" *ngFor="let game of gameList">
+      <li class="nav-item" *ngFor="let cartItem of purchasedGames">
         <a
           class="nav-link d-flex align-items-center"
           href="#"
-          (click)="onSelectGame(game); $event.preventDefault()"
+          (click)="onSelectGame(cartItem.game); $event.preventDefault()"
         >
-          <img [src]="game.gameImg" [alt]="game.Title" class="img-thumbnail" />
-          {{ game.Title }}
+          <img
+            [src]="cartItem.game.gameImg"
+            [alt]="cartItem.game.Title"
+            class="img-thumbnail"
+          />
+          {{ cartItem.game.Title }}
         </a>
       </li>
     </ul>
@@ -27,7 +31,10 @@
         </div>
         <div class="row offset-md-2 offset-lg-0">
           <div class="col-md-6 col-lg-3" *ngFor="let game of gameList">
-            <div class="card fixed-size-card">
+            <div
+              class="card fixed-size-card"
+              (click)="onSelectGame(game); $event.preventDefault()"
+            >
               <img
                 [src]="game.gameImg"
                 class="card-img-top fixed-size-img"
