@@ -127,10 +127,13 @@ h1.personal-font {
 }
 
 .favorites-container{
+  font-family: 'OldGame', cursive;
   background-color: #000;
+  color: white;
   padding: 2rem;
   border: 2px solid #fff; /* Colore bianco per i bordi */
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Ombra bianca */
   max-width: 600px;
+  margin-top: 10em;
 }
