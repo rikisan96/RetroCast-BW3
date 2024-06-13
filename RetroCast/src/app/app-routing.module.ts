@@ -68,14 +68,24 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/memory/memory.module').then((m) => m.MemoryModule),
     canActivate: [AuthGuard],
-  },{
+  },
+  {
     path: 'cross',
     loadChildren: () =>
       import('./pages/cross/cross.module').then((m) => m.CrossModule),
     canActivate: [AuthGuard],
-    
-  },  { path: 'page404', loadChildren: () => import('./pages/page404/page404.module').then(m => m.Page404Module) },
-  { path: 'profile', loadChildren: () => import('./pages/profile/profile.module').then(m => m.ProfileModule),canActivate: [AuthGuard] },
+  },
+  {
+    path: 'page404',
+    loadChildren: () =>
+      import('./pages/page404/page404.module').then((m) => m.Page404Module),
+  },
+  {
+    path: 'profile',
+    loadChildren: () =>
+      import('./pages/profile/profile.module').then((m) => m.ProfileModule),
+    canActivate: [AuthGuard],
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
