@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'Navbar';
-  src: url('../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf');
+  font-family: "Navbar";
+  src: url("../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf");
 }
 
 .navbar {
-  background-color: #141414!important; /* Sfondo nero */
+  background-color: #141414 !important; /* Sfondo nero */
   border-bottom: 2px solid #fff; /* Bordo bianco sotto la navbar */
   padding: 10px;
 }
 
 .navbar .navbar-nav .nav-link {
   color: #fff; /* Colore bianco per i link */
-  font-family: 'Navbar', cursive;
+  font-family: "Navbar", cursive;
   transition: color 0.3s, border-color 0.3s;
 }
 
@@ -34,7 +34,9 @@
 
 .navbar .logo:hover,
 .navbar .logo:focus {
-  transform: scale(1.1); /* Ingrandisce leggermente il logo al passaggio del mouse */
+  transform: scale(
+    1.1
+  ); /* Ingrandisce leggermente il logo al passaggio del mouse */
 }
 
 .collapse.navbar-collapse {
@@ -43,4 +45,19 @@
 
 .container-fluid {
   padding: 0;
+}
+
+ul li:last-of-type {
+  top: 1em;
+  right: 2em;
+  cursor: pointer;
+  color: white;
+  &:hover {
+    color: #ff0;
+  }
+  span {
+    left: 120%;
+    top: 1px;
+    font-size: small;
+  }
 }

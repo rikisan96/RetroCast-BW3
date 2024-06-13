@@ -8,8 +8,7 @@ import { NavbarComponent } from './main-components/navbar/navbar.component';
 import { NavbarFooterComponent } from './main-components/navbar-footer/navbar-footer.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { UserprofileComponent } from './main-components/user-profile/userprofile/userprofile.component';
-import { UserService } from './main-components/user-profile/user.service';
+import { UserModule } from './user/user.module';
 
 @NgModule({
   declarations: [AppComponent, NavbarComponent, NavbarFooterComponent],
@@ -19,6 +18,7 @@ import { UserService } from './main-components/user-profile/user.service';
     NgbModule,
     HttpClientModule,
     FormsModule,
+    UserModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

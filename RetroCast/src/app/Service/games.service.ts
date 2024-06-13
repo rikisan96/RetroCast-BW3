@@ -14,4 +14,12 @@ export class GamesService {
   getAllGames(): Observable<iGameList[]> {
     return this.http.get<iGameList[]>(this.apiUrl);
   }
+
+  addToCArt(array: iGameList[], game: iGameList) {
+    if (!array.find((g) => g.id === game.id)) {
+      array.push(game);
+      console.log(array);
+    }
+  }
+  
 }

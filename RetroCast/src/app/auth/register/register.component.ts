@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
 import { AuthService } from '../auth.service';
 import { iUser } from '../../Models/i-user';
-import { UserService } from './../../main-components/user-profile/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
-  styleUrls: ['./register.component.scss'],
+  styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent {
+
   newUser: Partial<iUser> = {
     email: '',
     password: '',
@@ -16,7 +17,7 @@ export class RegisterComponent {
     lastName: '',
     username: '',
     age: undefined, // Inizializza age con undefined
-    profileImageUrl: '../../assets/imgs/profile/mario1.jpg',
+    profileImageUrl: '../../assets/imgs/profile/mario1.jpg'
   };
   confirmPassword: string = '';
   securityAnswer: string = ''; // Aggiungi questa linea
@@ -26,24 +27,23 @@ export class RegisterComponent {
     '../../assets/imgs/profile/mario.png',
     '../../assets/imgs/profile/bowser.jpg',
     '../../assets/imgs/profile/mario1.jpg',
-    '../../assets/imgs/profile/toad.png',
+    '../../assets/imgs/profile/toad.png'
+
   ];
 
-  constructor(private authSvc: AuthService, private UserService: UserService) {} //imposto i dati dell`user nel servizio
+  constructor(private authSvc: AuthService, private router: Router) {}
 
   register() {
     if (this.newUser.password !== this.confirmPassword) {
       alert('Le password non coincidono');
       return;
     }
-    if (this.securityAnswer !== '7') {
-      // Verifica la risposta alla domanda di sicurezza
-      alert('Risposta alla domanda di verifica errata');
+    if (this.securityAnswer !== '7') { // Verifica la risposta alla domanda di sicurezza
+      alert('Compila Correttamente');
       return;
     }
     this.authSvc.register(this.newUser).subscribe(() => {
-      this.UserService.setUser(this.newUser);
-      // Handle successful registration
+      this.router.navigate(['/login']);
     });
   }
 

@@ -1,13 +1,14 @@
-import { iGameList } from "./i-game-list"
+import { iGameList } from './i-game-list';
 
 export interface iUser {
-  email: string
-  password: string
-  region: string
+  email: string;
+  password: string;
+  region: string;
   firstName: string;
   lastName: string;
   username: string;
   age?: number;
   profileImageUrl?: string;
-  "game-list": iGameList[]
+  'game-list': iGameList[];
+  id: number;
 }

@@ -8,6 +8,11 @@
   src: url(../../../assets/fonts/logos_font/retrocast-brand-zip-file/Sixtyfour.ttf);
 }
 
+@font-face {
+  font-family: ThirdFont;
+  src: url(../../../assets/fonts/planet-joust-font/PlanetJoust-w1Kv6.otf);
+}
+
 .personal-font {
   font-family: OldGame;
   color: white;
@@ -29,6 +34,148 @@
   color: white;
 }
 
+.personal-fontQuattro {
+  font-family: ThirdFont;
+}
+
 .personal-p {
   border: 5px solid white;
+}
+
+.active-link {
+  color: #ffdc00;
+}
+.active-button {
+  background-color: white !important;
+  color: black !important;
+}
+
+.input-personal {
+  border-radius: 10px;
+  border: 5px solid #ffdc00;
+  font-family: ThirdFont;
+}
+.card {
+  background-color: #000;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0;
+  transition: transform 0.3s, border-color 0.3s;
+  margin-bottom: 20px;
+}
+
+.card:hover,
+.card:focus {
+  transform: scale(1.05);
+  border-color: #ff0;
+}
+
+.card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.card-title,
+.card-text {
+  font-family: "OldGame", cursive;
+  margin-bottom: 1rem;
+}
+
+.card .btn {
+  font-family: "OldGame", cursive;
+  border-radius: 0;
+  border: 2px solid #fff;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.card .btn-primary {
+  background-color: #000;
+  color: #fff;
+}
+
+.card .btn-primary:hover,
+.card .btn-primary:focus {
+  background-color: #fff;
+  color: #000;
+  border-color: #ff0;
+}
+
+.card .btn-secondary {
+  background-color: #000;
+  color: #fff;
+}
+
+.card .btn-secondary:hover,
+.card .btn-secondary:focus {
+  background-color: #fff;
+  color: #000;
+  border-color: #ff0;
+}
+
+.card .btn-success {
+  background-color: #000;
+  color: #fff;
+}
+
+.card .btn-success:hover,
+.card .btn-success:focus {
+  background-color: #fff;
+  color: #000;
+  border-color: #ff0;
+}
+
+.img-fluid {
+  border-bottom: 2px solid #fff;
+  object-fit: cover;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.img-fluid:hover,
+.img-fluid:focus {
+  transform: scale(1.05);
+  border-color: #ff0;
+}
+
+.retro-modal {
+  background-color: #000;
+}
+
+.retro-modal-content {
+  border: 2px solid #fff;
+}
+
+.retro-modal-header {
+  border-bottom: 2px solid #fff;
+  background-color: #000;
+  color: #fff;
+}
+
+.retro-modal-title {
+  font-family: VintageFont, cursive;
+}
+
+.retro-modal-body {
+  background-color: #000;
+  color: #fff;
+}
+
+.retro-modal-footer {
+  background-color: #000;
+}
+
+.retro-modal-button {
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 0;
+}
+
+.modal {
+  font-family: OldGame;
+  font-size: 0.7em;
+  h3,
+  h4 {
+    color: #ff0;
+  }
 }
