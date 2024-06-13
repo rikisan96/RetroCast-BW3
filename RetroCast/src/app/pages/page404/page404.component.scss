@@ -1,4 +1,51 @@
 @font-face {
-  font-family: OldGame ;
-  src: url(../../assets/fonts/pacfont-good-font/Pacfont-ZEBZ.ttf);
+  font-family: OldGame;
+  src: url(../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf);
 }
+
+@font-face {
+  font-family: VintageFont;
+  src: url(../../../assets/fonts/logos_font/retrocast-brand-zip-file/Sixtyfour.ttf);
+}
+
+@font-face {
+  font-family: ThirdFont;
+  src: url(../../../assets/fonts/planet-joust-font/PlanetJoust-w1Kv6.otf);
+}
+
+
+.personal-font{
+  font-family: OldGame;
+  color:#FFFF42;
+  padding: 10px !important;
+  font-size: 150px;
+}
+
+.p-personal{
+  font-family: Oldgame;
+  color:white !important;
+}
+.p-personalDue{
+  font-family: Oldgame;
+  color:white !important;
+  font-size: smaller;
+}
+
+.personal-list{
+  border: 3px solid white !important;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  list-style:inside;
+}
+
+.personal-link{
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.personal-link:hover{
+  color:#FFFF42 !important;
+  transition:0.1s;
+}
+
+
