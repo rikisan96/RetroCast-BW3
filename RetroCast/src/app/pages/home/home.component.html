@@ -64,7 +64,7 @@
   <div *ngIf="activeFilter === 'platform'" class="filter-form mb-2">
     <h3 class="text-light personal-fontQuattro">Filter by Platform</h3>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByPlatform('Windows XP')"
       type="button"
       [ngClass]="{ 'active-button': selectedPlatform === 'Windows XP' }"
@@ -72,7 +72,7 @@
       Windows XP
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByPlatform('Windows Vista')"
       type="button"
       [ngClass]="{ 'active-button': selectedPlatform === 'Windows Vista' }"
@@ -80,25 +80,17 @@
       Windows Vista
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByPlatform('Windows 7')"
       type="button"
       [ngClass]="{ 'active-button': selectedPlatform === 'Windows 7' }"
     >
       Windows 7
     </button>
-    <button
-      class="btn btn-outline-light my-1 me-1"
-      type="button"
-      (click)="hideForm()"
-    >
+    <button class="custom-btn my-1 me-1" type="button" (click)="hideForm()">
       Close
     </button>
-    <button
-      class="btn btn-outline-light my-1 me-1"
-      type="button"
-      (click)="showAllGames()"
-    >
+    <button class="custom-btn my-1 me-1" type="button" (click)="showAllGames()">
       Show All
     </button>
   </div>
@@ -106,45 +98,37 @@
   <div *ngIf="activeFilter === 'year'" class="filter-form mb-2">
     <h3 class="text-light personal-fontQuattro">Filter by Year</h3>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByYear(1997, 1999)"
       type="button"
     >
       1997-1999
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByYear(2000, 2005)"
       type="button"
     >
       2000-2005
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByYear(2005, 2010)"
       type="button"
     >
       2005-2010
     </button>
     <button
-      class="btn btn-outline-light my-1 me-1"
+      class="custom-btn my-1 me-1"
       (click)="filterByYear(2010, 2015)"
       type="button"
     >
       2010-2015
     </button>
-    <button
-      class="btn btn-outline-light my-1 me-1"
-      type="button"
-      (click)="hideForm()"
-    >
+    <button class="custom-btn my-1 me-1" type="button" (click)="hideForm()">
       Close
     </button>
-    <button
-      class="btn btn-outline-light my-1 me-1"
-      type="button"
-      (click)="showAllGames()"
-    >
+    <button class="custom-btn my-1 me-1" type="button" (click)="showAllGames()">
       Show All
     </button>
   </div>
@@ -300,4 +284,3 @@
     </div>
   </div>
 </div>
-

@@ -40,6 +40,7 @@
 
 .personal-p {
   border: 5px solid white;
+  box-shadow: -1px 0px 49px -10px gray;
 }
 
 .active-link {
@@ -62,6 +63,7 @@
   border-radius: 0;
   transition: transform 0.3s, border-color 0.3s;
   margin-bottom: 20px;
+  box-shadow: -1px 0px 49px -10px gray;
 }
 
 .card:hover,
@@ -88,6 +90,20 @@
   border-radius: 0;
   border: 2px solid #fff;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.custom-btn {
+  font-family: OldGame;
+  padding: 5px 5px;
+  background-color: transparent;
+  border: 5px solid white;
+  color: #ffdc00;
+  transition: all 0.3s ease;
+  margin: 0 10px;
+  &:hover {
+    color: black;
+    background-color: #ffdc00;
+  }
 }
 
 .card .btn-primary {
