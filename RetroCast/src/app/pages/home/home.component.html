@@ -254,7 +254,15 @@
         ></button>
       </div>
       <div class="modal-body retro-modal-body">
-        <img [src]="selectedGame?.gameImg" class="img-fluid mb-3" alt="" />
+        <iframe
+          *ngIf="safeTrailerUrl"
+          width="100%"
+          height="315"
+          [src]="safeTrailerUrl"
+          frameborder="0"
+          allowfullscreen
+          class="mb-3"
+        ></iframe>
         <h3>Plot</h3>
         <p>{{ selectedGame?.plot }}</p>
         <hr />
@@ -292,3 +300,4 @@
     </div>
   </div>
 </div>
+
