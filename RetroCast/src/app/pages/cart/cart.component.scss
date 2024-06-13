@@ -1,0 +1,55 @@
+@font-face {
+  font-family: OldGame;
+  src: url(../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf);
+}
+
+@font-face {
+  font-family: VintageFont;
+  src: url(../../../assets/fonts/logos_font/retrocast-brand-zip-file/Sixtyfour.ttf);
+}
+
+@font-face {
+  font-family: ThirdFont;
+  src: url(../../../assets/fonts/planet-joust-font/PlanetJoust-w1Kv6.otf);
+}
+
+* {
+  font-family: oldGame;
+  color: white;
+}
+.img-container {
+  width: 10em;
+}
+.cart-item {
+  border-bottom: 2px solid white;
+}
+
+.cart-font {
+  p {
+    color: #ffdc00;
+  }
+}
+
+.custom-button {
+  border: 5px solid rgb(199, 3, 3);
+  background: transparent;
+  transition: all 0.3s ease;
+}
+
+.custom-button-2 {
+  border: 5px solid white;
+  background: transparent;
+  color: #0dcaf0;
+  transition: all 0.3s ease;
+}
+
+.custom-button:hover {
+  background: #ffdc00;
+  i {
+    color: rgb(199, 3, 3);
+  }
+}
+.custom-button-2:hover {
+  background-color: #0dcaf0;
+  color: white;
+}

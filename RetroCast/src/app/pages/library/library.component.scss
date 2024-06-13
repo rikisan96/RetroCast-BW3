@@ -1,10 +1,22 @@
 @font-face {
-  font-family: 'OldGame';
-  src: url('../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf');
+  font-family: "OldGame";
+  src: url("../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf");
 }
 
-.container-fluid {
-  padding: 0;
+.oldgameText * {
+  font-family: "OldGame";
+  color: white;
+}
+
+.smallText {
+
+  font-size: 10px;
+  text-wrap: wrap;
+  text-align: start;
+}
+
+.container {
+  min-height: 58.8vh;
 }
 
 .sidebar {
@@ -14,7 +26,6 @@
   top: 8%;
   bottom: 0;
   left: 0;
-  z-index: 1000;
   height: 92%;
   padding: 48px 0 0;
   overflow-y: auto;
@@ -22,7 +33,7 @@
 
 .nav-link {
   color: #fff;
-  font-family: 'OldGame', cursive;
+  font-family: "OldGame", cursive;
   display: flex;
   align-items: center;
   padding: 10px;
@@ -56,11 +67,10 @@
 .main {
   background-color: #000;
   color: #fff;
-  padding: 20px;
 }
 
 .h2 {
-  font-family: 'OldGame', cursive;
+  font-family: "OldGame", cursive;
   color: #fff;
   border-bottom: 2px solid #fff;
   padding-bottom: 10px;
@@ -97,7 +107,7 @@
   background-color: #000;
   border: 2px solid #fff;
   color: #fff;
-  font-family: 'OldGame', cursive;
+  font-family: "OldGame", cursive;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 

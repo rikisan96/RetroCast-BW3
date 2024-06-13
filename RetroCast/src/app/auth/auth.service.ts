@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable, map, tap } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 import { iUser } from '../Models/i-user';
 import { iAuthResponse } from '../Models/i-auth-response';
 import { iAuthData } from '../Models/i-auth-data';
@@ -14,22 +15,22 @@ export class AuthService {
 
   authSubject = new BehaviorSubject<null | iUser>(null);
 
-  jwtHelper: JwtHelperService = new JwtHelperService()//ci permette di lavorare facilmente con i jwt
-
   syncIsLoggedIn: boolean = false;
 
-  user$ = this.authSubject.asObservable()
+  user$ = this.authSubject.asObservable();
 
   isLoggedIn$ = this.user$.pipe(
     map(user => !!user),
     tap(user => this.syncIsLoggedIn = user)
   )
 
+  jwtHelper = new JwtHelperService(); // Initialize JwtHelperService
+
   constructor(
     private http: HttpClient,
     private router: Router
   ) {
-
+    this.restoreUser();
   }
 
   loginUrl: string = 'http://localhost:3000/login'
@@ -66,5 +67,22 @@ export class AuthService {
     return accessData;
   }
 
+  autoLogout(): void {
+    const accessData = this.getAccessData();
+    if (!accessData) return;
 
+    const expDate = this.jwtHelper.getTokenExpirationDate(accessData.accessToken) as Date;
+    const expMs = expDate.getTime() - new Date().getTime();
+    setTimeout(() => this.logout(), expMs);
+  }
+
+  restoreUser(): void {
+    const accessData = this.getAccessData();
+    if (!accessData) return;
+
+    if (this.jwtHelper.isTokenExpired(accessData.accessToken)) return;
+
+    this.authSubject.next(accessData.user);
+    this.autoLogout();
+  }
 }

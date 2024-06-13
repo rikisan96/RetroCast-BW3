@@ -1,11 +1,11 @@
-<nav class="navbar navbar-expand bg-info pb-2 sticky-top">
-  <div class="container-fluid">
+<div class="container-fluid position-sticky top-0 z-3">
+  <nav class="navbar navbar-expand bg-info pb-2">
     <img src="../../../assets/imgs/retrocast-logo-zip-file/svg/logo-no-background.svg" alt="logo" class="logo" />
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex position-relative">
         <li class="nav-item">
           <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }">Home</a>
+            [routerLinkActiveOptions]="{ exact: true }">Store</a>
         </li>
         <li *ngIf="!isLoggedIn">
           <a class="nav-link" routerLink="/login" routerLinkActive="active">Accedi</a>
@@ -16,17 +16,26 @@
         <li *ngIf="isLoggedIn">
           <a class="nav-link" routerLink="/arcade" routerLinkActive="active">Arcade <i class="bi bi-controller"></i></a>
         </li>
-        <li *ngIf="isLoggedIn" class="nav-item">
-          <button (click)="logout()" class="nav-link" routerLinkActive="active">
-            Logout
+      </ul>
+      <ul class="navbar-nav me-personal">
+        <div *ngIf="isLoggedIn" ngbDropdown class="nav-item d-flex personal-border">
+          <img src="{{ user.profileImageUrl }}" alt="userImg" class="img-thumbnail profile-thumbnail" />
+          <button type="button" class="btn btn-personal" id="dropdownBasic1" ngbDropdownToggle>
+            {{ user.username }}
           </button>
-        </li>
-        <li class="nav-item text-light align-self-center position-fixed fs-4" *ngIf="isLoggedIn">
-          <p class="d-inline">Carrello - </p><i class="bi bi-cart-fill position-relative"></i>
-          <span class="pallino position-absolute translate-middle badge rounded-pill bg-danger">
-            {{ cartLength$ | async }}</span>
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="bg-personal">
+            <button (click)="logout()" class="nav-link-personal btn">
+              Logout
+            </button>
+          </div>
+        </div>
+        <li class="nav-item align-self-center position-fixed fs-4" *ngIf="isLoggedIn">
+          <a routerLink="/cart" routerLinkActive="">
+            <i class="bi bi-cart-fill position-relative"></i>
+            <span class="position-absolute translate-middle badge rounded-pill bg-danger">
+              {{ cartLength$ | async }}</span></a>
         </li>
       </ul>
     </div>
-  </div>
-</nav>
+  </nav>
+</div>

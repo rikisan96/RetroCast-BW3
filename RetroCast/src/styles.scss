@@ -19,4 +19,17 @@ $verde-neon: #00FF00;
   border: 10px solid;
   border-color: $blu-neon $rosso-neon $verde-neon $giallo-neon;
   box-shadow: 10px 1px 1em 20px $blu-neon-chiaro;
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(211, 211, 211, 0.3);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: black;
+
+  }
 }

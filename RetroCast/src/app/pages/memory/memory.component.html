@@ -1,0 +1,13 @@
+<div class="memory-game">
+    <div class="card" *ngFor="let card of cards" [class.flipped]="card.flipped || card.matched" (click)="flipCard(card)">
+      <div class="card-inner">
+        <div class="card-front">
+          <img [src]="card.image" alt="Card image">
+        </div>
+        <div class="card-back">
+          ?
+        </div>
+      </div>
+    </div>
+  </div>
+  

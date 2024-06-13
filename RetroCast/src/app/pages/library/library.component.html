@@ -1,37 +1,60 @@
 <div class="container-fluid">
+  <!-- Sidebar -->
+  <nav class="col-md-3 col-lg-2 d-md-block z-2 sidebar">
+    <ul class="nav flex-column">
+      <li class="nav-item" *ngFor="let cartItem of purchasedGames">
+        <a class="nav-link d-flex align-items-center" href="#"
+          (click)="onSelectGame(cartItem.game); $event.preventDefault()">
+          <img [src]="cartItem.game.gameImg" [alt]="cartItem.game.Title" class="img-thumbnail" />
+          <span>
+
+            <p class="smallText oldgameText text-break">{{ cartItem.game.Title }}</p>
+          </span>
+
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<!-- Main content -->
+<div class="container">
   <div class="row">
     <!-- Sidebar -->
     <nav class="col-md-3 col-lg-2 d-md-block sidebar">
       <div class="">
         <ul class="nav flex-column">
-          <li class="nav-item" *ngFor="let game of gameList">
+          <li class="nav-item" *ngFor="let cartItem of purchasedGames">
             <a class="nav-link d-flex align-items-center" href="#"
-              (click)="onSelectGame(game); $event.preventDefault()">
-              <img [src]="game.gameImg" [alt]="game.Title" class="img-thumbnail" />
-              {{ game.Title }}
+              (click)="onSelectGame(cartItem.game); $event.preventDefault()">
+              <img [src]="cartItem.game.gameImg" [alt]="cartItem.game.Title" class="container-fluid  img-thumbnail" />
+              <p class="oldgameText">
+                {{ cartItem.game.Title }}
+              </p>
             </a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <!-- Main content -->
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 main">
+    <!-- Display giochi in base al filtro -->
+    <main role="main" class="col-md-9 col-lg-10 main d-none d-sm-block">
       <div *ngIf="!showGameDetails">
         <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 ps-md-5 ps-lg-0 border-bottom">
           <h1 class="h2">Library</h1>
-
-
+          <span>
+            <h3>Filtra per: <button class=" text-decoration-none personal-font fs-6">Installati</button></h3>
+          </span>
         </div>
-
-        <div class="row">
-          <div class="col-md-3" *ngFor="let game of gameList">
+        <div class="row offset-md-2 offset-lg-0">
+          <div class="col-md-6 col-lg-3" *ngFor="let game of gameList">
             <div class="card fixed-size-card" (click)="onSelectGame(game); $event.preventDefault()">
               <img [src]="game.gameImg" class="card-img-top fixed-size-img" [alt]="game.Title" />
+              {{ game.Title }}
             </div>
           </div>
         </div>
+
       </div>
 
       <div *ngIf="showGameDetails">
@@ -46,9 +69,8 @@
 
             <span>
               <img [src]="selectedGame?.gameImg" [alt]="selectedGame?.Title" class=" cover" />
-              <button class="btn btn-secondary  gap-3 mx-3" type="button">Aggiungi al carrello </button>
             </span>
-            <div class="bordoNEON p-2">
+            <div class=" btn-secondary p-2">
 
               <p><strong>Genre:</strong> {{ selectedGame?.genre }}</p>
               <p><strong>Year:</strong> {{ selectedGame?.year }}</p>
@@ -65,6 +87,3 @@
           </div>
         </div>
       </div>
-    </main>
-  </div>
-</div>

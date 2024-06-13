@@ -4,6 +4,7 @@ import { GamesService } from '../../Service/games.service';
 import { AuthService } from '../../auth/auth.service';
 import { iUser } from '../../Models/i-user';
 import { CartService } from '../../Service/cart.service';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 import { Modal } from 'bootstrap';
 
 @Component({
@@ -25,11 +26,13 @@ export class HomeComponent implements OnInit {
   selectedPlatform: string | null = null;
   selectedGenre: string | null = null;
   selectedGame: iGameList | null = null;
+  safeTrailerUrl: SafeResourceUrl | null = null;
 
   constructor(
     private gameSvc: GamesService,
     private authSvc: AuthService,
-    private cartSvc: CartService
+    private cartSvc: CartService,
+    private sanitizer: DomSanitizer
   ) {}
 
   ngOnInit() {
@@ -50,19 +53,17 @@ export class HomeComponent implements OnInit {
       return;
     }
 
-    const isGameAlreadyInCart = this.shoppingCartArr.find(
-      (item) => item.id === game.id
-    );
-    if (isGameAlreadyInCart) {
-      console.log('gioco già presente nel carrello');
-
-      return;
-    }
-    this.cartSvc.addToCart(game).subscribe(() => {
-      this.shoppingCartArr.push(game);
-      this.cartSvc.cartLength$.next(this.shoppingCartArr.length);
+    this.cartSvc.addToCart(game).subscribe({
+      next: () => {
+        this.shoppingCartArr.push(game);
+        this.cartSvc.cartLength$.next(this.shoppingCartArr.length);
+      },
+      error: (error) => {
+        console.error(error);
+      }
     });
   }
+
   filterByYear(startYear: number, endYear: number) {
     this.startYear = startYear;
     this.endYear = endYear;
@@ -148,6 +149,7 @@ export class HomeComponent implements OnInit {
 
   viewGameDetails(game: iGameList) {
     this.selectedGame = game;
+    this.safeTrailerUrl = this.sanitizer.bypassSecurityTrustResourceUrl(game.trailerUrl);
     const modalElement = document.getElementById('gameDetailsModal');
     if (modalElement) {
       const modal = new Modal(modalElement);
@@ -156,5 +158,4 @@ export class HomeComponent implements OnInit {
       console.error('Modal element not found');
     }
   }
-
 }

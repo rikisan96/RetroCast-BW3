@@ -1,65 +1,68 @@
 @font-face {
   font-family: OldGame;
   src: url(../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf);
-  }
+}
 
-@font-face{
-  font-family:VintageFont;
+@font-face {
+  font-family: VintageFont;
   src: url(../../../assets/fonts/logos_font/retrocast-brand-zip-file/Sixtyfour.ttf);
 }
-@font-face{
-  font-family:ThirdFont;
+
+@font-face {
+  font-family: ThirdFont;
   src: url(../../../assets/fonts/planet-joust-font/PlanetJoust-w1Kv6.otf);
 }
 
-.personal-font{
+.personal-font {
   font-family: OldGame;
   color: white;
-  border:5px solid white;
+  border: 5px solid white;
   padding: 0.5em;
 }
 
-.personal-font:hover{
-  color: #FFDC00;
+.personal-font:hover {
+  color: #ffdc00;
   transition: 0.1s;
 }
 
-
-.personal-fontDue{
+.personal-fontDue {
   font-family: OldGame;
   color: white;
 }
-.personal-fontTre{
+
+.personal-fontTre {
   font-family: VintageFont;
   color: white;
 }
 
-.personal-fontQuattro{
+.personal-fontQuattro {
   font-family: ThirdFont;
 }
 
-.personal-p{
-  border:5px solid white;
+.personal-p {
+  border: 5px solid white;
 }
 
-.active-link{
-  color: #FFDC00;
+.active-link {
+  color: #ffdc00;
 }
-.active-button{
+
+.active-button {
   background-color: white !important;
   color: black !important;
 }
 
-.input-personal{
+.input-personal {
   border-radius: 10px;
-  border: 5px solid #FFDC00;
+  border: 5px solid #ffdc00;
   font-family: ThirdFont;
 }
+
 .card {
   background-color: #000;
   color: #fff;
   border: 2px solid #fff;
-  border-radius: 0; 
+  border-radius: 0;
   transition: transform 0.3s, border-color 0.3s;
   margin-bottom: 20px;
 }
@@ -67,7 +70,7 @@
 .card:hover,
 .card:focus {
   transform: scale(1.05);
-  border-color: #ff0; 
+  border-color: #ff0;
 }
 
 .card .card-body {
@@ -77,13 +80,14 @@
   height: 100%;
 }
 
-.card-title, .card-text {
-  font-family: 'OldGame', cursive;
+.card-title,
+.card-text {
+  font-family: "OldGame", cursive;
   margin-bottom: 1rem;
 }
 
 .card .btn {
-  font-family: 'OldGame', cursive;
+  font-family: "OldGame", cursive;
   border-radius: 0;
   border: 2px solid #fff;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
@@ -98,7 +102,7 @@
 .card .btn-primary:focus {
   background-color: #fff;
   color: #000;
-  border-color: #ff0; 
+  border-color: #ff0;
 }
 
 .card .btn-secondary {
@@ -110,7 +114,7 @@
 .card .btn-secondary:focus {
   background-color: #fff;
   color: #000;
-  border-color: #ff0; 
+  border-color: #ff0;
 }
 
 .card .btn-success {
@@ -122,8 +126,9 @@
 .card .btn-success:focus {
   background-color: #fff;
   color: #000;
-  border-color: #ff0; 
+  border-color: #ff0;
 }
+
 
 .img-fluid {
   border-bottom: 2px solid #fff;
@@ -134,7 +139,7 @@
 .img-fluid:hover,
 .img-fluid:focus {
   transform: scale(1.05);
-  border-color: #ff0; 
+  border-color: #ff0;
 }
 
 .retro-modal {
@@ -161,7 +166,6 @@
 }
 
 .retro-modal-footer {
-  border-top: 2px solid #fff;
   background-color: #000;
 }
 
@@ -171,3 +175,12 @@
   border-radius: 0;
 }
 
+.modal {
+  font-family: OldGame;
+  font-size: 0.7em;
+
+  h3,
+  h4 {
+    color: #ff0;
+  }
+}

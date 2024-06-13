@@ -28,36 +28,52 @@ const routes: Routes = [
     canActivateChild: [AuthGuard],
   },
   {
-    path:'arcade',
-    loadChildren:() =>
+    path: 'cart',
+    loadChildren: () =>
+      import('./pages/cart/cart.module').then((m) => m.CartModule),
+  },
+  {
+    path: 'arcade',
+    loadChildren: () =>
       import('./pages/arcade/arcade.module').then((m) => m.ArcadeModule),
     canActivate: [AuthGuard],
     canActivateChild: [AuthGuard],
   },
   {
-    path:'pingpong',
-    loadChildren:() =>
+    path: 'pingpong',
+    loadChildren: () =>
       import('./pages/pingpong/pingpong.module').then((m) => m.PingpongModule),
     canActivate: [AuthGuard],
   },
   {
-    path:'pacman',
-    loadChildren:() =>
+    path: 'pacman',
+    loadChildren: () =>
       import('./pages/pacman/pacman.module').then((m) => m.PacmanModule),
     canActivate: [AuthGuard],
   },
   {
-    path:'snake',
-    loadChildren:() =>
+    path: 'snake',
+    loadChildren: () =>
       import('./pages/snake/snake.module').then((m) => m.SnakeModule),
     canActivate: [AuthGuard],
   },
   {
-    path:'breakout',
-    loadChildren:() =>
+    path: 'breakout',
+    loadChildren: () =>
       import('./pages/breakout/breakout.module').then((m) => m.BreakoutModule),
     canActivate: [AuthGuard],
-  }
+  },
+  {
+    path: 'memory',
+    loadChildren: () =>
+      import('./pages/memory/memory.module').then((m) => m.MemoryModule),
+    canActivate: [AuthGuard],
+  },{
+    path: 'cross',
+    loadChildren: () =>
+      import('./pages/cross/cross.module').then((m) => m.CrossModule),
+    canActivate: [AuthGuard],
+  },
 ];
 
 @NgModule({
