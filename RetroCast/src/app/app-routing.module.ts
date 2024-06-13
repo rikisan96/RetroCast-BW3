@@ -74,6 +74,7 @@ const routes: Routes = [
       import('./pages/cross/cross.module').then((m) => m.CrossModule),
     canActivate: [AuthGuard],
   },
+  { path: 'page404', loadChildren: () => import('./pages/page404/page404.module').then(m => m.Page404Module) },
 ];
 
 @NgModule({
