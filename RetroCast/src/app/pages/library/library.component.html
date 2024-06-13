@@ -35,6 +35,9 @@
               class="card fixed-size-card"
               (click)="onSelectGame(game); $event.preventDefault()"
             >
+              <div class="game-title p-2 text-center">
+                {{ game.Title }}
+              </div>
               <img
                 [src]="game.gameImg"
                 class="card-img-top fixed-size-img"

@@ -121,6 +121,13 @@
 .fixed-size-card {
   height: 300px; /* Altezza fissa per le card */
   margin-bottom: 20px;
+  .game-title {
+    font-family: "OldGame";
+    color: #fff;
+    border-bottom: 2px solid #fff;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+  }
 }
 
 .fixed-size-img {
