@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'OldGame';
+    src: url('../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf');
+  }
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'OldGame', cursive; /* Font retrò */
+  }
+  
+  label {
+    font-family: 'OldGame', cursive;
+  }
+  
+  .community-container {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1.personal-font {
+    font-family: 'OldGame', cursive;
+    font-size: 2rem; /* Dimensione font per un aspetto retrò */
+    margin-bottom: 1.5rem;
+    color: #fff;
+  }
+  
+  .search-bar {
+    background-color: #000;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0; /* Bordo squadrato per look retrò */
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+  }
+  
+  .search-bar::placeholder {
+    color: #ccc;
+  }
+  
+  .search-bar:hover,
+  .search-bar:focus {
+    border-color: #ff0; /* Colore giallo per hover e focus */
+    outline: none; /* Rimuove l'outline default */
+  }
+  
+  .user-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .user-card {
+    background-color: #000;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Ombra bianca */
+    padding: 1rem;
+    text-align: center;
+    width: 200px;
+  }
+  
+  .user-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%; /* Bordo arrotondato */
+    border: 2px solid #fff;
+    transition: transform 0.3s, border-color 0.3s;
+  }
+  
+  .user-image:hover,
+  .user-image:focus {
+    transform: scale(1.05);
+    border-color: #ff0; /* Colore giallo per hover e focus */
+  }
+  
+  .user-info {
+    margin-top: 1rem;
+  }
+  
+  .user-username {
+    font-family: 'OldGame', cursive;
+    font-size: 1.2rem;
+    color: #ff0; /* Colore giallo */
+  }
+  
+  .user-name,
+  .user-region {
+    font-family: 'OldGame', cursive;
+    color: #fff;
+  }
+  
