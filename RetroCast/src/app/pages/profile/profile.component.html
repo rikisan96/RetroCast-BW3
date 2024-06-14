@@ -8,10 +8,7 @@
           <div class="border-bottom mb-5">
             <h1 class="personal-font text-center">Profilo</h1>
           </div>
-          <div
-            *ngIf="!isEditing"
-            class="profile-info d-flex justify-content-around"
-          >
+          <div *ngIf="!isEditing" class="profile-info d-flex justify-content-around">
             <div>
               <div class="form-group">
                 <label>Username:</label>
@@ -41,12 +38,8 @@
             <div class="form-group text-center">
               <label>Profile Image:</label>
               <div class="p-2">
-                <img
-                  [src]="user.profileImageUrl"
-                  alt="Profile Image"
-                  class="img-thumbnail profile-thumbnail"
-                  (click)="openProfileModal()"
-                />
+                <img [src]="user.profileImageUrl" alt="Profile Image" class="img-thumbnail profile-thumbnail"
+                  (click)="openProfileModal()" />
               </div>
             </div>
           </div>
@@ -55,109 +48,49 @@
               Edit Profile
             </button>
           </div>
-          <form
-            (ngSubmit)="updateProfile()"
-            *ngIf="isEditing"
-            class="profile-form"
-          >
+          <form (ngSubmit)="updateProfile()" *ngIf="isEditing" class="profile-form">
             <div class="row">
               <div class="col-6">
                 <div class="form-group">
                   <label for="firstName">Nome</label>
-                  <input
-                    type="text"
-                    id="firstName"
-                    name="firstName"
-                    [(ngModel)]="user.firstName"
-                    placeholder="Nome"
-                    class="form-control long-input"
-                    required
-                  />
+                  <input type="text" id="firstName" name="firstName" [(ngModel)]="user.firstName" placeholder="Nome"
+                    class="form-control long-input" required />
                 </div>
                 <div class="form-group">
                   <label for="lastName">Cognome</label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    [(ngModel)]="user.lastName"
-                    placeholder="Cognome"
-                    class="form-control long-input"
-                    required
-                  />
+                  <input type="text" id="lastName" name="lastName" [(ngModel)]="user.lastName" placeholder="Cognome"
+                    class="form-control long-input" required />
                 </div>
                 <div class="form-group">
                   <label for="age">Eta'</label>
-                  <input
-                    type="number"
-                    id="age"
-                    name="age"
-                    [(ngModel)]="user.age"
-                    placeholder="Età"
-                    class="form-control long-input"
-                    required
-                    min="18"
-                  />
+                  <input type="number" id="age" name="age" [(ngModel)]="user.age" placeholder="Età"
+                    class="form-control long-input" required min="18" />
                 </div>
                 <div class="form-group">
                   <label for="username">Username</label>
-                  <input
-                    type="text"
-                    id="username"
-                    name="username"
-                    [(ngModel)]="user.username"
-                    placeholder="Username"
-                    class="form-control long-input"
-                    required
-                  />
+                  <input type="text" id="username" name="username" [(ngModel)]="user.username" placeholder="Username"
+                    class="form-control long-input" required />
                 </div>
                 <div class="form-group">
                   <label for="email">Email</label>
-                  <input
-                    type="text"
-                    id="email"
-                    name="email"
-                    [(ngModel)]="user.email"
-                    placeholder="La tua email"
-                    class="form-control long-input"
-                    required
-                  />
+                  <input type="text" id="email" name="email" [(ngModel)]="user.email" placeholder="La tua email"
+                    class="form-control long-input" required />
                 </div>
               </div>
               <div class="col-6 text-center">
-                <div
-                  class="profile-icon-container"
-                  (click)="openProfileModal()"
-                >
-                  <img
-                    [src]="user.profileImageUrl || selectedImage"
-                    alt="Profile Icon"
-                    class="img-thumbnail profile-thumbnail"
-                  />
+                <div class="profile-icon-container" (click)="openProfileModal()">
+                  <img [src]="user.profileImageUrl || selectedImage" alt="Profile Icon"
+                    class="img-thumbnail profile-thumbnail" />
                 </div>
                 <div class="form-group mt-4">
                   <label for="password">Password</label>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    [(ngModel)]="user.password"
-                    placeholder="Password"
-                    class="form-control long-input"
-                    required
-                  />
+                  <input type="password" id="password" name="password" [(ngModel)]="user.password"
+                    placeholder="Password" class="form-control long-input" required />
                 </div>
                 <div class="form-group">
                   <label for="region">Region</label>
-                  <input
-                    type="text"
-                    id="region"
-                    name="region"
-                    [(ngModel)]="user.region"
-                    placeholder="Region"
-                    class="form-control long-input"
-                    required
-                  />
+                  <input type="text" id="region" name="region" [(ngModel)]="user.region" placeholder="Region"
+                    class="form-control long-input" required />
                 </div>
               </div>
             </div>
@@ -183,15 +116,10 @@
           <div *ngIf="favoriteUsers.length === 0">
             Non hai ancora aggiunto nessun utente ai preferiti =(
           </div>
-          <div
-            *ngFor="let favorite of favoriteUsers"
-            class="favorite-user-card d-flex align-items-center justify-content-between"
-          >
+          <div *ngFor="let favorite of favoriteUsers"
+            class="favorite-user-card d-flex align-items-center justify-content-between">
             <p>{{ favorite.username }}</p>
-            <button
-              (click)="removeFromFavorites(favorite)"
-              class="btn btn-primary mt-3"
-            >
+            <button (click)="removeFromFavorites(favorite)" class="btn btn-primary mt-3">
               Rimuovi
             </button>
           </div>
@@ -201,7 +129,7 @@
 
     <!-- Avatar -->
     <div class="col-12">
-      <h2 class="personal-font text-center">Here is your avatar!</h2>
+      <h1 class="personal-font text-center">Here is your avatar!</h1>
       <div class="avatar-preview">
         <img *ngIf="avatar.face" [src]="avatar.face" class="face">
         <img *ngIf="avatar.body" [src]="avatar.body" class="body">
@@ -214,43 +142,24 @@
   </div>
 
   <!-- Modal for Verification Code -->
-  <div
-    *ngIf="showVerificationModal"
-    class="modal fade show"
-    tabindex="-1"
-    role="dialog"
-    style="display: block"
-  >
+  <div *ngIf="showVerificationModal" class="modal fade show" tabindex="-1" role="dialog" style="display: block">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
           <h5 class="modal-title">Verification</h5>
-          <button
-            type="button"
-            class="close"
-            (click)="closeVerificationModal()"
-            aria-label="Close"
-          >
+          <button type="button" class="close" (click)="closeVerificationModal()" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
         <div class="modal-body">
           <p>3 + 7 ?</p>
-          <input
-            type="text"
-            [(ngModel)]="verificationCode"
-            class="form-control long-input"
-          />
+          <input type="text" [(ngModel)]="verificationCode" class="form-control long-input" />
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-primary" (click)="verifyCode()">
             Verify
           </button>
-          <button
-            type="button"
-            class="btn btn-secondary"
-            (click)="closeVerificationModal()"
-          >
+          <button type="button" class="btn btn-secondary" (click)="closeVerificationModal()">
             Close
           </button>
         </div>
@@ -259,13 +168,7 @@
   </div>
 
   <!-- Modal for Profile Picture Selection -->
-  <div
-    class="modal"
-    tabindex="-1"
-    [ngClass]="{ show: showModal }"
-    style="display: block"
-    *ngIf="showModal"
-  >
+  <div class="modal" tabindex="-1" [ngClass]="{ show: showModal }" style="display: block" *ngIf="showModal">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
@@ -276,40 +179,21 @@
         </div>
         <div class="modal-body">
           <div class="predefined-images">
-            <img
-              *ngFor="let img of predefinedImages"
-              [src]="img"
-              (click)="selectPredefinedImage(img)"
-              class="predefined-thumbnail"
-            />
+            <img *ngFor="let img of predefinedImages" [src]="img" (click)="selectPredefinedImage(img)"
+              class="predefined-thumbnail" />
           </div>
           <div class="form-group">
             <label for="profileImageUrl">URL immagine profilo</label>
-            <input
-              type="text"
-              id="profileImageUrl"
-              name="profileImageUrl"
-              [(ngModel)]="user.profileImageUrl"
-              placeholder="URL immagine profilo"
-              class="form-control long-input"
-            />
+            <input type="text" id="profileImageUrl" name="profileImageUrl" [(ngModel)]="user.profileImageUrl"
+              placeholder="URL immagine profilo" class="form-control long-input" />
           </div>
           <div class="form-group">
             <label for="profileImage">Carica immagine profilo</label>
-            <input
-              type="file"
-              id="profileImage"
-              (change)="onFileSelected($event)"
-              class="form-control long-input"
-            />
+            <input type="file" id="profileImage" (change)="onFileSelected($event)" class="form-control long-input" />
           </div>
         </div>
         <div class="modal-footer">
-          <button
-            type="button"
-            class="btn btn-secondary"
-            (click)="closeProfileModal()"
-          >
+          <button type="button" class="btn btn-secondary" (click)="closeProfileModal()">
             Chiudi
           </button>
         </div>

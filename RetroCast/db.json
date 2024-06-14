@@ -11,14 +11,13 @@
     },
     {
       "email": "bywaze@mailinator.com",
+      "password": "$2a$10$j5A243eRPJ1ZJpow/HfY9OQls4hpmUIwGQtcpcUZ.fwfVQBlVmE0G",
       "firstName": "Francesco",
       "lastName": "Iannaccone",
       "username": "franc",
       "age": 22,
-      "profileImageUrl": "../../assets/imgs/profile/toad.png",
-      "id": 2,
-      "region": "Italy",
-      "password": "$2a$10$OSEXkLJFWosgyxurbY8m0epP1d4S4hznb8YKJwKKtIIXJ4GNahq46"
+      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
+      "id": 2
     },
     {
       "email": "cptsailorman@pirate.com",
@@ -50,19 +49,6 @@
       "age": 27,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
       "id": 6
-<<<<<<< HEAD
-=======
-    },
-    {
-      "email": "hello@gmail.com",
-      "password": "$2a$10$pyHVm.mvTlwz.VqDPrZyV.ev3FDPLQxaLoZ8Wm9Xg37F0CmmSTwNa",
-      "firstName": "hello",
-      "lastName": "hello",
-      "username": "hello",
-      "age": 99,
-      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
-      "id": 7
->>>>>>> 643a4c2f5b98d2ab4dde02b1fc3b430473979144
     }
   ],
   "games": [
@@ -470,7 +456,42 @@
       "trailerUrl": "https://www.youtube.com/embed/wtIp8jOo8_o?si=Ar7wyvddFnQ0cNPM"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "userId": 6,
+      "game": {
+        "Title": "Portal",
+        "genre": "Puzzle",
+        "year": 2007,
+        "price": 9.99,
+        "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/400/capsule_616x353.jpg?t=1699003695",
+        "gameVote": 9.5,
+        "sysRequirement": "Microsoft Windows XP/Vista/7/8, 1.7 GHz Processor, 512MB RAM, DirectX 8.1 level Graphics Card (Requires support for SSE), Windows",
+        "plot": "Un soggetto di test di Aperture Science deve risolvere enigmi basati su portali per sfuggire da un laboratorio di ricerca.",
+        "devName": "Valve",
+        "id": 7,
+        "trailerUrl": "https://www.youtube.com/embed/TluRVBhmf8w"
+      },
+      "id": 1
+    },
+    {
+      "userId": 6,
+      "game": {
+        "Title": "BioShock",
+        "genre": "First-Person Shooter",
+        "year": 2007,
+        "price": 19.99,
+        "gameImg": "https://upload.wikimedia.org/wikipedia/en/6/6d/BioShock_cover.jpg",
+        "gameVote": 9.4,
+        "sysRequirement": "Microsoft Windows XP/Vista, 2.4GHz Intel Pentium 4 or equivalent processor, 1GB RAM, 8GB free hard disk space, DirectX 9.0c compliant video card supporting 128 MB RAM and Pixel Shader 3.0",
+        "plot": "Un uomo sopravvissuto a un incidente aereo si ritrova in una città sottomarina utopica piena di orrore e follia.",
+        "devName": "2K Boston",
+        "id": 8,
+        "trailerUrl": "https://www.youtube.com/embed/Lmw78t8NgIE"
+      },
+      "id": 2
+    }
+  ],
   "boughtGames": [
     {
       "userId": 4,
@@ -562,7 +583,6 @@
         },
         {
           "userId": 4,
-<<<<<<< HEAD
           "game": {
             "Title": "Borderlands",
             "genre": "Action RPG/FPS",
@@ -614,94 +634,20 @@
         },
         {
           "userId": 4,
-=======
->>>>>>> 643a4c2f5b98d2ab4dde02b1fc3b430473979144
           "game": {
-            "Title": "Borderlands",
-            "genre": "Action RPG/FPS",
-            "year": 2009,
-            "price": 19.99,
-            "gameImg": "https://upload.wikimedia.org/wikipedia/en/0/01/Borderlandscover.jpg",
-            "gameVote": 9.2,
-            "sysRequirement": "Windows XP/Vista, 2.4 GHz processor, 1GB RAM (2GB recommended for Vista), 8GB free hard drive space, NVIDIA GeForce 8600 or better / ATI Radeon HD 2600 or better",
-            "plot": "Un gruppo di cacciatori di tesori cerca fortune in un pianeta ostile pieno di bande criminali e creature pericolose.",
-            "devName": "Gearbox Software",
-            "id": 12,
-            "trailerUrl": "https://www.youtube.com/embed/v3ZWbpce_Os?si=kt7Yd_dxJGX9BPxY"
-          },
-<<<<<<< HEAD
-          "id": 2
-=======
-          "id": 1
-        },
-        {
-          "userId": 4,
-          "game": {
-            "Title": "Assassin's Creed II",
-            "genre": "Action-Adventure",
-            "year": 2009,
-            "price": 19.99,
-            "gameImg": "https://cdn1.epicgames.com/salesEvent/salesEvent/AC2_GameName_Store_Portrait_1200x1600_1200x1600-2c5e000213988c5dde375bb2602e9986",
-            "gameVote": 9.5,
-            "sysRequirement": "Intel Core 2 Duo 1.8 GHZ or AMD Athlon X2 64 2.4GHZ, 1.5 GB Windows XP / 2 GB Windows Vista - Windows 7, NVIDIA GeForce 8800 GT or ATI Radeon HD 4700 or better",
-            "plot": "Un assassino del Rinascimento italiano, Ezio Auditore da Firenze, deve vendicare la sua famiglia e svelare una cospirazione contro i suoi.",
-            "devName": "Ubisoft Montreal",
-            "id": 11,
-            "trailerUrl": "https://www.youtube.com/embed/a12e3iKzqlw?si=CTlPL4ZJ-bj0P_bp"
-          },
-          "id": 2
-        },
-        {
-          "userId": 4,
-          "game": {
-            "Title": "Age of Empires III",
-            "genre": "Real-Time Strategy",
-            "year": 2005,
-            "price": 19.99,
-            "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2477660/capsule_616x353.jpg?t=1691100434",
-            "gameVote": 9.1,
-            "sysRequirement": "Microsoft Windows XP, PC with 1.4 GHz equivalent or higher processor, 256 MB of system RAM, 64 MB video card with support for hardware transformation and lighting",
-            "plot": "I giocatori costruiscono e gestiscono un impero durante l'età coloniale, affrontando altre civiltà e cercando di ottenere la supremazia.",
-            "devName": "Ensemble Studios",
-            "id": 24,
-            "trailerUrl": "https://www.youtube.com/embed/C_E83GfWM-A"
-          },
-          "id": 4
-        },
-        {
-          "userId": 1,
-          "game": {
-            "Title": "Diablo II",
+            "Title": "Mass Effect 2",
             "genre": "Action RPG",
-            "year": 2000,
+            "year": 2010,
             "price": 19.99,
-            "gameImg": "https://image.api.playstation.com/vulcan/ap/rnd/202106/0202/TaSFMTZoICnUWcXVmmBsBKlj.jpg",
-            "gameVote": 9.4,
-            "sysRequirement": "Windows 2000, Windows XP, or Mac OS, 233 MHz Pentium or equivalent, 32 MB RAM, 650 MB available hard drive space, 4X CD-ROM drive",
-            "plot": "I giocatori esplorano dungeon, combattono mostri e raccolgono bottino mentre cercano di fermare il Signore del Terrore, Diablo.",
-            "devName": "Blizzard North",
-            "id": 26,
-            "trailerUrl": "https://www.youtube.com/embed/KxnWjyvmpnI?si=pAaJSddjM4Ynai0u"
-          },
-          "id": 5
-        },
-        {
-          "userId": 1,
-          "game": {
-            "Title": "Star Wars: Knights of the Old Republic",
-            "genre": "RPG",
-            "year": 2003,
-            "price": 9.99,
-            "gameImg": "https://i.ytimg.com/vi/xUHAIvC45lE/maxresdefault.jpg",
-            "gameVote": 9.6,
-            "sysRequirement": "Windows XP / Vista / 7 / 8 / 10, 1.8 GHz Processor, 1 GB RAM, 3D graphics card compatible with DirectX 9.0c and 256 MB VRAM",
-            "plot": "I giocatori assumono il controllo di un Jedi durante la guerra civile galattica mentre combattono contro i Sith e prendono decisioni morali.",
+            "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2362420/capsule_616x353.jpg?t=1708017054",
+            "gameVote": 9.5,
+            "sysRequirement": "Microsoft Windows XP SP3 / Windows Vista SP1 / Windows 7, Intel Core 2 Duo at 1.8 GHz / AMD Athlon 64 X2, 1 GB RAM for Windows XP / 2 GB RAM for Windows Vista and Windows 7, 15 GB free disk space",
+            "plot": "Il comandante Shepard deve reclutare una squadra per combattere contro una minaccia aliena nota come I Razziatori.",
             "devName": "BioWare",
-            "id": 28,
-            "trailerUrl": "https://www.youtube.com/embed/xSbpETpkE9M?si=bg6KxO0WDOQ6lVdK"
+            "id": 9,
+            "trailerUrl": "https://www.youtube.com/embed/VTsD2FjmLsw"
           },
-          "id": 1
->>>>>>> 643a4c2f5b98d2ab4dde02b1fc3b430473979144
+          "id": 2
         }
       ],
       "id": 1718270218195
@@ -798,8 +744,4 @@
       "id": 1718353841166
     }
   ]
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 643a4c2f5b98d2ab4dde02b1fc3b430473979144

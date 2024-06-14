@@ -1,7 +1,13 @@
+@font-face {
+  font-family: "personalFont";
+  src: url("../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf");
+}
+
 /* src/app/character/character.component.css */
 .container {
   display: flex;
-  flex-direction: column; /* Aggiunto per supportare la modalità di visualizzazione */
+  flex-direction: column;
+  /* Aggiunto per supportare la modalità di visualizzazione */
   align-items: center;
 }
 
@@ -9,7 +15,8 @@
   position: relative;
   width: 200px;
   height: 400px;
-  margin-bottom: 4px; /* Aggiunto per spazio tra anteprima e pulsanti */
+  margin-bottom: 4px;
+  /* Aggiunto per spazio tra anteprima e pulsanti */
 }
 
 .character-preview img {
@@ -92,6 +99,11 @@ button:hover {
 
 button:focus {
   outline: none;
+}
+
+.personalFont {
+  font-family: 'personalFont';
+  color: white;
 }
 
 .character-final {
