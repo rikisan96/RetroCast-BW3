@@ -1,3 +1,4 @@
+<!-- src/app/profile/profile.component.html -->
 <div class="container">
   <div class="row">
     <!-- Profilo -->
@@ -154,6 +155,19 @@
             <button (click)="removeFromFavorites(favorite)" class="btn btn-primary mt-3">Rimuovi</button>
           </div>
         </div>
+      </div>
+    </div>
+
+    <!-- Avatar -->
+    <div class="col-12">
+      <h2 class="personal-font text-center">Here is your avatar!</h2>
+      <div class="avatar-preview">
+        <img *ngIf="avatar.face" [src]="avatar.face" class="face">
+        <img *ngIf="avatar.body" [src]="avatar.body" class="body">
+        <img *ngIf="avatar.armLeft" [src]="avatar.armLeft" class="arm-left">
+        <img *ngIf="avatar.armRight" [src]="avatar.armRight" class="arm-right">
+        <img *ngIf="avatar.legLeft" [src]="avatar.legLeft" class="leg-left">
+        <img *ngIf="avatar.legRight" [src]="avatar.legRight" class="leg-right">
       </div>
     </div>
   </div>
