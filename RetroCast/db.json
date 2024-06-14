@@ -11,13 +11,14 @@
     },
     {
       "email": "bywaze@mailinator.com",
-      "password": "$2a$10$j5A243eRPJ1ZJpow/HfY9OQls4hpmUIwGQtcpcUZ.fwfVQBlVmE0G",
       "firstName": "Francesco",
       "lastName": "Iannaccone",
       "username": "franc",
       "age": 22,
-      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
-      "id": 2
+      "profileImageUrl": "../RetroCast/src/assets/imgs/profile/wario.png",
+      "id": 2,
+      "password": "$2a$10$/lK/NF1uPAcHOmuUVR7HFeQhKUy9S/BlNIaHuNM1m99FCRpd39bbu",
+      "region": "Italy"
     },
     {
       "email": "example@example.com",
