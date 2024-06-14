@@ -73,6 +73,7 @@
 .card:focus {
   transform: scale(1.05);
   border-color: #ff0;
+  z-index: 10;
 }
 
 .card .card-body {
@@ -199,7 +200,6 @@
   h4 {
     color: #ff0;
   }
-
 }
 
 .red {

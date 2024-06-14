@@ -1,22 +1,41 @@
-<div class="quiz-container" *ngIf="quiz">
-  <h2>{{ quiz.title }}</h2>
-  <div *ngIf="!quizFinished">
-    <h3>Domanda {{ currentQuestionIndex + 1 }} / {{ quiz.questions.length }}</h3>
-    <p>{{ quiz.questions[currentQuestionIndex].text }}</p>
-    <div class="options">
-      <button *ngFor="let option of quiz.questions[currentQuestionIndex].options"
-              (click)="selectAnswer(option)" 
-              [class.selected]="selectedAnswer === option">
-        {{ option }}
-      </button>
+<div class="container">
+  <div class="row">
+    <div class="col-12 py-5">
+      <div class="quiz-container" *ngIf="quiz">
+        <h2>{{ quiz.title }}</h2>
+        <div *ngIf="!quizFinished">
+          <h3>
+            Domanda {{ currentQuestionIndex + 1 }} / {{ quiz.questions.length }}
+          </h3>
+          <p>{{ quiz.questions[currentQuestionIndex].text }}</p>
+          <div class="options">
+            <button
+              *ngFor="
+                let option of quiz.questions[currentQuestionIndex].options
+              "
+              (click)="selectAnswer(option)"
+              [class.selected]="selectedAnswer === option"
+            >
+              {{ option }}
+            </button>
+          </div>
+          <button (click)="nextQuestion()" [disabled]="!selectedAnswer">
+            Prossima domanda
+          </button>
+        </div>
+        <div *ngIf="quizFinished">
+          <h3>Quiz Completato!</h3>
+          <p>Punteggio: {{ score }} / {{ quiz.questions.length }}</p>
+          <p>{{ passMessage }}</p>
+          <div class="d-flex align-items-center justify-content-evenly">
+            <button (click)="restartQuiz()">Ricomincia il Quiz</button>
+            <button (click)="returnToQuizList()" class="btn btn-primary">
+              Torna alla Lista dei Quiz
+            </button>
+            <!-- Pulsante per tornare alla lista dei quiz -->
+          </div>
+        </div>
+      </div>
     </div>
-    <button (click)="nextQuestion()" [disabled]="!selectedAnswer">Prossima domanda</button>
-  </div>
-  <div *ngIf="quizFinished">
-    <h3>Quiz Completato!</h3>
-    <p>Punteggio: {{ score }} / {{ quiz.questions.length }}</p>
-    <p>{{ passMessage }}</p>
-    <button (click)="restartQuiz()">Ricomincia il Quiz</button>
-    <button (click)="returnToQuizList()" class="btn btn-primary">Torna alla Lista dei Quiz</button> <!-- Pulsante per tornare alla lista dei quiz -->
   </div>
 </div>

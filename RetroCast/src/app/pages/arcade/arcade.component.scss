@@ -1,41 +1,41 @@
 @font-face {
   font-family: OldGame;
   src: url(../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf);
-  }
+}
 
-@font-face{
-  font-family:VintageFont;
+@font-face {
+  font-family: VintageFont;
   src: url(../../../assets/fonts/logos_font/retrocast-brand-zip-file/Sixtyfour.ttf);
 }
-@font-face{
-  font-family:ThirdFont;
+@font-face {
+  font-family: ThirdFont;
   src: url(../../../assets/fonts/planet-joust-font/PlanetJoust-w1Kv6.otf);
 }
 
-.bg-personal{
+.bg-personal {
   background-color: transparent !important;
   border: 3px solid white !important;
 }
 
-.personal-font{
+.personal-font {
   font-family: OldGame;
-  color:white;
+  color: white;
 }
 
-.personal-fontTre{
+.personal-fontTre {
   font-family: VintageFont;
-  color:white;
+  color: white;
   font-size: small;
   border: 3px solid white;
   padding: 10px;
 }
 
-.btn-personal{
+.btn-personal {
   border: 3px solid white;
   padding: 10px;
 }
 
-.btn-personal:hover{
+.btn-personal:hover {
   background-color: white !important;
   color: black !important;
   transition: 0.1s;
@@ -46,13 +46,12 @@
 
 .card {
   transition: transform 0.5s ease, border-color 0.5s ease, filter 0.5s ease !important;
+  box-shadow: 0px 0px 12px 1px gray;
 }
 
 .card:hover,
 .card:focus {
-  transform: scale(1.05)!important;
-  border-color: yellow!important;
- /* Aggiungi l'effetto di blur */
+  transform: scale(1.05) !important;
+  border-color: yellow !important;
+  /* Aggiungi l'effetto di blur */
 }
-
-
