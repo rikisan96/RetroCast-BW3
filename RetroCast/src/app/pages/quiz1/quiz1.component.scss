@@ -2,8 +2,14 @@
     font-family: 'OldGame';
     src: url('../../../assets/fonts/emulogic-font/Emulogic-zrEw.ttf');
   }
-
-
+  
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'OldGame', cursive;
+    overflow: hidden;
+  }
+  
   .quiz-container {
     max-width: 600px;
     margin: 0 auto;
@@ -14,45 +20,42 @@
     border-radius: 10px;
     box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
   }
-
-  h1, h2 {
+  
+  h2, h3 {
     font-family: 'OldGame', cursive;
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
     color: #fff;
   }
-
+  
   p {
     font-family: 'OldGame', cursive;
     color: #fff;
   }
-
+  
   button {
     background-color: #000;
     border: 2px solid #fff;
     padding: 0.5rem 1rem;
-    font-family: 'OldGame';
     font-size: 1rem;
     border-radius: 0;
     cursor: pointer;
     color: #fff;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   }
-
+  
   button:hover,
   button:focus {
     background-color: #fff;
     color: #000;
     border-color: #ff0;
   }
-
+  
   .options {
     display: flex;
     flex-direction: column;
     gap: 10px;
     margin-bottom: 20px;
   }
-
+  
   .options button {
     border: 2px solid #fff;
     background-color: #000;
@@ -62,25 +65,17 @@
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   }
-
+  
   .options button:hover,
   .options button:focus {
     background-color: #fff;
     color: #000;
     border-color: #ff0;
   }
-
+  
   .options button.selected {
     background-color: #fff;
     color: #000;
     border-color: #ff0;
   }
-
-  .fireworks-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-  }
+  

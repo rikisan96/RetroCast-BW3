@@ -39,8 +39,13 @@
           </a>
         </li>
         <li *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/quiz" routerLinkActive="active"
-            >Quiz <i class="bi bi-people"></i>
+          <a class="nav-link" routerLink="/quizlist" routerLinkActive="active"
+            >Quiz <i class="bi bi-box"></i>
+          </a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/character" routerLinkActive="active"
+            >Character <i class="bi bi-box"></i>
           </a>
         </li>
       </ul>
