@@ -50,6 +50,16 @@
       "age": 27,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
       "id": 6
+    },
+    {
+      "email": "hello@gmail.com",
+      "password": "$2a$10$pyHVm.mvTlwz.VqDPrZyV.ev3FDPLQxaLoZ8Wm9Xg37F0CmmSTwNa",
+      "firstName": "hello",
+      "lastName": "hello",
+      "username": "hello",
+      "age": 99,
+      "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
+      "id": 7
     }
   ],
   "games": [
