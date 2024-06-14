@@ -29,6 +29,7 @@
   font-family: OldGame;
   color: white;
 }
+
 .personal-fontTre {
   font-family: VintageFont;
   color: white;
@@ -46,6 +47,7 @@
 .active-link {
   color: #ffdc00;
 }
+
 .active-button {
   background-color: white !important;
   color: black !important;
@@ -56,6 +58,7 @@
   border: 5px solid #ffdc00;
   font-family: ThirdFont;
 }
+
 .card {
   background-color: #000;
   color: #fff;
@@ -100,6 +103,7 @@
   color: #ffdc00;
   transition: all 0.3s ease;
   margin: 0 10px;
+
   &:hover {
     color: black;
     background-color: #ffdc00;
@@ -190,8 +194,15 @@
 .modal {
   font-family: OldGame;
   font-size: 0.7em;
+
   h3,
   h4 {
     color: #ff0;
   }
+
+}
+
+.red {
+  color: red;
+  padding: 0.5em;
 }
