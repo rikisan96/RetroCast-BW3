@@ -15,21 +15,20 @@
       "lastName": "Iannaccone",
       "username": "franc",
       "age": 22,
-      "profileImageUrl": "../RetroCast/src/assets/imgs/profile/wario.png",
+      "profileImageUrl": "../../assets/imgs/profile/toad.png",
       "id": 2,
-      "password": "$2a$10$/lK/NF1uPAcHOmuUVR7HFeQhKUy9S/BlNIaHuNM1m99FCRpd39bbu",
-      "region": "Italy"
+      "region": "Italy",
+      "password": "$2a$10$OSEXkLJFWosgyxurbY8m0epP1d4S4hznb8YKJwKKtIIXJ4GNahq46"
     },
     {
-      "email": "madonnariccardo12@gmail.com",
-      "password": "$2a$10$kDbnTL1H0WL4fyQYLwxoOOlOqVM/giL9pSYdua61cwl6SX8SkFYC2",
-      "firstName": "antonio",
-      "lastName": "gantolea",
-      "username": "arcobaleno",
-      "age": 22,
+      "email": "example@example.com",
+      "password": "$2a$10$jSBBKeuzR19j4dFHcrDHuOMZY7EqAaPVFHUvrS35rmA40gWv8ouB6",
+      "firstName": "Stefano",
+      "lastName": "Spitaleri",
+      "username": "marte",
+      "age": 23,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
       "id": 3
-<<<<<<< HEAD
     },
     {
       "email": "hello@gmail.com",

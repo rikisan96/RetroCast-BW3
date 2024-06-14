@@ -13,6 +13,10 @@ label {
   font-family: "OldGame", cursive;
 }
 
+.col-md-6:nth-of-type(2) {
+  margin-top: 7em;
+}
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -144,8 +148,8 @@ h1.personal-font {
   border-color: #ff0; /* Colore giallo per hover e focus */
 }
 
-.favorites-container{
-  font-family: 'OldGame', cursive;
+.favorites-container {
+  font-family: "OldGame", cursive;
   background-color: #000;
   color: white;
   padding: 2rem;
