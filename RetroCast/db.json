@@ -21,36 +21,35 @@
       "password": "$2a$10$OSEXkLJFWosgyxurbY8m0epP1d4S4hznb8YKJwKKtIIXJ4GNahq46"
     },
     {
-      "email": "example@example.com",
-      "password": "$2a$10$jSBBKeuzR19j4dFHcrDHuOMZY7EqAaPVFHUvrS35rmA40gWv8ouB6",
+      "email": "cptsailorman@pirate.com",
       "firstName": "Stefano",
       "lastName": "Spitaleri",
-      "username": "marte",
+      "username": "Marte",
+      "age": 23,
+      "profileImageUrl": "../../assets/imgs/profile/bowser.jpg",
+      "id": 4,
+      "region": "Italy",
+      "password": "$2a$10$koKOZAEHh4sIL7trPqVmW.itbW2Xao5dn4YbtnBCd.TMNq2BhlvQ6"
+    },
+    {
+      "email": "jas@mine.com",
+      "password": "$2a$10$k45SyabPe9oU4Xkp58Ko6ebXc6zeovJj/5f0wRySKstOnLCPqmlzS",
+      "firstName": "Yasmin",
+      "lastName": "Mahfouz",
+      "username": "Jas",
       "age": 23,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
-      "id": 3
+      "id": 5
     },
     {
-      "email": "hello@gmail.com",
-      "firstName": "hello",
-      "lastName": "hello",
-      "username": "hello",
-      "age": 21,
+      "email": "e@mail.com",
+      "password": "$2a$10$m2Kbuxg73f7eE1r5nz.XV.n9VxpWPZaPvtDDD6V6i2pOw36cs550q",
+      "firstName": "Riccardo ",
+      "lastName": "Cutruneo",
+      "username": "The Vitruvian",
+      "age": 27,
       "profileImageUrl": "../../assets/imgs/profile/mario1.jpg",
-      "id": 4,
-      "password": "$2a$10$vyh0zQ88vW3mI1JvKIA.tOjBz6ftWo9krLxazE7KPtXjww6upi1Se",
-      "region": "italia"
-    },
-    {
-      "email": "jasmine@gmail.com",
-      "firstName": "yasmin",
-      "lastName": "mahfouz",
-      "username": "jas",
-      "age": 99,
-      "profileImageUrl": "../../assets/imgs/profile/mario.png",
-      "id": 5,
-      "password": "$2a$10$dV.3N1ie9qPUbX05p4bSkeTZTaesM0DIdJLN2Tb7haJ9zTjrneP..",
-      "region": "italia"
+      "id": 6
     }
   ],
   "games": [
@@ -72,7 +71,7 @@
       "genre": "Action RPG",
       "year": 2011,
       "price": 19.99,
-      "gameImg": "https://gaming-cdn.com/images/products/789/orig/the-witcher-2-assassins-of-kings-enhanced-edition-enhanced-edition-pc-gioco-gog-com-cover.jpg?v=1701271719",
+      "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/header.jpg?t=1700481810",
       "gameVote": 8.8,
       "sysRequirement": "Windows XP/Vista/7, Intel Core 2 Duo 2.2 GHz or AMD equivalent, 1GB RAM for Windows XP / 2GB RAM for Windows Vista and Windows 7, Nvidia GeForce 8800 or ATI Radeon HD 3850",
       "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
@@ -85,7 +84,7 @@
       "genre": "Puzzle",
       "year": 2011,
       "price": 19.99,
-      "gameImg": "https://m.media-amazon.com/images/M/MV5BNzEyNGM5YjgtYjFkMC00MTE1LTk1YjgtNjAyYjA2ODUzNzQwXkEyXkFqcGdeQXVyNjk2MTcyMDA@._V1_.jpg",
+      "gameImg": "https://cdn.akamai.steamstatic.com/steam/apps/620/header.jpg",
       "gameVote": 9.5,
       "sysRequirement": "Windows 7/Vista/XP, 3.0 GHz P4, Dual Core 2.0 (or higher) or AMD64X2 (or higher), 2GB RAM, DirectX 9 compatible video card",
       "plot": "Un ex soggetto di test di Aperture Science e GLaDOS devono lavorare insieme per fuggire da un laboratorio di ricerca.",
@@ -98,7 +97,7 @@
       "genre": "Action RPG",
       "year": 2011,
       "price": 19.99,
-      "gameImg": "https://sm.ign.com/t/ign_it/screenshot/d/dark-souls/dark-souls-1-concept-cover_3syr.1080.jpg",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg",
       "gameVote": 9.2,
       "sysRequirement": "Windows XP, Windows Vista, Windows 7, or newer, 2.6 GHz Dual-Core, 1 GB RAM, DirectX 9.0c, 512 MB RAM video card",
       "plot": "Un cavaliere non morto cerca di sopravvivere in un mondo oscuro e ostile mentre combatte creature spaventose e boss imponenti.",
@@ -111,7 +110,7 @@
       "genre": "Action-Adventure",
       "year": 2011,
       "price": 19.99,
-      "gameImg": "https://wallpapercave.com/wp/Xrng9Mu.jpg",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/0/00/Batman_Arkham_City_Game_Cover.jpg",
       "gameVote": 9.4,
       "sysRequirement": "Microsoft Windows XP, Vista or 7, Intel Core 2 Duo 2.4 GHz or AMD Athlon X2 4800+ processor, 2GB RAM (Windows XP) / 2.5GB (Windows Vista and 7), DirectX 9.0c compatible NVIDIA GeForce 8800 GT or ATI Radeon HD 3850 video card",
       "plot": "Batman deve navigare attraverso Arkham City, una prigione di massima sicurezza per i criminali di Gotham, per sventare i piani di Hugo Strange e Joker.",
@@ -150,7 +149,7 @@
       "genre": "First-Person Shooter",
       "year": 2007,
       "price": 19.99,
-      "gameImg": "https://images.everyeye.it/img-notizie/bioshock-the-collection-compare-rating-board-coreana-trapela-copertina-gioco-256171.jpg",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/6/6d/BioShock_cover.jpg",
       "gameVote": 9.4,
       "sysRequirement": "Microsoft Windows XP/Vista, 2.4GHz Intel Pentium 4 or equivalent processor, 1GB RAM, 8GB free hard disk space, DirectX 9.0c compliant video card supporting 128 MB RAM and Pixel Shader 3.0",
       "plot": "Un uomo sopravvissuto a un incidente aereo si ritrova in una città sottomarina utopica piena di orrore e follia.",
@@ -176,7 +175,7 @@
       "genre": "Action-Adventure",
       "year": 2010,
       "price": 29.99,
-      "gameImg": "https://gaming-cdn.com/images/products/7047/orig/red-dead-redemption-pc-gioco-cover.jpg?v=1705660598",
+      "gameImg": "https://store-images.s-microsoft.com/image/apps.26419.71534445913389778.3217f3df-0d90-489b-8f2f-90d018aded6a.9821d242-8c8c-4fd3-95ef-1ea45f500a1c?q=90&w=480&h=270",
       "gameVote": 9.7,
       "sysRequirement": "PlayStation 3, Xbox 360",
       "plot": "John Marston, un ex criminale, deve cacciare i suoi ex compagni per salvare la sua famiglia.",
@@ -202,7 +201,7 @@
       "genre": "Action RPG/FPS",
       "year": 2009,
       "price": 19.99,
-      "gameImg": "https://images8.alphacoders.com/284/284217.jpg",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/0/01/Borderlandscover.jpg",
       "gameVote": 9.2,
       "sysRequirement": "Windows XP/Vista, 2.4 GHz processor, 1GB RAM (2GB recommended for Vista), 8GB free hard drive space, NVIDIA GeForce 8600 or better / ATI Radeon HD 2600 or better",
       "plot": "Un gruppo di cacciatori di tesori cerca fortune in un pianeta ostile pieno di bande criminali e creature pericolose.",
@@ -215,7 +214,7 @@
       "genre": "Action RPG",
       "year": 2009,
       "price": 19.99,
-      "gameImg": "https://gaming-cdn.com/images/products/196/orig/dragon-age-origins-ultimate-edition-ultimate-edition-pc-gioco-ea-app-cover.jpg?v=1705418479",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/8/89/Dragon_Age_Origins_cover.png",
       "gameVote": 9.1,
       "sysRequirement": "Microsoft Windows XP SP3, Windows Vista SP1, or Windows 7, Intel Core 2 (or equivalent) running at 1.4Ghz or greater, AMD X2 (or equivalent) running at 1.8Ghz or greater, 1 GB RAM",
       "plot": "Un Grey Warden deve unire le forze contro un esercito di creature oscure conosciute come l'Orda Oscura.",
@@ -254,7 +253,7 @@
       "genre": "Action-Adventure",
       "year": 2008,
       "price": 19.99,
-      "gameImg": "https://i.pinimg.com/originals/66/1c/6d/661c6d8b7c1c64535c28e7fa830f9330.png",
+      "gameImg": "https://m.media-amazon.com/images/I/51+VmzFNeoL._AC_UF894,1000_QL80_.jpg",
       "gameVote": 9.7,
       "sysRequirement": "Windows Vista - Service Pack 1 / Windows XP - Service Pack 3, Intel Core 2 Duo 1.8GHz, 1 GB RAM for Windows XP / 1.5 GB for Windows Vista, 16 GB free hard drive space, 512MB NVIDIA 7900 or 512MB ATI X1900",
       "plot": "Niko Bellic, un immigrato dalla Serbia, cerca di farsi una vita nell'ambiente criminale di Liberty City mentre cerca vendetta.",
@@ -267,7 +266,7 @@
       "genre": "First-Person Shooter",
       "year": 2007,
       "price": 19.99,
-      "gameImg": "https://assets-prd.ignimgs.com/2022/03/28/cod4-1648511386228.jpg",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/5/5f/Call_of_Duty_4_Modern_Warfare.jpg",
       "gameVote": 9.5,
       "sysRequirement": "Microsoft Windows XP / Vista, Intel Pentium 4 2.4 GHz or AMD Athlon 64 2800+ processor, 512 MB RAM (768 MB for Windows Vista), NVIDIA GeForce 6600 or ATI Radeon 9800Pro or better",
       "plot": "Una serie di missioni militari in tutto il mondo mentre si lotta contro il terrorismo.",
@@ -319,7 +318,7 @@
       "genre": "First-Person Shooter",
       "year": 2004,
       "price": 19.99,
-      "gameImg": "https://wallpapers.com/images/featured/half-life-ozcf4n76ksp99yhk.jpg",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/thumb/2/25/Half-Life_2_cover.jpg/220px-Half-Life_2_cover.jpg",
       "gameVote": 9.7,
       "sysRequirement": "1.2 GHz processor, 256MB RAM, DirectX 7 level graphics card, Windows XP/2000/ME/98, Mouse, Keyboard, Internet Connection",
       "plot": "Gordon Freeman combatte una razza aliena invasiva mentre cerca di fermare il controllo del mondo da parte del misterioso Dr. Wallace Breen.",
@@ -332,7 +331,7 @@
       "genre": "MMORPG",
       "year": 2008,
       "price": 39.99,
-      "gameImg": "https://www.tribe.games/wp-content/uploads/2022/07/WoW_Copertina.webp",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/b/be/World_of_Warcraft_Wrath_of_the_Lich_King.png",
       "gameVote": 9.4,
       "sysRequirement": "Windows XP (Service Pack 2), Windows Vista, or Windows 7, Intel Pentium 4 1.3 GHz or AMD Athlon XP 1500+, 1GB or more of RAM, NVIDIA GeForce FX or ATI Radeon 9500 or better video card",
       "plot": "I giocatori devono affrontare il Re dei Lich e il suo esercito di non morti nella terra ghiacciata di Northrend.",
@@ -397,7 +396,7 @@
       "genre": "RPG",
       "year": 1997,
       "price": 11.99,
-      "gameImg": "https://www.giantbomb.com/a/uploads/original/36/369565/2995549-ffvii-twitch-icon.jpg",
+      "gameImg": "https://upload.wikimedia.org/wikipedia/en/c/c2/Final_Fantasy_VII_Box_Art.jpg",
       "gameVote": 9.8,
       "sysRequirement": "Windows XP/Vista/7/8, 2 GHz Processor or faster, 1 GB RAM, DirectX 9-compatible graphics card",
       "plot": "Un ex soldato di nome Cloud Strife si unisce a un gruppo di ribelli per combattere una potente azienda e salvare il pianeta dalla distruzione.",
@@ -410,7 +409,7 @@
       "genre": "RPG",
       "year": 2003,
       "price": 9.99,
-      "gameImg": "https://i.ytimg.com/vi/xUHAIvC45lE/maxresdefault.jpg",
+      "gameImg": "https://lumiere-a.akamaihd.net/v1/images/game_poster_knightsoftheoldrepub_1_d341747d.jpeg?region=0,0,500,750",
       "gameVote": 9.6,
       "sysRequirement": "Windows XP / Vista / 7 / 8 / 10, 1.8 GHz Processor, 1 GB RAM, 3D graphics card compatible with DirectX 9.0c and 256 MB VRAM",
       "plot": "I giocatori assumono il controllo di un Jedi durante la guerra civile galattica mentre combattono contro i Sith e prendono decisioni morali.",
@@ -449,7 +448,7 @@
       "genre": "First-Person Shooter",
       "year": 1998,
       "price": 9.99,
-      "gameImg": "https://i.ytimg.com/vi/bYnFmpLgfyI/maxresdefault.jpg",
+      "gameImg": "https://shared.cloudflare.steamstatic.com/store_item_assets/steam/apps/70/capsule_616x353.jpg?t=1700269108",
       "gameVote": 9.6,
       "sysRequirement": "400 MHz processor, 96 MB RAM, 16 MB video card, Windows 95/98/NT/2000",
       "plot": "Gordon Freeman si trova coinvolto in un disastroso esperimento scientifico che porta all'invasione di una razza aliena nella Terra.",
@@ -458,241 +457,13 @@
       "trailerUrl": "https://www.youtube.com/embed/wtIp8jOo8_o?si=Ar7wyvddFnQ0cNPM"
     }
   ],
-  "cart": [
-    {
-      "userId": 5,
-      "game": {
-        "Title": "The Elder Scrolls V: Skyrim",
-        "genre": "Action RPG",
-        "year": 2011,
-        "price": 39.99,
-        "gameImg": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheElderScrollsVSkyrim_image1600w.jpg",
-        "gameVote": 9.3,
-        "sysRequirement": "Windows 7/Vista/XP PC (32 or 64 bit), Intel Dual Core 2.0 GHz or equivalent processor, 2GB RAM, DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)",
-        "plot": "Il giocatore è il Dovakhiin, un guerriero destinato a salvare il mondo da un'antica profezia mentre combatte draghi e altre creature.",
-        "devName": "Bethesda Game Studios",
-        "id": 1,
-        "trailerUrl": "https://www.youtube.com/embed/PjqsYzBrP-M"
-      },
-      "id": 1
-    },
-    {
-      "userId": 5,
-      "game": {
-        "Title": "The Witcher 2: Assassins of Kings",
-        "genre": "Action RPG",
-        "year": 2011,
-        "price": 19.99,
-        "gameImg": "https://gaming-cdn.com/images/products/789/orig/the-witcher-2-assassins-of-kings-enhanced-edition-enhanced-edition-pc-gioco-gog-com-cover.jpg?v=1701271719",
-        "gameVote": 8.8,
-        "sysRequirement": "Windows XP/Vista/7, Intel Core 2 Duo 2.2 GHz or AMD equivalent, 1GB RAM for Windows XP / 2GB RAM for Windows Vista and Windows 7, Nvidia GeForce 8800 or ATI Radeon HD 3850",
-        "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
-        "devName": "CD Projekt Red",
-        "id": 2,
-        "trailerUrl": "https://www.youtube.com/embed/SdiK8uaduZs?si=uGgnqH01_OYETl-5"
-      },
-      "id": 2
-    },
-    {
-      "userId": 5,
-      "game": {
-        "Title": "Portal 2",
-        "genre": "Puzzle",
-        "year": 2011,
-        "price": 19.99,
-        "gameImg": "https://m.media-amazon.com/images/M/MV5BNzEyNGM5YjgtYjFkMC00MTE1LTk1YjgtNjAyYjA2ODUzNzQwXkEyXkFqcGdeQXVyNjk2MTcyMDA@._V1_.jpg",
-        "gameVote": 9.5,
-        "sysRequirement": "Windows 7/Vista/XP, 3.0 GHz P4, Dual Core 2.0 (or higher) or AMD64X2 (or higher), 2GB RAM, DirectX 9 compatible video card",
-        "plot": "Un ex soggetto di test di Aperture Science e GLaDOS devono lavorare insieme per fuggire da un laboratorio di ricerca.",
-        "devName": "Valve",
-        "id": 3,
-        "trailerUrl": "https://www.youtube.com/embed/ts-j0nFf2e0?si=BJfDYqQI_hJGftNc"
-      },
-      "id": 3
-    },
-    {
-      "userId": 5,
-      "game": {
-        "Title": "Dark Souls",
-        "genre": "Action RPG",
-        "year": 2011,
-        "price": 19.99,
-        "gameImg": "https://sm.ign.com/t/ign_it/screenshot/d/dark-souls/dark-souls-1-concept-cover_3syr.1080.jpg",
-        "gameVote": 9.2,
-        "sysRequirement": "Windows XP, Windows Vista, Windows 7, or newer, 2.6 GHz Dual-Core, 1 GB RAM, DirectX 9.0c, 512 MB RAM video card",
-        "plot": "Un cavaliere non morto cerca di sopravvivere in un mondo oscuro e ostile mentre combatte creature spaventose e boss imponenti.",
-        "devName": "FromSoftware",
-        "id": 4,
-        "trailerUrl": "https://www.youtube.com/embed/o1780AqAa20?si=pd0sJ9mB7LsloucB"
-      },
-      "id": 4
-    }
-  ],
+  "cart": [],
   "boughtGames": [
     {
-      "userId": 2,
+      "userId": 4,
       "cartItems": [
         {
-          "userId": 2,
-          "game": {
-            "Title": "Dark Souls",
-            "genre": "Action RPG",
-            "year": 2011,
-            "price": 19.99,
-            "gameImg": "https://sm.ign.com/t/ign_it/screenshot/d/dark-souls/dark-souls-1-concept-cover_3syr.1080.jpg",
-            "gameVote": 9.2,
-            "sysRequirement": "Windows XP, Windows Vista, Windows 7, or newer, 2.6 GHz Dual-Core, 1 GB RAM, DirectX 9.0c, 512 MB RAM video card",
-            "plot": "Un cavaliere non morto cerca di sopravvivere in un mondo oscuro e ostile mentre combatte creature spaventose e boss imponenti.",
-            "devName": "FromSoftware",
-            "id": 4,
-            "trailerUrl": "https://www.youtube.com/embed/o1780AqAa20?si=pd0sJ9mB7LsloucB"
-          },
-          "id": 1
-        },
-        {
-          "userId": 2,
-          "game": {
-            "Title": "Batman: Arkham City",
-            "genre": "Action-Adventure",
-            "year": 2011,
-            "price": 19.99,
-            "gameImg": "https://wallpapercave.com/wp/Xrng9Mu.jpg",
-            "gameVote": 9.4,
-            "sysRequirement": "Microsoft Windows XP, Vista or 7, Intel Core 2 Duo 2.4 GHz or AMD Athlon X2 4800+ processor, 2GB RAM (Windows XP) / 2.5GB (Windows Vista and 7), DirectX 9.0c compatible NVIDIA GeForce 8800 GT or ATI Radeon HD 3850 video card",
-            "plot": "Batman deve navigare attraverso Arkham City, una prigione di massima sicurezza per i criminali di Gotham, per sventare i piani di Hugo Strange e Joker.",
-            "devName": "Rocksteady Studios",
-            "id": 5,
-            "trailerUrl": "https://www.youtube.com/embed/MlX--IPxTRU?si=6onRyWXPvy2HrRGK"
-          },
-          "id": 2
-        },
-        {
-          "userId": 2,
-          "game": {
-            "Title": "Portal",
-            "genre": "Puzzle",
-            "year": 2007,
-            "price": 9.99,
-            "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/400/capsule_616x353.jpg?t=1699003695",
-            "gameVote": 9.5,
-            "sysRequirement": "Microsoft Windows XP/Vista/7/8, 1.7 GHz Processor, 512MB RAM, DirectX 8.1 level Graphics Card (Requires support for SSE), Windows",
-            "plot": "Un soggetto di test di Aperture Science deve risolvere enigmi basati su portali per sfuggire da un laboratorio di ricerca.",
-            "devName": "Valve",
-            "id": 7,
-            "trailerUrl": "https://www.youtube.com/embed/TluRVBhmf8w"
-          },
-          "id": 3
-        },
-        {
-          "userId": 2,
-          "game": {
-            "Title": "BioShock",
-            "genre": "First-Person Shooter",
-            "year": 2007,
-            "price": 19.99,
-            "gameImg": "https://images.everyeye.it/img-notizie/bioshock-the-collection-compare-rating-board-coreana-trapela-copertina-gioco-256171.jpg",
-            "gameVote": 9.4,
-            "sysRequirement": "Microsoft Windows XP/Vista, 2.4GHz Intel Pentium 4 or equivalent processor, 1GB RAM, 8GB free hard disk space, DirectX 9.0c compliant video card supporting 128 MB RAM and Pixel Shader 3.0",
-            "plot": "Un uomo sopravvissuto a un incidente aereo si ritrova in una città sottomarina utopica piena di orrore e follia.",
-            "devName": "2K Boston",
-            "id": 8,
-            "trailerUrl": "https://www.youtube.com/embed/Lmw78t8NgIE"
-          },
-          "id": 4
-        },
-        {
-          "userId": 2,
-          "game": {
-            "Title": "Red Dead Redemption",
-            "genre": "Action-Adventure",
-            "year": 2010,
-            "price": 29.99,
-            "gameImg": "https://gaming-cdn.com/images/products/7047/orig/red-dead-redemption-pc-gioco-cover.jpg?v=1705660598",
-            "gameVote": 9.7,
-            "sysRequirement": "PlayStation 3, Xbox 360",
-            "plot": "John Marston, un ex criminale, deve cacciare i suoi ex compagni per salvare la sua famiglia.",
-            "devName": "Rockstar San Diego",
-            "id": 10,
-            "trailerUrl": "https://www.youtube.com/embed/-o7rES_3ymA?si=VZK1Xv6ZoqeGhPYa"
-          },
-          "id": 5
-        },
-        {
-          "userId": 2,
-          "game": {
-            "Title": "Borderlands",
-            "genre": "Action RPG/FPS",
-            "year": 2009,
-            "price": 19.99,
-            "gameImg": "https://images8.alphacoders.com/284/284217.jpg",
-            "gameVote": 9.2,
-            "sysRequirement": "Windows XP/Vista, 2.4 GHz processor, 1GB RAM (2GB recommended for Vista), 8GB free hard drive space, NVIDIA GeForce 8600 or better / ATI Radeon HD 2600 or better",
-            "plot": "Un gruppo di cacciatori di tesori cerca fortune in un pianeta ostile pieno di bande criminali e creature pericolose.",
-            "devName": "Gearbox Software",
-            "id": 12,
-            "trailerUrl": "https://www.youtube.com/embed/v3ZWbpce_Os?si=kt7Yd_dxJGX9BPxY"
-          },
-          "id": 6
-        },
-        {
-          "userId": 2,
-          "game": {
-            "Title": "Fallout 3",
-            "genre": "Action RPG",
-            "year": 2008,
-            "price": 19.99,
-            "gameImg": "https://cdn1.epicgames.com/offer/fa702d34a37248ba98fb17f680c085e3/EGS_Fallout3GameoftheYearEdition_BethesdaGameStudios_S1_2560x1440-073f5b4cf358f437a052a3c29806efa0",
-            "gameVote": 9.5,
-            "sysRequirement": "Microsoft Windows XP / Vista, 2.4 Ghz Intel Pentium 4 or equivalent processor, 1 GB (XP) / 2 GB (Vista) system RAM, 512 MB DirectX 9.0c compliant video card, 8 GB free hard disk space",
-            "plot": "Un abitante del Vault 101 deve trovare suo padre nel mondo post-apocalittico della zona di Washington, D.C.",
-            "devName": "Bethesda Game Studios",
-            "id": 14,
-            "trailerUrl": "https://www.youtube.com/embed/iYZpR51XgW0?si=EF3fUmQg9J8ReC4V"
-          },
-          "id": 7
-        },
-        {
-          "userId": 2,
-          "game": {
-            "Title": "Final Fantasy VII",
-            "genre": "RPG",
-            "year": 1997,
-            "price": 11.99,
-            "gameImg": "https://www.giantbomb.com/a/uploads/original/36/369565/2995549-ffvii-twitch-icon.jpg",
-            "gameVote": 9.8,
-            "sysRequirement": "Windows XP/Vista/7/8, 2 GHz Processor or faster, 1 GB RAM, DirectX 9-compatible graphics card",
-            "plot": "Un ex soldato di nome Cloud Strife si unisce a un gruppo di ribelli per combattere una potente azienda e salvare il pianeta dalla distruzione.",
-            "devName": "Square Enix",
-            "id": 27,
-            "trailerUrl": "https://www.youtube.com/embed/utVE4aUKYuY?si=1dnOylqVjX3Yp5Fe"
-          },
-          "id": 8
-        },
-        {
-          "userId": 2,
-          "game": {
-            "Title": "Half-Life",
-            "genre": "First-Person Shooter",
-            "year": 1998,
-            "price": 9.99,
-            "gameImg": "https://i.ytimg.com/vi/bYnFmpLgfyI/maxresdefault.jpg",
-            "gameVote": 9.6,
-            "sysRequirement": "400 MHz processor, 96 MB RAM, 16 MB video card, Windows 95/98/NT/2000",
-            "plot": "Gordon Freeman si trova coinvolto in un disastroso esperimento scientifico che porta all'invasione di una razza aliena nella Terra.",
-            "devName": "Valve",
-            "id": 31,
-            "trailerUrl": "https://www.youtube.com/embed/wtIp8jOo8_o?si=Ar7wyvddFnQ0cNPM"
-          },
-          "id": 9
-        }
-      ],
-      "id": 1718276261210
-    },
-    {
-      "userId": 1,
-      "cartItems": [
-        {
-          "userId": 1,
+          "userId": 4,
           "game": {
             "Title": "The Elder Scrolls V: Skyrim",
             "genre": "Action RPG",
@@ -709,13 +480,13 @@
           "id": 1
         },
         {
-          "userId": 1,
+          "userId": 4,
           "game": {
             "Title": "The Witcher 2: Assassins of Kings",
             "genre": "Action RPG",
             "year": 2011,
             "price": 19.99,
-            "gameImg": "https://gaming-cdn.com/images/products/789/orig/the-witcher-2-assassins-of-kings-enhanced-edition-enhanced-edition-pc-gioco-gog-com-cover.jpg?v=1701271719",
+            "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/header.jpg?t=1700481810",
             "gameVote": 8.8,
             "sysRequirement": "Windows XP/Vista/7, Intel Core 2 Duo 2.2 GHz or AMD equivalent, 1GB RAM for Windows XP / 2GB RAM for Windows Vista and Windows 7, Nvidia GeForce 8800 or ATI Radeon HD 3850",
             "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
@@ -726,13 +497,30 @@
           "id": 2
         },
         {
-          "userId": 1,
+          "userId": 4,
+          "game": {
+            "Title": "Portal 2",
+            "genre": "Puzzle",
+            "year": 2011,
+            "price": 19.99,
+            "gameImg": "https://cdn.akamai.steamstatic.com/steam/apps/620/header.jpg",
+            "gameVote": 9.5,
+            "sysRequirement": "Windows 7/Vista/XP, 3.0 GHz P4, Dual Core 2.0 (or higher) or AMD64X2 (or higher), 2GB RAM, DirectX 9 compatible video card",
+            "plot": "Un ex soggetto di test di Aperture Science e GLaDOS devono lavorare insieme per fuggire da un laboratorio di ricerca.",
+            "devName": "Valve",
+            "id": 3,
+            "trailerUrl": "https://www.youtube.com/embed/ts-j0nFf2e0?si=BJfDYqQI_hJGftNc"
+          },
+          "id": 3
+        },
+        {
+          "userId": 4,
           "game": {
             "Title": "Dark Souls",
             "genre": "Action RPG",
             "year": 2011,
             "price": 19.99,
-            "gameImg": "https://sm.ign.com/t/ign_it/screenshot/d/dark-souls/dark-souls-1-concept-cover_3syr.1080.jpg",
+            "gameImg": "https://upload.wikimedia.org/wikipedia/en/8/8d/Dark_Souls_Cover_Art.jpg",
             "gameVote": 9.2,
             "sysRequirement": "Windows XP, Windows Vista, Windows 7, or newer, 2.6 GHz Dual-Core, 1 GB RAM, DirectX 9.0c, 512 MB RAM video card",
             "plot": "Un cavaliere non morto cerca di sopravvivere in un mondo oscuro e ostile mentre combatte creature spaventose e boss imponenti.",
@@ -743,41 +531,41 @@
           "id": 3
         },
         {
-          "userId": 1,
+          "userId": 4,
           "game": {
-            "Title": "Red Dead Redemption",
-            "genre": "Action-Adventure",
-            "year": 2010,
-            "price": 29.99,
-            "gameImg": "https://gaming-cdn.com/images/products/7047/orig/red-dead-redemption-pc-gioco-cover.jpg?v=1705660598",
-            "gameVote": 9.7,
-            "sysRequirement": "PlayStation 3, Xbox 360",
-            "plot": "John Marston, un ex criminale, deve cacciare i suoi ex compagni per salvare la sua famiglia.",
-            "devName": "Rockstar San Diego",
-            "id": 10,
-            "trailerUrl": "https://www.youtube.com/embed/-o7rES_3ymA?si=VZK1Xv6ZoqeGhPYa"
+            "Title": "Minecraft",
+            "genre": "Sandbox",
+            "year": 2011,
+            "price": 26.95,
+            "gameImg": "https://image.api.playstation.com/vulcan/img/cfn/11307x4B5WLoVoIUtdewG4uJ_YuDRTwBxQy0qP8ylgazLLc01PBxbsFG1pGOWmqhZsxnNkrU3GXbdXIowBAstzlrhtQ4LCI4.png",
+            "gameVote": 9.3,
+            "sysRequirement": "Windows XP or better, Mac OS 10.5.8 or better, Linux",
+            "plot": "Un gioco sandbox in cui i giocatori possono costruire e esplorare mondi generati proceduralmente.",
+            "devName": "Mojang",
+            "id": 6,
+            "trailerUrl": "https://www.youtube.com/embed/MmB9b5njVbA"
           },
           "id": 1
         },
         {
-          "userId": 1,
+          "userId": 4,
           "game": {
-            "Title": "Mass Effect 2",
-            "genre": "Action RPG",
-            "year": 2010,
+            "Title": "Borderlands",
+            "genre": "Action RPG/FPS",
+            "year": 2009,
             "price": 19.99,
-            "gameImg": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2362420/capsule_616x353.jpg?t=1708017054",
-            "gameVote": 9.5,
-            "sysRequirement": "Microsoft Windows XP SP3 / Windows Vista SP1 / Windows 7, Intel Core 2 Duo at 1.8 GHz / AMD Athlon 64 X2, 1 GB RAM for Windows XP / 2 GB RAM for Windows Vista and Windows 7, 15 GB free disk space",
-            "plot": "Il comandante Shepard deve reclutare una squadra per combattere contro una minaccia aliena nota come I Razziatori.",
-            "devName": "BioWare",
-            "id": 9,
-            "trailerUrl": "https://www.youtube.com/embed/VTsD2FjmLsw"
+            "gameImg": "https://upload.wikimedia.org/wikipedia/en/0/01/Borderlandscover.jpg",
+            "gameVote": 9.2,
+            "sysRequirement": "Windows XP/Vista, 2.4 GHz processor, 1GB RAM (2GB recommended for Vista), 8GB free hard drive space, NVIDIA GeForce 8600 or better / ATI Radeon HD 2600 or better",
+            "plot": "Un gruppo di cacciatori di tesori cerca fortune in un pianeta ostile pieno di bande criminali e creature pericolose.",
+            "devName": "Gearbox Software",
+            "id": 12,
+            "trailerUrl": "https://www.youtube.com/embed/v3ZWbpce_Os?si=kt7Yd_dxJGX9BPxY"
           },
-          "id": 2
+          "id": 1
         },
         {
-          "userId": 1,
+          "userId": 4,
           "game": {
             "Title": "Assassin's Creed II",
             "genre": "Action-Adventure",
@@ -791,10 +579,10 @@
             "id": 11,
             "trailerUrl": "https://www.youtube.com/embed/a12e3iKzqlw?si=CTlPL4ZJ-bj0P_bp"
           },
-          "id": 3
+          "id": 2
         },
         {
-          "userId": 1,
+          "userId": 4,
           "game": {
             "Title": "Age of Empires III",
             "genre": "Real-Time Strategy",
