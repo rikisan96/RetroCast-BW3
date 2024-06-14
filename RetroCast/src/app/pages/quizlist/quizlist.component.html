@@ -1,0 +1,14 @@
+<div class="container quiz-list-container">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-3" *ngFor="let quiz of quizzes; let i = index">
+        <div class="card quiz-card mb-4">
+          <img [src]="quiz.image" class="card-img-top" alt="{{ quiz.title }}">
+          <div class="card-body">
+            <h2 class="card-title">{{ quiz.title }}</h2>
+            <button class="btn btn-primary" (click)="startQuiz(i)">Inizia il Quiz</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

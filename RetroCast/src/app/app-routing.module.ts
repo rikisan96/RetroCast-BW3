@@ -90,7 +90,9 @@ const routes: Routes = [
     loadChildren: () =>
       import('./pages/community/community.module').then((m) => m.CommunityModule),
     canActivate: [AuthGuard],
-  },
+  },{ path: 'quizlist', loadChildren: () => import('./pages/quizlist/quizlist.module').then(m => m.QuizlistModule), canActivate: [AuthGuard] },
+  { path: 'quiz/:index', loadChildren: () => import('./pages/quiz1/quiz1.module').then(m => m.Quiz1Module), canActivate: [AuthGuard] },
+  { path: 'character', loadChildren: () => import('./pages/character/character.module').then(m => m.CharacterModule), canActivate: [AuthGuard] },
   { path: '**', loadChildren: () => import('./pages/page404/page404.module').then(m => m.Page404Module) },
 ];
 @NgModule({

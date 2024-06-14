@@ -38,6 +38,16 @@
             >Community <i class="bi bi-people"></i>
           </a>
         </li>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/quizlist" routerLinkActive="active"
+            >Quiz <i class="bi bi-box"></i>
+          </a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/character" routerLinkActive="active"
+            >Character <i class="bi bi-person-arms-up"></i>
+          </a>
+        </li>
       </ul>
       <ul class="navbar-nav me-personal">
         <div

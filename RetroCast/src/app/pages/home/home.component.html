@@ -142,7 +142,41 @@
     </div>
   </div>
 </div>
-
+<div
+    class="modal fade"
+    id="loginInstructionsModal"
+    tabindex="-1"
+    aria-labelledby="loginInstructionsModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginInstructionsModalLabel">Login Required</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ng-container *ngIf="loginStep === 1">
+            <p>Passo 1: Clicca sul pulsante <strong>Accedi</strong> nella barra di navigazione.</p>
+            <img src="../../../assets/login/step1.jpg" alt="Step 1" class="img-fluid" />
+          </ng-container>
+          <ng-container *ngIf="loginStep === 2">
+            <p>Passo 2: Inserisci le tue credenziali e accedi.</p>
+            <img src="../../../assets/login/step2.jpg" alt="Step 2" class="img-fluid" />
+          </ng-container>
+          <ng-container *ngIf="loginStep === 3">
+            <p>Passo 3: Una volta effettuato l'accesso, puoi aggiungere giochi al carrello e procedere con l'acquisto.</p>
+            <img src="../../../assets/login/step3.jpg" alt="Step 3" class="img-fluid" />
+          </ng-container>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="previousStep()" [disabled]="loginStep === 1">Previous</button>
+          <button type="button" class="btn btn-primary" (click)="nextStep()" [disabled]="loginStep === 3">Next Step</button>
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal" *ngIf="loginStep === 3">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Add the modal -->
 <div class="modal fade" id="gameDetailsModal" tabindex="-1" aria-labelledby="gameDetailsModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg retro-modal">
