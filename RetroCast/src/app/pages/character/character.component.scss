@@ -9,7 +9,7 @@
   position: relative;
   width: 200px;
   height: 400px;
-  margin-bottom: 20px; /* Aggiunto per spazio tra anteprima e pulsanti */
+  margin-bottom: 4px; /* Aggiunto per spazio tra anteprima e pulsanti */
 }
 
 .character-preview img {
@@ -17,40 +17,44 @@
 }
 
 .face {
-  top: 10%;
+  top: 13%;
   left: 50%;
   transform: translateX(-50%);
+  width: 100px;
+  z-index: 2;
 }
 
 .body {
   top: 30%;
   left: 50%;
   transform: translateX(-50%);
+  margin: 0;
+  width: 100px;
 }
 
 .arm-left {
-  top: 30%;
+  top: 45%;
   left: 5%;
-  width: 40px;
+  width: 50px;
   transform: translateY(-50%) scaleX(-1);
 }
 
 .arm-right {
-  top: 30%;
+  top: 45%;
   right: 5%;
-  width: 40px;
+  width: 50px;
   transform: translateY(-50%);
 }
 
 .leg-left {
-  top: 70%;
+  top: 63%;
   left: 25%;
   width: 40px;
   transform: translateY(-50%) scaleX(-1);
 }
 
 .leg-right {
-  top: 70%;
+  top: 63%;
   right: 25%;
   width: 40px;
   transform: translateY(-50%);
