@@ -457,7 +457,76 @@
       "trailerUrl": "https://www.youtube.com/embed/wtIp8jOo8_o?si=Ar7wyvddFnQ0cNPM"
     }
   ],
-  "cart": [],
+  "cart": [
+    {
+      "userId": 5,
+      "game": {
+        "Title": "The Elder Scrolls V: Skyrim",
+        "genre": "Action RPG",
+        "year": 2011,
+        "price": 39.99,
+        "gameImg": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_4/H2x1_NSwitch_TheElderScrollsVSkyrim_image1600w.jpg",
+        "gameVote": 9.3,
+        "sysRequirement": "Windows 7/Vista/XP PC (32 or 64 bit), Intel Dual Core 2.0 GHz or equivalent processor, 2GB RAM, DirectX 9.0c compatible NVIDIA or AMD ATI video card with 1GB of RAM (Nvidia GeForce GTX 260 or higher; ATI Radeon 4890 or higher)",
+        "plot": "Il giocatore è il Dovakhiin, un guerriero destinato a salvare il mondo da un'antica profezia mentre combatte draghi e altre creature.",
+        "devName": "Bethesda Game Studios",
+        "id": 1,
+        "trailerUrl": "https://www.youtube.com/embed/PjqsYzBrP-M"
+      },
+      "id": 1
+    },
+    {
+      "userId": 5,
+      "game": {
+        "Title": "The Witcher 2: Assassins of Kings",
+        "genre": "Action RPG",
+        "year": 2011,
+        "price": 19.99,
+        "gameImg": "https://gaming-cdn.com/images/products/789/orig/the-witcher-2-assassins-of-kings-enhanced-edition-enhanced-edition-pc-gioco-gog-com-cover.jpg?v=1701271719",
+        "gameVote": 8.8,
+        "sysRequirement": "Windows XP/Vista/7, Intel Core 2 Duo 2.2 GHz or AMD equivalent, 1GB RAM for Windows XP / 2GB RAM for Windows Vista and Windows 7, Nvidia GeForce 8800 or ATI Radeon HD 3850",
+        "plot": "Geralt di Rivia, un cacciatore di mostri, si trova coinvolto in intrighi politici mentre cerca di chiarire il suo nome.",
+        "devName": "CD Projekt Red",
+        "id": 2,
+        "trailerUrl": "https://www.youtube.com/embed/SdiK8uaduZs?si=uGgnqH01_OYETl-5"
+      },
+      "id": 2
+    },
+    {
+      "userId": 5,
+      "game": {
+        "Title": "Portal 2",
+        "genre": "Puzzle",
+        "year": 2011,
+        "price": 19.99,
+        "gameImg": "https://m.media-amazon.com/images/M/MV5BNzEyNGM5YjgtYjFkMC00MTE1LTk1YjgtNjAyYjA2ODUzNzQwXkEyXkFqcGdeQXVyNjk2MTcyMDA@._V1_.jpg",
+        "gameVote": 9.5,
+        "sysRequirement": "Windows 7/Vista/XP, 3.0 GHz P4, Dual Core 2.0 (or higher) or AMD64X2 (or higher), 2GB RAM, DirectX 9 compatible video card",
+        "plot": "Un ex soggetto di test di Aperture Science e GLaDOS devono lavorare insieme per fuggire da un laboratorio di ricerca.",
+        "devName": "Valve",
+        "id": 3,
+        "trailerUrl": "https://www.youtube.com/embed/ts-j0nFf2e0?si=BJfDYqQI_hJGftNc"
+      },
+      "id": 3
+    },
+    {
+      "userId": 5,
+      "game": {
+        "Title": "Dark Souls",
+        "genre": "Action RPG",
+        "year": 2011,
+        "price": 19.99,
+        "gameImg": "https://sm.ign.com/t/ign_it/screenshot/d/dark-souls/dark-souls-1-concept-cover_3syr.1080.jpg",
+        "gameVote": 9.2,
+        "sysRequirement": "Windows XP, Windows Vista, Windows 7, or newer, 2.6 GHz Dual-Core, 1 GB RAM, DirectX 9.0c, 512 MB RAM video card",
+        "plot": "Un cavaliere non morto cerca di sopravvivere in un mondo oscuro e ostile mentre combatte creature spaventose e boss imponenti.",
+        "devName": "FromSoftware",
+        "id": 4,
+        "trailerUrl": "https://www.youtube.com/embed/o1780AqAa20?si=pd0sJ9mB7LsloucB"
+      },
+      "id": 4
+    }
+  ],
   "boughtGames": [
     {
       "userId": 2,

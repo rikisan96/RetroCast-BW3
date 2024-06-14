@@ -207,7 +207,41 @@
     </div>
   </div>
 </div>
-
+<div
+    class="modal fade"
+    id="loginInstructionsModal"
+    tabindex="-1"
+    aria-labelledby="loginInstructionsModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginInstructionsModalLabel">Login Required</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ng-container *ngIf="loginStep === 1">
+            <p>Step 1: Click the <strong>Login</strong> button in the navbar.</p>
+            <img src="../../../assets/login/step1.jpg" alt="Step 1" class="img-fluid" />
+          </ng-container>
+          <ng-container *ngIf="loginStep === 2">
+            <p>Step 2: Enter your credentials and log in.</p>
+            <img src="../../../assets/login/step2.jpg" alt="Step 2" class="img-fluid" />
+          </ng-container>
+          <ng-container *ngIf="loginStep === 3">
+            <p>Step 3: Once logged in, you can add games to your cart and proceed with the purchase.</p>
+            <img src="../../../assets/login/step3.jpg" alt="Step 3" class="img-fluid" />
+          </ng-container>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="previousStep()" [disabled]="loginStep === 1">Previous</button>
+          <button type="button" class="btn btn-primary" (click)="nextStep()" [disabled]="loginStep === 3">Next Step</button>
+          <button type="button" class="btn btn-info" data-bs-dismiss="modal" *ngIf="loginStep === 3">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 <!-- Add the modal -->
 <div
   class="modal fade"

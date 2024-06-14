@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
   shoppingCartArr: iGameList[] = [];
   filteredGameList: iGameList[] = [];
   user!: iUser;
+  showLoginInstruction: boolean = false;
 
   activeFilter: string | null = null;
   searchTerm: string = '';
@@ -27,6 +28,8 @@ export class HomeComponent implements OnInit {
   selectedGenre: string | null = null;
   selectedGame: iGameList | null = null;
   safeTrailerUrl: SafeResourceUrl | null = null;
+
+  loginStep: number = 1;  // Add this line
 
   constructor(
     private gameSvc: GamesService,
@@ -44,12 +47,14 @@ export class HomeComponent implements OnInit {
     this.authSvc.user$.subscribe((user) => {
       if (user) {
         this.user = user;
+        this.showLoginInstruction = false;
       }
     });
   }
 
   addToCart(game: iGameList) {
     if (!this.user) {
+      this.showLoginInstructions();
       return;
     }
 
@@ -62,6 +67,29 @@ export class HomeComponent implements OnInit {
         console.error(error);
       }
     });
+  }
+
+  showLoginInstructions() {
+    this.loginStep = 1;  // Reset to the first step
+    const modalElement = document.getElementById('loginInstructionsModal');
+    if (modalElement) {
+      const modal = new Modal(modalElement);
+      modal.show();
+    } else {
+      console.error('Modal element not found');
+    }
+  }
+
+  nextStep() {
+    if (this.loginStep < 3) {  // Assume there are 3 steps
+      this.loginStep++;
+    }
+  }
+
+  previousStep() {
+    if (this.loginStep > 1) {
+      this.loginStep--;
+    }
   }
 
   filterByYear(startYear: number, endYear: number) {
