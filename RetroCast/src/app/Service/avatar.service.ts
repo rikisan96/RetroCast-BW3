@@ -15,8 +15,16 @@ export class AvatarService {
     legRight: ''
   };
 
+  constructor() {
+    const savedAvatar = localStorage.getItem('avatar');
+    if (savedAvatar) {
+      this.avatar = JSON.parse(savedAvatar);
+    }
+  }
+
   setAvatar(avatar: iCharacter): void {
     this.avatar = avatar;
+    localStorage.setItem('avatar', JSON.stringify(this.avatar));
   }
 
   getAvatar(): iCharacter {
