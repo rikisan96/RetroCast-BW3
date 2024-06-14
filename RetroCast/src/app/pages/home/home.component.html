@@ -1,122 +1,217 @@
 <!-- home.component.html -->
 <div class="pt-5">
-  <div class="container py-4 blue-neon ">
-    <div class="personal-p m-5  ">
+  <div class="container py-4 blue-neon">
+    <div class="personal-p m-5">
       <nav class="navbar bg-transparent justify-content-center">
-        <img src="../../../assets/imgs/retrocast-logo-zip-file/png/logo-no-background.png" alt="imgLogo"
-          class="w-25 mb-5" />
-        <h1 class="personal-fontDue">RetroCast </h1>
+        <img
+          src="../../../assets/imgs/retrocast-logo-zip-file/png/logo-no-background.png"
+          alt="imgLogo"
+          class="w-25 mb-5"
+        />
+        <h1 class="personal-fontDue">RetroCast</h1>
       </nav>
 
-      <section class="d-flex flex-column justify-content-center align-items-center my-5">
-        <p class="personal-fontTre mt-4 p-2 border m-5 ">
-          Esplora l'affascinante mondo dei giochi vintage su RetroGames Haven, il
-          tuo portale definitivo per rivivere le emozioni dei giochi del passato.
-          Dalle leggendarie console degli anni '80 e '90 ai classici arcade che
-          hanno definito un'epoca, qui troverai tutto ciò che riguarda il gaming
-          nostalgico. Scopri recensioni dettagliate, storie dei giochi che hanno
-          fatto la storia e guide su come restaurare e mantenere le tue vecchie
-          console. Unisciti alla nostra community di appassionati per condividere
-          ricordi e scoprire gemme nascoste che hanno segnato l'infanzia di tanti.
-          Rivivi il passato, gioca al presente e colleziona per il futuro con
-          RetroGames Haven!
+      <section
+        class="d-flex flex-column justify-content-center align-items-center my-5"
+      >
+        <p class="personal-fontTre mt-4 p-2 border m-5">
+          Esplora l'affascinante mondo dei giochi vintage su RetroGames Haven,
+          il tuo portale definitivo per rivivere le emozioni dei giochi del
+          passato. Dalle leggendarie console degli anni '80 e '90 ai classici
+          arcade che hanno definito un'epoca, qui troverai tutto ciò che
+          riguarda il gaming nostalgico. Scopri recensioni dettagliate, storie
+          dei giochi che hanno fatto la storia e guide su come restaurare e
+          mantenere le tue vecchie console. Unisciti alla nostra community di
+          appassionati per condividere ricordi e scoprire gemme nascoste che
+          hanno segnato l'infanzia di tanti. Rivivi il passato, gioca al
+          presente e colleziona per il futuro con RetroGames Haven!
         </p>
       </section>
     </div>
 
     <div class="mb-4 d-flex">
-
-      <form class="container-fluid  d-flex gap-4">
-        <a class="text-decoration-none personal-font fs-6" (click)="showForm('platform')"
-          [ngClass]="{ 'active-link': activeFilter === 'platform' }" type="button">Platform</a>
-        <a class="text-decoration-none personal-font fs-6" (click)="showForm('year')"
-          [ngClass]="{ 'active-link': activeFilter === 'year' }" type="button">Year</a>
-        <a class="text-decoration-none personal-font fs-6" (click)="showForm('genre')"
-          [ngClass]="{ 'active-link': activeFilter === 'genre' }" type="button">Genre</a>
+      <form class="container-fluid d-flex gap-4">
+        <a
+          class="text-decoration-none personal-font fs-6"
+          (click)="showForm('platform')"
+          [ngClass]="{ 'active-link': activeFilter === 'platform' }"
+          type="button"
+          >Platform</a
+        >
+        <a
+          class="text-decoration-none personal-font fs-6"
+          (click)="showForm('year')"
+          [ngClass]="{ 'active-link': activeFilter === 'year' }"
+          type="button"
+          >Year</a
+        >
+        <a
+          class="text-decoration-none personal-font fs-6"
+          (click)="showForm('genre')"
+          [ngClass]="{ 'active-link': activeFilter === 'genre' }"
+          type="button"
+          >Genre</a
+        >
       </form>
 
-      <input type="text" [(ngModel)]="searchTerm" (input)="filterByName()" placeholder="Search by name"
-        class="form-control input-personal w-25 d-flex" />
-      <div>
-
-      </div>
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (input)="filterByName()"
+        placeholder="Search by name"
+        class="form-control input-personal w-25 d-flex me-3"
+      />
     </div>
 
     <div *ngIf="activeFilter === 'platform'" class="filter-form mb-2">
       <h3 class="text-light personal-fontQuattro">Filter by Platform</h3>
-      <button class="custom-btn my-1 me-1" (click)="filterByPlatform('Windows XP')" type="button"
-        [ngClass]="{ 'active-button': selectedPlatform === 'Windows XP' }">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByPlatform('Windows XP')"
+        type="button"
+        [ngClass]="{ 'active-button': selectedPlatform === 'Windows XP' }"
+      >
         Windows XP
       </button>
-      <button class="custom-btn my-1 me-1" (click)="filterByPlatform('Windows Vista')" type="button"
-        [ngClass]="{ 'active-button': selectedPlatform === 'Windows Vista' }">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByPlatform('Windows Vista')"
+        type="button"
+        [ngClass]="{ 'active-button': selectedPlatform === 'Windows Vista' }"
+      >
         Windows Vista
       </button>
-      <button class="custom-btn my-1 me-1" (click)="filterByPlatform('Windows 7')" type="button"
-        [ngClass]="{ 'active-button': selectedPlatform === 'Windows 7' }">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByPlatform('Windows 7')"
+        type="button"
+        [ngClass]="{ 'active-button': selectedPlatform === 'Windows 7' }"
+      >
         Windows 7
       </button>
 
-      <button class="custom-btn my-1 me-1" type="button" (click)="showAllGames()">
+      <button
+        class="custom-btn my-1 me-1"
+        type="button"
+        (click)="showAllGames()"
+      >
         Show All
       </button>
-      <button class="custom-btn my-1 red me-1" type="button" (click)="hideForm()">
+      <button
+        class="custom-btn my-1 red me-1"
+        type="button"
+        (click)="hideForm()"
+      >
         X
       </button>
     </div>
 
     <div *ngIf="activeFilter === 'year'" class="filter-form mb-2">
       <h3 class="text-light personal-fontQuattro">Filter by Year</h3>
-      <button class="custom-btn my-1 me-1" (click)="filterByYear(1997, 1999)" type="button">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByYear(1997, 1999)"
+        type="button"
+      >
         1997-1999
       </button>
-      <button class="custom-btn my-1 me-1" (click)="filterByYear(2000, 2005)" type="button">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByYear(2000, 2005)"
+        type="button"
+      >
         2000-2005
       </button>
-      <button class="custom-btn my-1 me-1" (click)="filterByYear(2005, 2010)" type="button">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByYear(2005, 2010)"
+        type="button"
+      >
         2005-2010
       </button>
-      <button class="custom-btn my-1 me-1" (click)="filterByYear(2010, 2015)" type="button">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByYear(2010, 2015)"
+        type="button"
+      >
         2010-2015
       </button>
 
-      <button class="custom-btn my-1 me-1" type="button" (click)="showAllGames()">
+      <button
+        class="custom-btn my-1 me-1"
+        type="button"
+        (click)="showAllGames()"
+      >
         Show All
       </button>
-      <button class="custom-btn my-1 red me-1" type="button" (click)="hideForm()">
+      <button
+        class="custom-btn my-1 red me-1"
+        type="button"
+        (click)="hideForm()"
+      >
         X
       </button>
     </div>
 
     <div *ngIf="activeFilter === 'genre'" class="filter-form mb-2">
       <h3 class="text-light personal-fontQuattro">Filter by Genre</h3>
-      <button class="custom-btn my-1 me-1" (click)="filterByGenre('Action RPG')" type="button"
-        [ngClass]="{ 'active-button': selectedGenre === 'Action RPG' }">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByGenre('Action RPG')"
+        type="button"
+        [ngClass]="{ 'active-button': selectedGenre === 'Action RPG' }"
+      >
         Action RPG
       </button>
-      <button class="custom-btn my-1 me-1" (click)="filterByGenre('First-Person Shooter')" type="button"
-        [ngClass]="{ 'active-button': selectedGenre === 'First-Person Shooter' }">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByGenre('First-Person Shooter')"
+        type="button"
+        [ngClass]="{
+          'active-button': selectedGenre === 'First-Person Shooter'
+        }"
+      >
         First-Person Shooter
       </button>
-      <button class="custom-btn my-1 me-1" (click)="filterByGenre('Action-Adventure')" type="button"
-        [ngClass]="{ 'active-button': selectedGenre === 'Action-Adventure' }">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByGenre('Action-Adventure')"
+        type="button"
+        [ngClass]="{ 'active-button': selectedGenre === 'Action-Adventure' }"
+      >
         Action-Adventure
       </button>
-      <button class="custom-btn my-1 me-1" (click)="filterByGenre('Real-Time Strategy')" type="button"
-        [ngClass]="{ 'active-button': selectedGenre === 'Real-Time Strategy' }">
+      <button
+        class="custom-btn my-1 me-1"
+        (click)="filterByGenre('Real-Time Strategy')"
+        type="button"
+        [ngClass]="{ 'active-button': selectedGenre === 'Real-Time Strategy' }"
+      >
         Real-Time Strategy
       </button>
 
-      <button class="custom-btn my-1 me-1" type="button" (click)="showAllGames()">
+      <button
+        class="custom-btn my-1 me-1"
+        type="button"
+        (click)="showAllGames()"
+      >
         Show All
       </button>
-      <button class="custom-btn my-1 red me-1" type="button" (click)="hideForm()">
+      <button
+        class="custom-btn my-1 red me-1"
+        type="button"
+        (click)="hideForm()"
+      >
         X
       </button>
     </div>
 
     <div class="row justify-content-center">
-      <div class="card mb-3 me-2" style="max-width: 540px" *ngFor="let game of filteredGameList">
+      <div
+        class="card mb-3 me-2"
+        style="max-width: 540px"
+        *ngFor="let game of filteredGameList"
+      >
         <div class="row pt-3">
           <div class="col-md-4">
             <img [src]="game.gameImg" class="img-fluid rounded-start" alt="" />
@@ -143,53 +238,118 @@
       </div>
     </div>
   </div>
-  <div class="modal fade" id="loginInstructionsModal" tabindex="-1" aria-labelledby="loginInstructionsModalLabel"
-    aria-hidden="true">
+  <div
+    class="modal fade"
+    id="loginInstructionsModal"
+    tabindex="-1"
+    aria-labelledby="loginInstructionsModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="loginInstructionsModalLabel">Login Required</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h5 class="modal-title" id="loginInstructionsModalLabel">
+            Login Required
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body">
           <ng-container *ngIf="loginStep === 1">
-            <p>Passo 1: Clicca sul pulsante <strong>Accedi</strong> nella barra di navigazione.</p>
-            <img src="../../../assets/login/step1.jpg" alt="Step 1" class="img-fluid" />
+            <p>
+              Passo 1: Clicca sul pulsante <strong>Accedi</strong> nella barra
+              di navigazione.
+            </p>
+            <img
+              src="../../../assets/login/step1.jpg"
+              alt="Step 1"
+              class="img-fluid"
+            />
           </ng-container>
           <ng-container *ngIf="loginStep === 2">
             <p>Passo 2: Inserisci le tue credenziali e accedi.</p>
-            <img src="../../../assets/login/step2.jpg" alt="Step 2" class="img-fluid" />
+            <img
+              src="../../../assets/login/step2.jpg"
+              alt="Step 2"
+              class="img-fluid"
+            />
           </ng-container>
           <ng-container *ngIf="loginStep === 3">
-            <p>Passo 3: Una volta effettuato l'accesso, puoi aggiungere giochi al carrello e procedere con l'acquisto.
+            <p>
+              Passo 3: Una volta effettuato l'accesso, puoi aggiungere giochi al
+              carrello e procedere con l'acquisto.
             </p>
-            <img src="../../../assets/login/step3.jpg" alt="Step 3" class="img-fluid" />
+            <img
+              src="../../../assets/login/step3.jpg"
+              alt="Step 3"
+              class="img-fluid"
+            />
           </ng-container>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" (click)="previousStep()"
-            [disabled]="loginStep === 1">Previous</button>
-          <button type="button" class="btn btn-primary" (click)="nextStep()" [disabled]="loginStep === 3">Next
-            Step</button>
-          <button type="button" class="btn btn-info" data-bs-dismiss="modal" *ngIf="loginStep === 3">Close</button>
+          <button
+            type="button"
+            class="btn btn-secondary"
+            (click)="previousStep()"
+            [disabled]="loginStep === 1"
+          >
+            Previous
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="nextStep()"
+            [disabled]="loginStep === 3"
+          >
+            Next Step
+          </button>
+          <button
+            type="button"
+            class="btn btn-info"
+            data-bs-dismiss="modal"
+            *ngIf="loginStep === 3"
+          >
+            Close
+          </button>
         </div>
       </div>
     </div>
   </div>
   <!-- Add the modal -->
-  <div class="modal fade" id="gameDetailsModal" tabindex="-1" aria-labelledby="gameDetailsModalLabel"
-    aria-hidden="true">
+  <div
+    class="modal fade"
+    id="gameDetailsModal"
+    tabindex="-1"
+    aria-labelledby="gameDetailsModalLabel"
+    aria-hidden="true"
+  >
     <div class="modal-dialog modal-dialog-centered modal-lg retro-modal">
       <div class="modal-content retro-modal-content">
         <div class="modal-header retro-modal-header">
           <h5 class="modal-title retro-modal-title" id="gameDetailsModalLabel">
             Game Details
           </h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
         </div>
         <div class="modal-body retro-modal-body">
-          <iframe *ngIf="safeTrailerUrl" width="100%" height="315" [src]="safeTrailerUrl" frameborder="0"
-            allowfullscreen class="mb-3"></iframe>
+          <iframe
+            *ngIf="safeTrailerUrl"
+            width="100%"
+            height="315"
+            [src]="safeTrailerUrl"
+            frameborder="0"
+            allowfullscreen
+            class="mb-3"
+          ></iframe>
           <h3>Plot</h3>
           <p>{{ selectedGame?.plot }}</p>
           <hr />
@@ -216,7 +376,11 @@
           </div>
 
           <div class="modal-footer retro-modal-footer border-0">
-            <button type="button" class="btn btn-info retro-modal-button" data-bs-dismiss="modal">
+            <button
+              type="button"
+              class="btn btn-info retro-modal-button"
+              data-bs-dismiss="modal"
+            >
               Close
             </button>
           </div>
@@ -224,5 +388,4 @@
       </div>
     </div>
   </div>
-
 </div>
