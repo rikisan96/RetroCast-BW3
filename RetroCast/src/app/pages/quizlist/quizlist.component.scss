@@ -53,4 +53,28 @@
       margin-bottom: 20px;
     }
   }
+  .search-container {
+    text-align: center;
+    margin-bottom: 20px;
+  
+    .search-bar {
+      width: 80%;
+      margin-top: 20px;
+      padding: 10px;
+      font-family: 'OldGame';
+      font-size: 18px;
+      border: 5px solid #ffdc00;
+      border-radius: 5px;
+      background-color: #000;
+      color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      outline: none;
+      transition: all 0.3s ease;
+      
+      &:focus {
+        border-color: #ff6f61;
+        box-shadow: 0 0 10px rgba(255, 111, 97, 0.5);
+      }
+    }
+  }
   
