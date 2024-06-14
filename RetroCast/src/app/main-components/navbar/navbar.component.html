@@ -1,78 +1,47 @@
 <div class="container-fluid position-sticky top-0 z-3">
   <nav class="navbar navbar-expand bg-info pb-2">
-    <img
-      src="../../../assets/imgs/retrocast-logo-zip-file/svg/logo-no-background.svg"
-      alt="logo"
-      class="logo"
-      routerLink="/"
-    />
+    <img src="../../../assets/imgs/retrocast-logo-zip-file/svg/logo-no-background.svg" alt="logo" class="logo"
+      routerLink="/" />
     <div class="collapse navbar-collapse">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex position-relative">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex position-relative mx-2">
         <li class="nav-item">
-          <a
-            class="nav-link"
-            aria-current="page"
-            routerLink="/"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-            >Store</a
-          >
+          <a class="nav-link" aria-current="page" routerLink="/" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"><i class="bi bi-shop text-warning"></i> Store </a>
         </li>
         <li *ngIf="!isLoggedIn">
-          <a class="nav-link" routerLink="/login" routerLinkAc  tive="active"
-            >Accedi</a
-          >
+          <a class="nav-link" routerLink="/login" routerLinkAc tive="active">Accedi</a>
         </li>
         <li *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/library" routerLinkActive="active"
-            >Libreria</a
-          >
+          <a class="nav-link" routerLink="/library" routerLinkActive="active"> <i
+              class="bi bi-collection text-warning"></i> Libreria</a>
         </li>
         <li *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/arcade" routerLinkActive="active"
-            >Arcade <i class="bi bi-controller"></i
-          ></a>
+          <a class="nav-link" routerLink="/arcade" routerLinkActive="active"><i class="bi bi-joystick text-danger"></i>
+            Arcade </a>
         </li>
         <li *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/community" routerLinkActive="active"
-            >Community <i class="bi bi-people"></i>
+          <a class="nav-link" routerLink="/community" routerLinkActive="active"> <i
+              class="bi bi-people text-primary"></i> Community
           </a>
         </li>
         <li *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/quizlist" routerLinkActive="active"
-            >Quiz <i class="bi bi-box"></i>
+          <a class="nav-link" routerLink="/quizlist" routerLinkActive="active"><i class="bi bi-box text-success"></i>
+            Quiz
           </a>
         </li>
         <li *ngIf="isLoggedIn">
-          <a class="nav-link" routerLink="/character" routerLinkActive="active"
-            >Character <i class="bi bi-person-arms-up"></i>
+          <a class="nav-link" routerLink="/character" routerLinkActive="active">Character <i
+              class="bi bi-person-arms-up viola"></i>
           </a>
         </li>
       </ul>
       <ul class="navbar-nav me-personal">
-        <div
-          *ngIf="isLoggedIn"
-          ngbDropdown
-          class="nav-item d-flex personal-border"
-        >
-          <img
-            src="{{ user.profileImageUrl }}"
-            alt="userImg"
-            class="img-thumbnail profile-thumbnail"
-          />
-          <button
-            type="button"
-            class="btn btn-personal"
-            id="dropdownBasic1"
-            ngbDropdownToggle
-          >
+        <div *ngIf="isLoggedIn" ngbDropdown class="nav-item d-flex personal-border">
+          <img src="{{ user.profileImageUrl }}" alt="userImg" class="img-thumbnail profile-thumbnail" />
+          <button type="button" class="btn btn-personal" id="dropdownBasic1" ngbDropdownToggle>
             {{ user.username }}
           </button>
-          <div
-            ngbDropdownMenu
-            aria-labelledby="dropdownBasic1"
-            class="bg-personal"
-          >
+          <div ngbDropdownMenu aria-labelledby="dropdownBasic1" class="bg-personal">
             <li class="nav-link-personal" routerLink="/profile">
               Profile <i class="bi bi-person-bounding-box"></i>
             </li>
@@ -85,9 +54,7 @@
         <li class="nav-item position-fixed fs-4" *ngIf="isLoggedIn">
           <a routerLink="/cart" routerLinkActive="">
             <i class="bi bi-cart-fill position-relative fs-2"></i>
-            <span
-              class="position-absolute translate-middle badge rounded-pill bg-danger"
-            >
+            <span class="position-absolute translate-middle badge rounded-pill bg-danger">
               {{ cartLength$ | async }}
             </span>
           </a>

@@ -4,26 +4,33 @@
 }
 
 .navbar {
-  background-color: #141414 !important; /* Sfondo nero */
-  border-bottom: 2px solid #fff; /* Bordo bianco sotto la navbar */
+  background-color: #141414 !important;
+  /* Sfondo nero */
+  border-bottom: 2px solid #fff;
+  /* Bordo bianco sotto la navbar */
   padding: 10px;
 }
 
 .navbar .navbar-nav .nav-link {
-  color: #fff; /* Colore bianco per i link */
+  color: #fff;
+  /* Colore bianco per i link */
   font-family: "Navbar", cursive;
   transition: color 0.3s, border-color 0.3s;
 }
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link:focus {
-  color: #ff0; /* Colore giallo per hover e focus */
-  border-bottom: 2px solid #ff0; /* Bordo giallo sotto il link */
+  color: #ff0;
+  /* Colore giallo per hover e focus */
+  border-bottom: 2px solid #ff0;
+  /* Bordo giallo sotto il link */
 }
 
 .navbar .navbar-nav .nav-link.active {
-  color: #ff0; /* Colore giallo per il link attivo */
-  border-bottom: 2px solid #ff0; /* Bordo giallo sotto il link attivo */
+  color: #ff0;
+  /* Colore giallo per il link attivo */
+  border-bottom: 2px solid #ff0;
+  /* Bordo giallo sotto il link attivo */
 }
 
 .navbar .logo {
@@ -34,9 +41,8 @@
 
 .navbar .logo:hover,
 .navbar .logo:focus {
-  transform: scale(
-    1.1
-  ); /* Ingrandisce leggermente il logo al passaggio del mouse */
+  transform: scale(1.1);
+  /* Ingrandisce leggermente il logo al passaggio del mouse */
 }
 
 .collapse.navbar-collapse {
@@ -50,11 +56,14 @@
 ul li:last-of-type {
   top: 1.6em;
   right: 2em;
+
   a {
     color: white;
+
     &:hover {
       color: #ff0;
     }
+
     span {
       left: 110%;
       top: 5px;
@@ -62,6 +71,7 @@ ul li:last-of-type {
     }
   }
 }
+
 .me-personal {
   margin-right: 5rem !important;
 }
@@ -70,7 +80,8 @@ ul li:last-of-type {
   width: 40px;
   height: 40px;
   object-fit: cover;
-  border-radius: 0; /* Bordo squadrato per look retrò */
+  border-radius: 0;
+  /* Bordo squadrato per look retrò */
   border: 2px solid #fff;
   transition: transform 0.3s, border-color 0.3s;
 }
@@ -86,6 +97,7 @@ ul li:last-of-type {
   margin: 4px;
   padding: 4px;
 }
+
 .nav-link-personalDue {
   font-family: "Navbar";
   color: white;
@@ -96,6 +108,7 @@ ul li:last-of-type {
 .personal-border:hover {
   border: 1px solid #ff0 !important;
 }
+
 .btn-personal {
   font-family: "Navbar";
   color: white;
@@ -111,15 +124,20 @@ ul li:last-of-type {
 // }
 .nav-link-personal:hover {
   background-color: #ff0 !important;
-  color:#141414;
+  color: #141414;
   transition: 0.2s;
   cursor: pointer;
 
 }
-.nav-link-personalDue:hover{
+
+.nav-link-personalDue:hover {
   background-color: #ff0 !important;
-  color:#141414;
+  color: #141414;
   transition: 0.2s;
   cursor: pointer;
 
+}
+
+.viola {
+  color: #e22dff !important;
 }

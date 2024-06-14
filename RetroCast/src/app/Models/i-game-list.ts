@@ -9,5 +9,5 @@ export interface iGameList {
   sysRequirement: string;
   plot: string;
   devName: string;
-  trailerUrl:string;
+  trailerUrl: string;
 }
