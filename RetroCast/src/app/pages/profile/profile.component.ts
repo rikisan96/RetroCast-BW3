@@ -1,7 +1,10 @@
+// src/app/profile/profile.component.ts
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../auth/auth.service';
 import { iUser } from '../../Models/i-user';
 import { Router } from '@angular/router';
+import { AvatarService } from '../../Service/avatar.service';
+import { iCharacter } from '../../Models/i-character';
 
 @Component({
   selector: 'app-profile',
@@ -21,6 +24,16 @@ export class ProfileComponent implements OnInit {
     'game-list': [],
     id: 0
   };
+
+  avatar: iCharacter = {
+    body: '',
+    face: '',
+    armLeft: '',
+    armRight: '',
+    legLeft: '',
+    legRight: ''
+  };
+
   isEditing = false;
   showVerificationModal = false;
   verificationCode = '';
@@ -36,7 +49,7 @@ export class ProfileComponent implements OnInit {
   favoriteUsers: iUser[] = []; // Lista degli utenti preferiti
   showFavorites: boolean = true; // Stato per mostrare/nascondere i preferiti
 
-  constructor(private authSvc: AuthService, private router: Router) { }
+  constructor(private authSvc: AuthService, private router: Router, private avatarService: AvatarService) { }
 
   ngOnInit(): void {
     this.authSvc.user$.subscribe({
@@ -50,6 +63,7 @@ export class ProfileComponent implements OnInit {
       }
     });
     this.loadFavorites(); // Carica i preferiti dal localStorage
+    this.avatar = this.avatarService.getAvatar(); // Ottieni l'avatar dal servizio
   }
 
   confirmEdit() {

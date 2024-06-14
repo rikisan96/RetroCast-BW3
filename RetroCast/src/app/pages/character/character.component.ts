@@ -2,6 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { iCharacter, iOptions } from '../../Models/i-character';
 import { CharacterOptionsService } from '../../Service/options.service';
+import { AvatarService } from '../../Service/avatar.service';
 
 @Component({
   selector: 'app-character',
@@ -28,7 +29,12 @@ export class CharacterComponent implements OnInit {
     legRight: 0
   };
 
-  constructor(private characterOptionsService: CharacterOptionsService) {}
+  isEditing: boolean = true;
+
+  constructor(
+    private characterOptionsService: CharacterOptionsService,
+    private avatarService: AvatarService
+  ) {}
 
   ngOnInit(): void {
     this.options = this.characterOptionsService.getOptions();
@@ -82,6 +88,11 @@ export class CharacterComponent implements OnInit {
   }
 
   finalizeSelection(): void {
-    console.log('Character finalized:', this.character);
+    this.isEditing = false;
+    this.avatarService.setAvatar(this.character);
+  }
+
+  editCharacter(): void {
+    this.isEditing = true;
   }
 }

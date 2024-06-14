@@ -9,14 +9,21 @@ import { Router } from '@angular/router';
 })
 export class QuizListComponent implements OnInit {
   quizzes: Quiz[] = [];
+  filteredQuizzes: Quiz[] = [];
 
   constructor(private quizService: QuizService, private router: Router) {}
 
   ngOnInit(): void {
     this.quizzes = this.quizService.getQuizzes();
+    this.filteredQuizzes = this.quizzes;
   }
 
   startQuiz(index: number) {
     this.router.navigate([`/quiz/${index}`]);
+  }
+
+  filterQuizzes(event: Event) {
+    const query = (event.target as HTMLInputElement).value.toLowerCase();
+    this.filteredQuizzes = this.quizzes.filter(quiz => quiz.title.toLowerCase().includes(query));
   }
 }

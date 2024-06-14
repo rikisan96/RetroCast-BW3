@@ -13,6 +13,10 @@ label {
   font-family: "OldGame", cursive;
 }
 
+.col-md-6:nth-of-type(2) {
+  margin-top: 7em;
+}
+
 .login-container {
   display: flex;
   justify-content: center;
@@ -144,8 +148,8 @@ h1.personal-font {
   border-color: #ff0; /* Colore giallo per hover e focus */
 }
 
-.favorites-container{
-  font-family: 'OldGame', cursive;
+.favorites-container {
+  font-family: "OldGame", cursive;
   background-color: #000;
   color: white;
   padding: 2rem;
@@ -154,4 +158,55 @@ h1.personal-font {
   box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5); /* Ombra bianca */
   max-width: 600px;
   margin-top: 10em;
+}
+
+.avatar-preview {
+  position: relative;
+  width: 200px;
+  height: 400px;
+  margin-bottom: 20px; /* Aggiunto per spazio tra anteprima e pulsanti */
+}
+
+.avatar-preview img {
+  position: absolute;
+}
+
+.face {
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.body {
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.arm-left {
+  top: 30%;
+  left: 5%;
+  width: 40px;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.arm-right {
+  top: 30%;
+  right: 5%;
+  width: 40px;
+  transform: translateY(-50%);
+}
+
+.leg-left {
+  top: 70%;
+  left: 25%;
+  width: 40px;
+  transform: translateY(-50%) scaleX(-1);
+}
+
+.leg-right {
+  top: 70%;
+  right: 25%;
+  width: 40px;
+  transform: translateY(-50%);
 }

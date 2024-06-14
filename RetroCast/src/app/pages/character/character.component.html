@@ -1,46 +1,50 @@
 <!-- src/app/character/character.component.html -->
 <div class="container">
-    <div class="character-preview">
-      <img *ngIf="character.face" [src]="character.face" class="face">
-      <img *ngIf="character.body" [src]="character.body" class="body">
-      <img *ngIf="character.armLeft" [src]="character.armLeft" class="arm-left">
-      <img *ngIf="character.armRight" [src]="character.armRight" class="arm-right">
-      <img *ngIf="character.legLeft" [src]="character.legLeft" class="leg-left">
-      <img *ngIf="character.legRight" [src]="character.legRight" class="leg-right">
-    </div>
-  
-    <div class="character-selection">
-      <div class="selection">
-        <button (click)="changeOption('body', -1)">&#9664;</button>
-        <img [src]="character.body">
-        <button (click)="changeOption('body', 1)">&#9654;</button>
-      </div>
-      <div class="selection">
-        <button (click)="changeOption('face', -1)">&#9664;</button>
-        <img [src]="character.face">
-        <button (click)="changeOption('face', 1)">&#9654;</button>
-      </div>
-      <div class="selection">
-        <button (click)="changeOption('armLeft', -1)">&#9664;</button>
-        <img [src]="character.armLeft">
-        <button (click)="changeOption('armLeft', 1)">&#9654;</button>
-      </div>
-      <div class="selection">
-        <button (click)="changeOption('armRight', -1)">&#9664;</button>
-        <img [src]="character.armRight">
-        <button (click)="changeOption('armRight', 1)">&#9654;</button>
-      </div>
-      <div class="selection">
-        <button (click)="changeOption('legLeft', -1)">&#9664;</button>
-        <img [src]="character.legLeft">
-        <button (click)="changeOption('legLeft', 1)">&#9654;</button>
-      </div>
-      <div class="selection">
-        <button (click)="changeOption('legRight', -1)">&#9664;</button>
-        <img [src]="character.legRight">
-        <button (click)="changeOption('legRight', 1)">&#9654;</button>
-      </div>
-      <button (click)="finalizeSelection()">Finalize Character</button>
-    </div>
+  <div class="character-preview">
+    <img *ngIf="character.face" [src]="character.face" class="face">
+    <img *ngIf="character.body" [src]="character.body" class="body">
+    <img *ngIf="character.armLeft" [src]="character.armLeft" class="arm-left">
+    <img *ngIf="character.armRight" [src]="character.armRight" class="arm-right">
+    <img *ngIf="character.legLeft" [src]="character.legLeft" class="leg-left">
+    <img *ngIf="character.legRight" [src]="character.legRight" class="leg-right">
   </div>
-  
+
+  <div *ngIf="isEditing" class="character-selection">
+    <div class="selection">
+      <button (click)="changeOption('face', -1)">&#9664;</button>
+      <img [src]="character.face">
+      <button (click)="changeOption('face', 1)">&#9654;</button>
+    </div>
+    <div class="selection">
+      <button (click)="changeOption('body', -1)">&#9664;</button>
+      <img [src]="character.body">
+      <button (click)="changeOption('body', 1)">&#9654;</button>
+    </div>
+    <div class="selection">
+      <button (click)="changeOption('armLeft', -1)">&#9664;</button>
+      <img [src]="character.armLeft">
+      <button (click)="changeOption('armLeft', 1)">&#9654;</button>
+    </div>
+    <div class="selection">
+      <button (click)="changeOption('armRight', -1)">&#9664;</button>
+      <img [src]="character.armRight">
+      <button (click)="changeOption('armRight', 1)">&#9654;</button>
+    </div>
+    <div class="selection">
+      <button (click)="changeOption('legLeft', -1)">&#9664;</button>
+      <img [src]="character.legLeft">
+      <button (click)="changeOption('legLeft', 1)">&#9654;</button>
+    </div>
+    <div class="selection">
+      <button (click)="changeOption('legRight', -1)">&#9664;</button>
+      <img [src]="character.legRight">
+      <button (click)="changeOption('legRight', 1)">&#9654;</button>
+    </div>
+    <button (click)="finalizeSelection()">Finalize Character</button>
+  </div>
+  <div *ngIf="!isEditing" class="character-final">
+    <h2>Here is your avatar!</h2>
+    <button (click)="editCharacter()">Edit</button>
+    <button routerLink="/profile">Go to Profile</button>
+  </div>
+</div>
