@@ -4,6 +4,7 @@
       src="../../../assets/imgs/retrocast-logo-zip-file/svg/logo-no-background.svg"
       alt="logo"
       class="logo"
+      routerLink="/"
     />
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex position-relative">
@@ -18,7 +19,7 @@
           >
         </li>
         <li *ngIf="!isLoggedIn">
-          <a class="nav-link" routerLink="/login" routerLinkActive="active"
+          <a class="nav-link" routerLink="/login" routerLinkAc  tive="active"
             >Accedi</a
           >
         </li>
@@ -35,6 +36,16 @@
         <li *ngIf="isLoggedIn">
           <a class="nav-link" routerLink="/community" routerLinkActive="active"
             >Community <i class="bi bi-people"></i>
+          </a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/quizlist" routerLinkActive="active"
+            >Quiz <i class="bi bi-box"></i>
+          </a>
+        </li>
+        <li *ngIf="isLoggedIn">
+          <a class="nav-link" routerLink="/character" routerLinkActive="active"
+            >Character <i class="bi bi-box"></i>
           </a>
         </li>
       </ul>
@@ -62,13 +73,13 @@
             aria-labelledby="dropdownBasic1"
             class="bg-personal"
           >
-            <button class="nav-link-personal btn" routerLink="/profile">
+            <li class="nav-link-personal" routerLink="/profile">
               Profile <i class="bi bi-person-bounding-box"></i>
-            </button>
+            </li>
 
-            <button (click)="logout()" class="nav-link-personal btn">
+            <li (click)="logout()" class="nav-link-personal">
               Logout
-            </button>
+            </li>
           </div>
         </div>
         <li class="nav-item position-fixed fs-4" *ngIf="isLoggedIn">
