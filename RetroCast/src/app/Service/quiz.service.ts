@@ -18,7 +18,7 @@ export class QuizService {
   private quizzes: Quiz[] = [
     {
       title: 'Quiz su Super Mario (anni 90)',
-      image: 'https://upload.wikimedia.org/wikipedia/en/a/a9/Super_Mario_World_Coverart.png',
+      image: 'https://i.redd.it/96e9f3itf0i51.jpg',
       questions: [
         {
           text: 'Quale nemico ricorrente è il principale antagonista di Mario?',
@@ -49,7 +49,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su The Witcher 2: Assassins of Kings',
-      image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/The_Witcher_2_cover.jpg',
+      image: 'https://www.gamerclick.it/immagini/videogame/The_Witcher_2_Assassins_of_Kings/cover/The_Witcher_2_Assassins_of_Kings-cover.jpg',
       questions: [
         {
           text: 'Chi è il protagonista di The Witcher 2?',
@@ -80,7 +80,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su Minecraft',
-      image: 'https://upload.wikimedia.org/wikipedia/en/5/51/Minecraft_cover.png',
+      image: 'https://i.pinimg.com/736x/cb/62/90/cb6290ec436941da956f4a6080a29d22.jpg',
       questions: [
         {
           text: 'Chi è il creatore di Minecraft?',
@@ -111,7 +111,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su Batman: Arkham City',
-      image: 'https://upload.wikimedia.org/wikipedia/en/0/00/Batman_Arkham_City_Game_Cover.jpg',
+      image: 'https://static.posters.cz/image/1300/poster/batman-arkham-city-cover-i11510.jpg',
       questions: [
         {
           text: 'Chi è il principale antagonista di Batman in Arkham City?',
@@ -142,7 +142,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su The Sims 2',
-      image: 'https://upload.wikimedia.org/wikipedia/en/e/e4/Sims2.jpg',
+      image: 'https://cdn.mobygames.com/5d04952e-ac0d-11ed-ad33-02420a00012d.webp',
       questions: [
         {
           text: 'In quale anno è stato rilasciato The Sims 2?',
@@ -173,7 +173,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su Red Dead Redemption',
-      image: 'https://upload.wikimedia.org/wikipedia/en/4/4a/Red_Dead_Redemption.jpg',
+      image: 'https://upload.wikimedia.org/wikipedia/en/a/a7/Red_Dead_Redemption.jpg',
       questions: [
         {
           text: 'Chi è il protagonista di Red Dead Redemption?',
@@ -204,7 +204,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su Grand Theft Auto IV',
-      image: 'https://upload.wikimedia.org/wikipedia/en/8/8e/Grand_Theft_Auto_IV_cover.jpg',
+      image: 'https://upload.wikimedia.org/wikipedia/en/b/b7/Grand_Theft_Auto_IV_cover.jpg',
       questions: [
         {
           text: 'Chi è il protagonista di Grand Theft Auto IV?',
@@ -235,7 +235,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su Tomb Raider',
-      image: 'https://upload.wikimedia.org/wikipedia/en/b/b1/Tomb_Raider_%282013_video_game%29_cover.png',
+      image: 'https://www.tombraiderchronicles.com/images/tomb-raider-covers-redux/tomb-raider-1-us.png',
       questions: [
         {
           text: 'Qual è il nome completo della protagonista di Tomb Raider?',
@@ -266,7 +266,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su Final Fantasy VII',
-      image: 'https://upload.wikimedia.org/wikipedia/en/e/e1/Final_Fantasy_VII_Box_Art.png',
+      image: 'https://cdn11.bigcommerce.com/s-kqbs9oimhc/images/stencil/1280x1280/products/889/2014/df5313d5528cafec58d0163d3c4036e7__93205.1670600291.jpg?c=1',
       questions: [
         {
           text: 'Chi è il protagonista di Final Fantasy VII?',
@@ -297,7 +297,7 @@ export class QuizService {
     },
     {
       title: 'Quiz su The Legend of Zelda: Ocarina of Time',
-      image: 'https://upload.wikimedia.org/wikipedia/en/5/57/The_Legend_of_Zelda_Ocarina_of_Time.jpg',
+      image: 'https://i1.sndcdn.com/artworks-000464588955-2ftldl-t500x500.jpg',
       questions: [
         {
           text: 'Chi è il principale antagonista in The Legend of Zelda: Ocarina of Time?',
